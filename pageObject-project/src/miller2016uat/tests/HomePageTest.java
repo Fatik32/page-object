@@ -9,7 +9,7 @@ import miller2016uat.pageObject.HomePage;
 /**
  * 
  * @Тест Главной (домашней) страницы
- * test тестовый ТЕКСТТ 12345 !!!
+ * test тестовый ТЕКСТ TEST 12345 !!!
  * @author a.fatov
  * Переменные:
  * @public WebDriver driver
