@@ -11,7 +11,7 @@ import miller2016uat.pageObject.AgeVerificationPage;
 /**
  * 
  * @author a.fatov
- * @Тест страницы верификации возраста
+ * @РўРµСЃС‚ СЃС‚СЂР°РЅРёС†С‹ РІРµСЂРёС„РёРєР°С†РёРё РІРѕР·СЂР°СЃС‚Р°
  */
 
 public class AuthorizationPageTest {
@@ -29,7 +29,7 @@ public class AuthorizationPageTest {
     public void TestAgeVerificationTrue() throws Exception{
     	System.out.println("@Test 1 start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
-    	System.out.println("Страница подтверждения возраста: " + ageVerificationPage.getPage());
+    	System.out.println("РЎС‚СЂР°РЅРёС†Р° РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РІРѕР·СЂР°СЃС‚Р°: " + ageVerificationPage.getPage());
     	
     	ageVerificationPage.getPage();
     	ageVerificationPage.openPage();
@@ -42,7 +42,7 @@ public class AuthorizationPageTest {
     public void TestAgeVerificationFalse() throws Exception{
     	System.out.println("@Test 2 start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
-    	System.out.println("Страница подтверждения возраста: " + ageVerificationPage.getPage());
+    	System.out.println("РЎС‚СЂР°РЅРёС†Р° РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РІРѕР·СЂР°СЃС‚Р°: " + ageVerificationPage.getPage());
     	
     	ageVerificationPage.getPage();
     	ageVerificationPage.openPage();
