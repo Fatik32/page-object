@@ -6,11 +6,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import miller2016uat.pageObject.AgeVerificationPage;
 /**
  * 
- * @Тест страницы верификации возраста
+ * @РўРµСЃС‚ СЃС‚СЂР°РЅРёС†С‹ РІРµСЂРёС„РёРєР°С†РёРё РІРѕР·СЂР°СЃС‚Р°
  * @author a.fatov
- * Переменные:
+ * РџРµСЂРµРјРµРЅРЅС‹Рµ:
  * @public WebDriver driver
- * Методы:
+ * РњРµС‚РѕРґС‹:
  * @public void setUp() throws Exception
  * @public void TestAgeVerificationTrue() throws Exception
  * @public void TestAgeVerificationTrueIsOneMetod() throws Exception
@@ -18,11 +18,11 @@ import miller2016uat.pageObject.AgeVerificationPage;
  * @public void tearDown() throws Exception
  */
 public class AgeVerificationPageTest {
-					//                    Переменные
+					//                    РџРµСЂРµРјРµРЅРЅС‹Рµ
 	public WebDriver driver;
-					//                      Методы
+					//                      РњРµС‚РѕРґС‹
 /**
- * setUp() Метод вызываемый перед началом каждого теста
+ * setUp() РњРµС‚РѕРґ РІС‹Р·С‹РІР°РµРјС‹Р№ РїРµСЂРµРґ РЅР°С‡Р°Р»РѕРј РєР°Р¶РґРѕРіРѕ С‚РµСЃС‚Р°
  * @throws Exception
  */
     @Before
@@ -34,14 +34,14 @@ public class AgeVerificationPageTest {
     	System.out.println("@Before succes!");
     }
 /**
- * TestAgeVerificationTrue() Тест прохождения верификации возраста
+ * TestAgeVerificationTrue() РўРµСЃС‚ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ РІРµСЂРёС„РёРєР°С†РёРё РІРѕР·СЂР°СЃС‚Р°
  * @throws Exception
  */
 	@Test
     public void TestAgeVerificationTrue() throws Exception{
     	System.out.println("@Test 1 start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
-    	System.out.println("Страница подтверждения возраста: " + ageVerificationPage.getPage());
+    	System.out.println("РЎС‚СЂР°РЅРёС†Р° РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РІРѕР·СЂР°СЃС‚Р°: " + ageVerificationPage.getPage());
     	
     	ageVerificationPage.getPage();
     	ageVerificationPage.openPage();
@@ -50,28 +50,28 @@ public class AgeVerificationPageTest {
         System.out.println("@Test 1 success!");
 }
 /**
- * TestAgeVerificationTrueIsOneMetod() Тест прохождения верификации возраста одним методом
+ * TestAgeVerificationTrueIsOneMetod() РўРµСЃС‚ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ РІРµСЂРёС„РёРєР°С†РёРё РІРѕР·СЂР°СЃС‚Р° РѕРґРЅРёРј РјРµС‚РѕРґРѕРј
  * @throws Exception
  */
 	@Test
     public void TestAgeVerificationTrueIsOneMetod() throws Exception{
     	System.out.println("@Test 2 start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
-    	System.out.println("Страница подтверждения возраста: " + ageVerificationPage.getPage());
+    	System.out.println("РЎС‚СЂР°РЅРёС†Р° РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РІРѕР·СЂР°СЃС‚Р°: " + ageVerificationPage.getPage());
     	
     	ageVerificationPage.ageVerificationTrue();
     	
         System.out.println("@Test 2 success!");
 }
 /**
- * TestAgeVerificationFalse() Тест неудачного прохождения верификации возраста	
+ * TestAgeVerificationFalse() РўРµСЃС‚ РЅРµСѓРґР°С‡РЅРѕРіРѕ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ РІРµСЂРёС„РёРєР°С†РёРё РІРѕР·СЂР°СЃС‚Р°	
  * @throws Exception
  */
 	@Test
     public void TestAgeVerificationFalse() throws Exception{
     	System.out.println("@Test 3 start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
-    	System.out.println("Страница подтверждения возраста: " + ageVerificationPage.getPage());
+    	System.out.println("РЎС‚СЂР°РЅРёС†Р° РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РІРѕР·СЂР°СЃС‚Р°: " + ageVerificationPage.getPage());
     	
     	ageVerificationPage.getPage();
     	ageVerificationPage.openPage();
@@ -80,7 +80,7 @@ public class AgeVerificationPageTest {
         System.out.println("@Test 3 success!");
 }
 /**
- * tearDown() Метод вызываемый после окончания каждого теста
+ * tearDown() РњРµС‚РѕРґ РІС‹Р·С‹РІР°РµРјС‹Р№ РїРѕСЃР»Рµ РѕРєРѕРЅС‡Р°РЅРёСЏ РєР°Р¶РґРѕРіРѕ С‚РµСЃС‚Р°
  * @throws Exception
  */
     @After

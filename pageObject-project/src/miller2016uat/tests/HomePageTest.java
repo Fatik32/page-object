@@ -8,12 +8,11 @@ import miller2016uat.pageObject.AgeVerificationPage;
 import miller2016uat.pageObject.HomePage;
 /**
  * 
- * @���� ������� (��������) ��������
- * test �������� ����� TEST TESTTT 12345 !!!
+ * @Тест главной (домашней) страницы
  * @author a.fatov
- * ����������:
+ * Переменные:
  * @public WebDriver driver
- * ������:
+ * Методы:
  * @public void setUp() throws Exception
  * @public void TestClickHome() throws Exception
  * @public void TestClickPrize() throws Exception
@@ -24,11 +23,11 @@ import miller2016uat.pageObject.HomePage;
  * @public void tearDown() throws Exception
  */
 public class HomePageTest {
-					//                    ����������
+					//                    Переменные
 	public WebDriver driver;
-					//                      ������
+					//                      Методы
 /**
- * setUp() ����� ���������� ����� ������� ������� �����
+ * setUp() Метод вызываемый перед началом каждого теста
  * @throws Exception
 */
     @Before
@@ -40,7 +39,7 @@ public class HomePageTest {
     	System.out.println("@Before succes!");
     }
 /**
- * TestClickHome() ���� �������� �� ������� ��������
+ * TestClickHome() Тест перехода по ссылке на главную страницу
  * @throws Exception
 */
     @Test
@@ -49,7 +48,7 @@ public class HomePageTest {
     	System.out.println("@Test ClickHome start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
     	HomePage homePage = new HomePage(driver);
-    	System.out.println("�������� ������������� ��������: " + homePage.getPage());
+    	System.out.println("Домашняя страница: " + homePage.getPage());
     	
     	ageVerificationPage.ageVerificationTrue(); //����� ����� �������� �� ������� ��������
     	homePage.clickHome();                      //�������� �� �������
@@ -59,7 +58,7 @@ public class HomePageTest {
         System.out.println("@Test ClickHome success!");
 }
 /**
- * TestClickPrize() ���� �������� �� �������� ������
+ * TestClickPrize() Тест прохождения верификации возраста
  * @throws Exception
  */
     @Test
@@ -78,7 +77,7 @@ public class HomePageTest {
     	System.out.println("@Test ClickPrize success!");
 }
 /**
- * TestClickWinner() ���� �������� �� �������� �����������
+ * TestClickWinner() Тест прохождения верификации возраста
  * @throws Exception
  */
     @Test
@@ -97,7 +96,7 @@ public class HomePageTest {
         System.out.println("@Test ClickWinner success!");
 }
 /**
- * TestClickAuth() ���� �������� �� �������� �����������
+ * TestClickAuth() Тест прохождения верификации возраста
  * @throws Exception
  */
     @Test
@@ -114,7 +113,7 @@ public class HomePageTest {
     System.out.println("Title." + driver.getTitle());
 }
 /**
- * TestClickRegister() ���� �������� �� �������� ����������� ����� ������
+ * TestClickRegister() Тест прохождения верификации возраста
  * ������ ���������� ��-�� ������������ ������ ��� ������ ������������
  * @throws Exception
  */
@@ -136,7 +135,7 @@ public class HomePageTest {
     System.out.println("@Test ClickRegister success!");
     }
 /**
- * TestClickPopUpRegBtn() ���� �������� �� �������� ����������� ����� �����
+ * TestClickPopUpRegBtn() Тест прохождения верификации возраста
  * @throws Exception
  */
     @Test
@@ -160,7 +159,7 @@ public class HomePageTest {
     System.out.println("@Test ClickPopUpRegBtn success!");
 }
 /**
- * tearDown() ����� ���������� ����� ��������� ������� �����
+ * tearDown() Тест прохождения верификации возраста
  * @throws Exception
  */
     @After

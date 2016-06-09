@@ -55,7 +55,7 @@ public class ageVerTest_ide {
     
     //driver.findElement(By.cssSelector("select[name=\"dob_month\"]")).click();
     driver.findElement(By.cssSelector("select[name=\"dob_month\"]")).click();
-    driver.findElement(By.xpath("//option[contains(text(),'Ï‡È')]")).click();
+    driver.findElement(By.xpath("//option[contains(text(),'–º–∞–π')]")).click();
     Thread.sleep(3000);
     
     //dob_year
@@ -67,7 +67,7 @@ public class ageVerTest_ide {
     //driver.findElement(By.xpath("//select[contains(@name, 'dob_year')]/option[contains(@value, '1945')]")).click();
     Thread.sleep(3000);
     
-    //button ¬ıÓ‰
+    //button –í—Ö–æ–¥
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
     //driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
     
