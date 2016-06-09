@@ -8,12 +8,12 @@ import miller2016uat.pageObject.AgeVerificationPage;
 import miller2016uat.pageObject.HomePage;
 /**
  * 
- * @Тест Главной (домашней) страницы
- * test тестовый ТЕКСТ TEST TEST 12345 !!!
+ * @пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+ * test пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ TEST TESTTT 12345 !!!
  * @author a.fatov
- * Переменные:
+ * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
  * @public WebDriver driver
- * Методы:
+ * пїЅпїЅпїЅпїЅпїЅпїЅ:
  * @public void setUp() throws Exception
  * @public void TestClickHome() throws Exception
  * @public void TestClickPrize() throws Exception
@@ -24,11 +24,11 @@ import miller2016uat.pageObject.HomePage;
  * @public void tearDown() throws Exception
  */
 public class HomePageTest {
-					//                    Переменные
+					//                    пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	public WebDriver driver;
-					//                      Методы
+					//                      пїЅпїЅпїЅпїЅпїЅпїЅ
 /**
- * setUp() Метод вызываемый перед началом каждого теста
+ * setUp() пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
  * @throws Exception
 */
     @Before
@@ -40,7 +40,7 @@ public class HomePageTest {
     	System.out.println("@Before succes!");
     }
 /**
- * TestClickHome() Тест перехода на главную страницу
+ * TestClickHome() пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
  * @throws Exception
 */
     @Test
@@ -49,17 +49,17 @@ public class HomePageTest {
     	System.out.println("@Test ClickHome start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
     	HomePage homePage = new HomePage(driver);
-    	System.out.println("Страница подтверждения возраста: " + homePage.getPage());
+    	System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + homePage.getPage());
     	
-    	ageVerificationPage.ageVerificationTrue(); //После этого попадаем на главную страницу
-    	homePage.clickHome();                      //Остаемся на главной
+    	ageVerificationPage.ageVerificationTrue(); //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    	homePage.clickHome();                      //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     	
     	System.out.println("Title." + driver.getTitle());
-        Assert.assertTrue(driver.getTitle().contains("World music tour")); // Проверка Title текущей страницы
+        Assert.assertTrue(driver.getTitle().contains("World music tour")); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Title пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         System.out.println("@Test ClickHome success!");
 }
 /**
- * TestClickPrize() Тест перехода на страницу призов
+ * TestClickPrize() пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
  * @throws Exception
  */
     @Test
@@ -68,17 +68,17 @@ public class HomePageTest {
     	System.out.println("@Test ClickPrize start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
     	HomePage homePage = new HomePage(driver);
-    	System.out.println("Страница подтверждения возраста: " + homePage.getPage());
+    	System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + homePage.getPage());
     	
-    	ageVerificationPage.ageVerificationTrue(); //Проходим проверку возраста и попадаем на главную страницу
-    	homePage.clickPrize();                      //Переходим на страницу призов
+    	ageVerificationPage.ageVerificationTrue(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    	homePage.clickPrize();                      //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     	
     	System.out.println("Title." + driver.getTitle());
-        Assert.assertTrue(driver.getTitle().contains("Призы")); // Проверка Title текущей страницы
+        Assert.assertTrue(driver.getTitle().contains("пїЅпїЅпїЅпїЅпїЅ")); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Title пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     	System.out.println("@Test ClickPrize success!");
 }
 /**
- * TestClickWinner() Тест перехода на страницу победителей
+ * TestClickWinner() пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
  * @throws Exception
  */
     @Test
@@ -87,17 +87,17 @@ public class HomePageTest {
         System.out.println("@Test ClickWinner start!");
         AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
         HomePage homePage = new HomePage(driver);
-        System.out.println("Страница подтверждения возраста: " + homePage.getPage());
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + homePage.getPage());
         	
-        ageVerificationPage.ageVerificationTrue(); //Проходим проверку возраста и попадаем на главную страницу
-        homePage.clickWinner();                      //Переходим на страницу победителей
+        ageVerificationPage.ageVerificationTrue(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        homePage.clickWinner();                      //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         	
         System.out.println("Title." + driver.getTitle());
-        Assert.assertTrue(driver.getTitle().contains("Победители")); // Проверка Title текущей страницы
+        Assert.assertTrue(driver.getTitle().contains("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Title пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         System.out.println("@Test ClickWinner success!");
 }
 /**
- * TestClickAuth() Тест перехода на страницу авторизации
+ * TestClickAuth() пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
  * @throws Exception
  */
     @Test
@@ -106,16 +106,16 @@ public class HomePageTest {
     System.out.println("@Test ClickAuth start!");
     AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
     HomePage homePage = new HomePage(driver);
-    System.out.println("Страница подтверждения возраста: " + homePage.getPage());
+    System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + homePage.getPage());
             	
-    ageVerificationPage.ageVerificationTrue(); //Проходим проверку возраста и попадаем на главную страницу
-    homePage.clickAuth();                      //Переходим на страницу авторизации
+    ageVerificationPage.ageVerificationTrue(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    homePage.clickAuth();                      //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     Thread.sleep(3000);  
     System.out.println("Title." + driver.getTitle());
 }
 /**
- * TestClickRegister() Тест перехода на страницу регистрации через кнопку
- * кнопка недоступна из-за всплывающего попапа для нового пользователя
+ * TestClickRegister() пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
  * @throws Exception
  */
     @Test
@@ -124,19 +124,19 @@ public class HomePageTest {
     System.out.println("@Test ClickRegister start!");
     AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
     HomePage homePage = new HomePage(driver);
-    System.out.println("Страница подтверждения возраста: " + homePage.getPage());
+    System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + homePage.getPage());
                 	
-    ageVerificationPage.ageVerificationTrue(); //Проходим проверку возраста и попадаем на главную страницу
+    ageVerificationPage.ageVerificationTrue(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     try {
-    	homePage.clickRegister();                      //Переходим на страницу регистрации
-    } catch (Exception e){System.out.println("Обычная ссылка на регистрацию недоступна из за попапа");}
+    	homePage.clickRegister();                      //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    } catch (Exception e){System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");}
     Thread.sleep(3000); 
     System.out.println("Title." + driver.getTitle());
-    Assert.assertTrue(driver.getTitle().contains("World music tour")); // Проверка Title текущей страницы
+    Assert.assertTrue(driver.getTitle().contains("World music tour")); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Title пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     System.out.println("@Test ClickRegister success!");
     }
 /**
- * TestClickPopUpRegBtn() Тест перехода на страницу регистрации через попап
+ * TestClickPopUpRegBtn() пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
  * @throws Exception
  */
     @Test
@@ -145,22 +145,22 @@ public class HomePageTest {
     System.out.println("@Test ClickPopUpRegBtn start!");
     AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
     HomePage homePage = new HomePage(driver);
-    System.out.println("Страница подтверждения возраста: " + homePage.getPage());
+    System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + homePage.getPage());
                     	
-    ageVerificationPage.ageVerificationTrue(); //Проходим проверку возраста и попадаем на главную страницу
+    ageVerificationPage.ageVerificationTrue(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     try {
     	homePage.clickRegister();
     } catch (ElementNotVisibleException e) {
-    System.out.println("Обычная ссылка на регистрацию недоступна, пробуем перейти на страницу регистрации через попап");
-    homePage.clickPopUpRegBtn();               //Переходим на страницу регистрации через всплывающий попап
+    System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
+    homePage.clickPopUpRegBtn();               //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     }
     Thread.sleep(3000);
     System.out.println("Title." + driver.getTitle());
-    Assert.assertTrue(driver.getTitle().contains("Регистрация")); // Проверка Title текущей страницы
+    Assert.assertTrue(driver.getTitle().contains("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Title пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     System.out.println("@Test ClickPopUpRegBtn success!");
 }
 /**
- * tearDown() Метод вызываемый после окончания каждого теста
+ * tearDown() пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
  * @throws Exception
  */
     @After
