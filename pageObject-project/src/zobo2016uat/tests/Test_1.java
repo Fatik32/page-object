@@ -38,7 +38,7 @@ public class Test_1 {
 
         @After
         public void tearDown() throws Exception {
-        	Thread.sleep(3000);
+        	Thread.sleep(1000);
     	    driver.manage().deleteAllCookies();
     	    driver.quit();
     	    System.out.println("@After success!");

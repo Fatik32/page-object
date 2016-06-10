@@ -3,7 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import static org.junit.Assert.*;
 /**
- * Страница авторизации
+ * Страница авторизации Возможно не будет  использована
  * @author a.fatov
  * Переменные:
  * @public WebDriver driver
@@ -14,11 +14,10 @@ import static org.junit.Assert.*;
  * @public void openPage() throws Exception
  */
 public class AuthorizationPage extends Page {
-	public WebDriver driver;
 	//interface нужно добавить интерфейс для совместно используемых констант
 	//if(elem.Displayed) проверка есть элемент или нет
-	//http://essa2016-uat.posterone.ru/content/efes/essa/russia/essa2016/ru/overlays/age-verification.html
 	//										Переменные
+	public WebDriver driver;
 	public String pageUrl = "/home.html";
 	public By usernameLocator = By.name("login");
 	public By passwordLocator = By.name("password");

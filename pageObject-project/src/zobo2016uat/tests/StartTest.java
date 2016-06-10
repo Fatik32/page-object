@@ -27,7 +27,7 @@ public class StartTest {
 	    driver.findElement(authPage.passwordLocator).clear();
 	    driver.findElement(authPage.passwordLocator).sendKeys("Fatik32rus");
 	    driver.findElement(authPage.loginButtonLocator).click();
-	    Thread.sleep(3000);
+	    Thread.sleep(1000);
 	    driver.manage().deleteAllCookies();
 	    driver.quit();
 	    System.out.println("End!");
