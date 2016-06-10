@@ -2,9 +2,9 @@ package zobo2016uat.pageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 /**
- * Домашняя (главная) Страница сайта:
+ * Р”РѕРјР°С€РЅСЏСЏ (РіР»Р°РІРЅР°СЏ) РЎС‚СЂР°РЅРёС†Р° СЃР°Р№С‚Р°:
  * @author a.fatov
- * Переменные:
+ * РџРµСЂРµРјРµРЅРЅС‹Рµ:
  *	//	HEADER
  *	public By user_profileLocator
  *	public By registerLocator
@@ -19,42 +19,42 @@ import org.openqa.selenium.WebDriver;
  *	public By contact_usLocator
  *	public By prizeLocator
  *	public By winnerLocator
- * Методы:
+ * РњРµС‚РѕРґС‹:
  * @public HomePage(WebDriver driver) throws Exception
  * @public String getPage() throws Exception
  * @public void openPage() throws Exception
  * @public void clickHome() throws Exception
- * @public void clickPrize() throws Exception Не используется
- * @public void clickWinner() throws Exception Не используется
+ * @public void clickPrize() throws Exception РќРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
+ * @public void clickWinner() throws Exception РќРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
  * @public void clickAuth() throws Exception
  * @public void clickRegister() throws Exception
- * @public void clickPopUpRegBtn() throws Exception Не используется
+ * @public void clickPopUpRegBtn() throws Exception РќРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
  */
 public class HomePage extends Page {
-	//                   				Переменные
+	//                   				РџРµСЂРµРјРµРЅРЅС‹Рµ
 	public WebDriver driver;
 	public String pageUrl = "/home.html";
 	//	HEADER
-	public By user_profileLocator = By.cssSelector("a[href='/ru/user-profile.html']"); //Ссылка на страницу профиля пользователя
-	public By registerLocator = By.cssSelector("a[title='РЕГИСТРАЦИЯ']"); //Ссылка на страницу регистрации
-	public By authLocator = By.cssSelector("span[title='ВХОД']"); //Ссылка на страницу авторизации
-	public By homeLocator = By.cssSelector("a[href='/ru/home.html']"); //Ссылка на главную страницу
-	public By rulesLocator = By.cssSelector("a[href='/ru/rules.html']"); //Ссылка на страницу с правилами акции
+	public By user_profileLocator = By.cssSelector("a[href='/ru/user-profile.html']"); //РЎСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ РїСЂРѕС„РёР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	public By registerLocator = By.cssSelector("a[title='Р Р•Р“РРЎРўР РђР¦РРЇ']"); //РЎСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ СЂРµРіРёСЃС‚СЂР°С†РёРё
+	public By authLocator = By.cssSelector("span[title='Р’РҐРћР”']"); //РЎСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ Р°РІС‚РѕСЂРёР·Р°С†РёРё
+	public By homeLocator = By.cssSelector("a[href='/ru/home.html']"); //РЎСЃС‹Р»РєР° РЅР° РіР»Р°РІРЅСѓСЋ СЃС‚СЂР°РЅРёС†Сѓ
+	public By rulesLocator = By.cssSelector("a[href='/ru/rules.html']"); //РЎСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ СЃ РїСЂР°РІРёР»Р°РјРё Р°РєС†РёРё
 	//	BODY
-	public By orderPrizeLocator = By.cssSelector("button[class='[ main-button  main-button--prize ]']"); //Кнопка "Заказать приз"
-	public By activateCodeLocator = By.cssSelector("button[class='[ main-button  main-button--code ]']"); //Кнопка "Зарегистрировать код"
+	public By orderPrizeLocator = By.cssSelector("button[class='[ main-button  main-button--prize ]']"); //РљРЅРѕРїРєР° "Р—Р°РєР°Р·Р°С‚СЊ РїСЂРёР·"
+	public By activateCodeLocator = By.cssSelector("button[class='[ main-button  main-button--code ]']"); //РљРЅРѕРїРєР° "Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊ РєРѕРґ"
 	//	FOOTER
-	public By faqLocator = By.cssSelector("a[href='/ru/faq.html']"); //Ссылка на страницу "FAQ"
-	public By contact_usLocator = By.cssSelector("a[href='/ru/contact-us.html']"); //Ссылка на страницу  "Обратная связь"
-	//	Не используются
-	public By prizeLocator = By.cssSelector("a[title='Призы']"); //Ссылка на страницу призов
-	public By winnerLocator = By.cssSelector("a[title='Победители']"); //Ссылка на страницу победителей
-	public By popUpRegBtnLocator = By.id("popUpRegBtn"); //Ссылка на страницу регистрации в всплывающем попапе
-	//public By registerLocator = By.cssSelector("a[href='/ru/registration.html']"); //Ссылка на страницу регистрации
-	//					                    Методы
+	public By faqLocator = By.cssSelector("a[href='/ru/faq.html']"); //РЎСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ "FAQ"
+	public By contact_usLocator = By.cssSelector("a[href='/ru/contact-us.html']"); //РЎСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ  "РћР±СЂР°С‚РЅР°СЏ СЃРІСЏР·СЊ"
+	//	РќРµ РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ
+	public By prizeLocator = By.cssSelector("a[title='РџСЂРёР·С‹']"); //РЎСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ РїСЂРёР·РѕРІ
+	public By winnerLocator = By.cssSelector("a[title='РџРѕР±РµРґРёС‚РµР»Рё']"); //РЎСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ РїРѕР±РµРґРёС‚РµР»РµР№
+	public By popUpRegBtnLocator = By.id("popUpRegBtn"); //РЎСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ СЂРµРіРёСЃС‚СЂР°С†РёРё РІ РІСЃРїР»С‹РІР°СЋС‰РµРј РїРѕРїР°РїРµ
+	//public By registerLocator = By.cssSelector("a[href='/ru/registration.html']"); //РЎСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ СЂРµРіРёСЃС‚СЂР°С†РёРё
+	//					                    РњРµС‚РѕРґС‹
 	/**
-	 * HomePage(WebDriver driver) Конструктор!
-	 * Метод для передачи обьекта driver
+	 * HomePage(WebDriver driver) РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ!
+	 * РњРµС‚РѕРґ РґР»СЏ РїРµСЂРµРґР°С‡Рё РѕР±СЊРµРєС‚Р° driver
 	 * @param driver
 	 * @throws Exception
 	 */
@@ -62,7 +62,7 @@ public class HomePage extends Page {
 		this.driver = driver;
 	}
 	/**
-	 * getPage() Выдает адресс страницы
+	 * getPage() Р’С‹РґР°РµС‚ Р°РґСЂРµСЃСЃ СЃС‚СЂР°РЅРёС†С‹
 	 * @throws Exception
 	 * @return (baseUrl + pageUrl)
 	 */
@@ -72,7 +72,7 @@ public class HomePage extends Page {
 		return (baseUrl + pageUrl);
 	 }
 	/**
-	 * openPage() Открыть страницу
+	 * openPage() РћС‚РєСЂС‹С‚СЊ СЃС‚СЂР°РЅРёС†Сѓ
 	 * @throws Exception
 	 */
 	public void openPage() throws Exception {
@@ -81,7 +81,7 @@ public class HomePage extends Page {
 		//System.out.println(baseUrl + pageUrl);
 	 }
 	/**
-	 * clickHome() Нажать на текст "Главная"
+	 * clickHome() РќР°Р¶Р°С‚СЊ РЅР° С‚РµРєСЃС‚ "Р“Р»Р°РІРЅР°СЏ"
 	 * @throws Exception
 	 */
 	public void clickHome() throws Exception {
@@ -90,8 +90,8 @@ public class HomePage extends Page {
 		Thread.sleep(1000);
 	 }
 	/**
-	 * Не используется
-	 * clickPrize() Нажать на текст "Призы" 
+	 * РќРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
+	 * clickPrize() РќР°Р¶Р°С‚СЊ РЅР° С‚РµРєСЃС‚ "РџСЂРёР·С‹" 
 	 * @throws Exception
 	 */
 	public void clickPrize() throws Exception {
@@ -100,8 +100,8 @@ public class HomePage extends Page {
 		Thread.sleep(1000);
 	 }
 	/**
-	 * Не используется
-	 * clickWinner() Нажать на текст "Победители"
+	 * РќРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
+	 * clickWinner() РќР°Р¶Р°С‚СЊ РЅР° С‚РµРєСЃС‚ "РџРѕР±РµРґРёС‚РµР»Рё"
 	 * @throws Exception
 	 */
 	public void clickWinner() throws Exception {
@@ -110,7 +110,7 @@ public class HomePage extends Page {
 		Thread.sleep(1000);
 	 }
 	/**
-	 * clickAuth() Нажать на текст "ВХОД"
+	 * clickAuth() РќР°Р¶Р°С‚СЊ РЅР° С‚РµРєСЃС‚ "Р’РҐРћР”"
 	 * @throws Exception
 	 */
 	public void clickAuth() throws Exception {
@@ -119,7 +119,7 @@ public class HomePage extends Page {
 		Thread.sleep(1000);
 	 }
 	/**
-	 * clickRegister() Нажать на текст "РЕГИСТРАЦИЯ"
+	 * clickRegister() РќР°Р¶Р°С‚СЊ РЅР° С‚РµРєСЃС‚ "Р Р•Р“РРЎРўР РђР¦РРЇ"
 	 * @throws Exception
 	 */
 	public void clickRegister() throws Exception {
@@ -128,8 +128,8 @@ public class HomePage extends Page {
 		Thread.sleep(1000);
 	 }
 	/**
-	 * Не используется
-	 * clickPopUpRegBtn() Нажать на текст "РЕГИСТРАЦИЯ" в всплывающем попапе
+	 * РќРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
+	 * clickPopUpRegBtn() РќР°Р¶Р°С‚СЊ РЅР° С‚РµРєСЃС‚ "Р Р•Р“РРЎРўР РђР¦РРЇ" РІ РІСЃРїР»С‹РІР°СЋС‰РµРј РїРѕРїР°РїРµ
 	 * @throws Exception
 	 */
 	public void clickPopUpRegBtn() throws Exception {

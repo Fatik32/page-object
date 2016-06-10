@@ -3,20 +3,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import static org.junit.Assert.*;
 /**
- * Страница авторизации Возможно не будет  использована
+ * РЎС‚СЂР°РЅРёС†Р° Р°РІС‚РѕСЂРёР·Р°С†РёРё Р’РѕР·РјРѕР¶РЅРѕ РЅРµ Р±СѓРґРµС‚  РёСЃРїРѕР»СЊР·РѕРІР°РЅР°
  * @author a.fatov
- * Переменные:
+ * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
  * @public WebDriver driver
  * @public String pageUrl
- * Методы:
+ * пїЅпїЅпїЅпїЅпїЅпїЅ:
  * @public HomePage(WebDriver driver) throws Exception
  * @public String getPage() throws Exception
  * @public void openPage() throws Exception
  */
 public class AuthorizationPage extends Page {
-	//interface нужно добавить интерфейс для совместно используемых констант
-	//if(elem.Displayed) проверка есть элемент или нет
-	//										Переменные
+	//if(elem.Displayed) РїСЂРѕРІРµСЂРєР° РµСЃС‚СЊ СЌР»РµРјРµРЅС‚ РёР»Рё РЅРµС‚
+	//										РџРµСЂРµРјРµРЅРЅС‹Рµ
 	public WebDriver driver;
 	public String pageUrl = "/home.html";
 	public By usernameLocator = By.name("login");
@@ -25,11 +24,11 @@ public class AuthorizationPage extends Page {
 	public By errorsLocator = By.className("errors");
 	public String Login = "a.fatov";
 	public String Password = "Fatik32rus";
-	//    									Методы
+	//    									РњРµС‚РѕРґС‹
 	public AuthorizationPage(WebDriver driver) throws Exception {
 		this.driver = driver;
 	}
-	//Авторизация с правильным логином
+	//РђРІС‚РѕСЂРёР·Р°С†РёСЏ СЃ РїСЂР°РІРёР»СЊРЅС‹Рј Р»РѕРіРёРЅРѕРј
 	public void loginAs() throws Exception {
 	    driver.findElement(usernameLocator).clear();
 	    driver.findElement(usernameLocator).sendKeys("a.fatov");
@@ -38,7 +37,7 @@ public class AuthorizationPage extends Page {
 	    driver.findElement(loginButtonLocator).click();
 	    System.out.println("AuthorizationPage.loginAs() success!");
 	}
-	//Авторизация с неправильным логином
+	//РђРІС‚РѕСЂРёР·Р°С†РёСЏ СЃ РЅРµРїСЂР°РІРёР»СЊРЅС‹Рј Р»РѕРіРёРЅРѕРј
 	public void loginAsInvalidLogin() throws Exception {
 	    driver.findElement(usernameLocator).clear();
 	    driver.findElement(usernameLocator).sendKeys("a.fatov123");

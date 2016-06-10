@@ -1,6 +1,6 @@
 package zobo2016uat.pageObject;
 /** 
- * Абстрактный класс PageObject
+ * РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ PageObject
  * @author a.fatov
  */
 public abstract class Page {
