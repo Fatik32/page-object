@@ -2,14 +2,14 @@ package zobo2016uat.pageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 /**
- * Страница проверки возраста
+ * РЎС‚СЂР°РЅРёС†Р° РїСЂРѕРІРµСЂРєРё РІРѕР·СЂР°СЃС‚Р°
  * @author a.fatov
- * Переменные:
+ * РџРµСЂРµРјРµРЅРЅС‹Рµ:
  * @public WebDriver driver
  * @public String pageUrl
  * @public By yesButtonLocator
  * @public By noButtonLocator
- * Методы:
+ * РњРµС‚РѕРґС‹:
  * @public AgeVerificationPage(WebDriver driver) throws Exception
  * @public String getPage() throws Exception
  * @public void openPage() throws Exception
@@ -20,15 +20,15 @@ import org.openqa.selenium.WebDriver;
  * @public void clickYesButton() throws Exception
  */
 public class AgeVerificationPage extends Page {	
-				//                   Переменные
+				//                   РџРµСЂРµРјРµРЅРЅС‹Рµ
 	public WebDriver driver;
 	public String pageUrl = "ru/overlays/age-verification.html";
 	public By yesButtonLocator = By.id("agevalidation-confirm");
 	public By noButtonLocator = By.id("agevalidation-deny");	
-				//	                    Методы
+				//	                    РњРµС‚РѕРґС‹
 	/**
-	 * Конструктор!
-	 * Метод для передачи обьекта driver
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ!
+	 * РњРµС‚РѕРґ РґР»СЏ РїРµСЂРµРґР°С‡Рё РѕР±СЊРµРєС‚Р° driver
 	 * @param driver
 	 * @throws Exception
 	 */
@@ -36,7 +36,7 @@ public class AgeVerificationPage extends Page {
 		this.driver = driver;
 	}
 	/**
-	 * Выдает адресс страницы
+	 * Р’С‹РґР°РµС‚ Р°РґСЂРµСЃСЃ СЃС‚СЂР°РЅРёС†С‹
 	 * @throws Exception
 	 * @return (baseUrl + pageUrl)
 	 */
@@ -46,7 +46,7 @@ public class AgeVerificationPage extends Page {
 		return (baseUrl + pageUrl);
 	 }
 	/**
-	 * Открыть страницу
+	 * РћС‚РєСЂС‹С‚СЊ СЃС‚СЂР°РЅРёС†Сѓ
 	 * @throws Exception
 	 */
 	public void openPage() throws Exception {
@@ -55,7 +55,7 @@ public class AgeVerificationPage extends Page {
 		//System.out.println(baseUrl + pageUrl);
 	 }
 	/**
-	 * Нажать на кнопку "ДА"
+	 * РќР°Р¶Р°С‚СЊ РЅР° РєРЅРѕРїРєСѓ "Р”Рђ"
 	 * @throws Exception
 	 */
 	public void clickYesButton() throws Exception {
@@ -64,7 +64,7 @@ public class AgeVerificationPage extends Page {
 		Thread.sleep(1000);
 	 }
 	/**
-	 * Нажать на кнопку "НЕТ"
+	 * РќР°Р¶Р°С‚СЊ РЅР° РєРЅРѕРїРєСѓ "РќР•Рў"
 	 * @throws Exception
 	 */
 	public void clickNoButton() throws Exception {
@@ -73,7 +73,7 @@ public class AgeVerificationPage extends Page {
 		Thread.sleep(1000);
 	 }
 	/**
-	 * Пройти проверку возраста, оказываемся на главной странице
+	 * РџСЂРѕР№С‚Рё РїСЂРѕРІРµСЂРєСѓ РІРѕР·СЂР°СЃС‚Р°, РѕРєР°Р·С‹РІР°РµРјСЃСЏ РЅР° РіР»Р°РІРЅРѕР№ СЃС‚СЂР°РЅРёС†Рµ
 	 * @throws Exception
 	 */
     public void ageVerificationTrue() throws Exception{
