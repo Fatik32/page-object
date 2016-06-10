@@ -23,7 +23,7 @@ public class AgeVerificationPage extends Page {
 	//interface нужно добавить интерфейс для совместно используемых констант	
 				//                   Переменные
 	public WebDriver driver;
-	public String pageUrl = "/ru/overlays/age-verification.html";
+	public String pageUrl = "ru/overlays/age-verification.html";
 	public By yesButtonLocator = By.id("agevalidation-confirm");
 	public By noButtonLocator = By.id("agevalidation-deny");	
 				//	                    Методы
@@ -62,7 +62,7 @@ public class AgeVerificationPage extends Page {
 	public void clickYesButton() throws Exception {
 		driver.findElement(yesButtonLocator).click();
 		//driver.findElement(By.id("agevalidation-confirm")).click();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	 }
 	/**
 	 * Нажать на кнопку "НЕТ"
@@ -71,7 +71,7 @@ public class AgeVerificationPage extends Page {
 	public void clickNoButton() throws Exception {
 		driver.findElement(noButtonLocator).click();
 		//driver.findElement(By.id("agevalidation-deny")).click();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	 }
 	/**
 	 * Пройти проверку возраста, оказываемся на главной странице

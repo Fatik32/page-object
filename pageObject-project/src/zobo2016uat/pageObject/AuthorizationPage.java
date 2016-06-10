@@ -1,15 +1,24 @@
 package zobo2016uat.pageObject;
 import org.openqa.selenium.By;
-/**
- * Страница авторизации
- */
 import org.openqa.selenium.WebDriver;
 import static org.junit.Assert.*;
+/**
+ * Страница авторизации
+ * @author a.fatov
+ * Переменные:
+ * @public WebDriver driver
+ * @public String pageUrl
+ * Методы:
+ * @public HomePage(WebDriver driver) throws Exception
+ * @public String getPage() throws Exception
+ * @public void openPage() throws Exception
+ */
 public class AuthorizationPage extends Page {
 	public WebDriver driver;
 	//interface нужно добавить интерфейс для совместно используемых констант
 	//if(elem.Displayed) проверка есть элемент или нет
 	//http://essa2016-uat.posterone.ru/content/efes/essa/russia/essa2016/ru/overlays/age-verification.html
+	//										Переменные
 	public String pageUrl = "/home.html";
 	public By usernameLocator = By.name("login");
 	public By passwordLocator = By.name("password");
@@ -17,6 +26,7 @@ public class AuthorizationPage extends Page {
 	public By errorsLocator = By.className("errors");
 	public String Login = "a.fatov";
 	public String Password = "Fatik32rus";
+	//    									Методы
 	public AuthorizationPage(WebDriver driver) throws Exception {
 		this.driver = driver;
 	}
