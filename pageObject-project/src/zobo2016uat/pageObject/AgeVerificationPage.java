@@ -19,8 +19,7 @@ import org.openqa.selenium.WebDriver;
  * @public void clickLoginButton() throws Exception
  * @public void clickYesButton() throws Exception
  */
-public class AgeVerificationPage extends Page {
-	//interface нужно добавить интерфейс для совместно используемых констант	
+public class AgeVerificationPage extends Page {	
 				//                   Переменные
 	public WebDriver driver;
 	public String pageUrl = "ru/overlays/age-verification.html";
