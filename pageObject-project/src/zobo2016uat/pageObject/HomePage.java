@@ -31,7 +31,6 @@ import org.openqa.selenium.WebDriver;
  * @public void clickPopUpRegBtn() throws Exception Не используется
  */
 public class HomePage extends Page {
-	//interface нужно добавить интерфейс для совместно используемых констант	
 	//                   				Переменные
 	public WebDriver driver;
 	public String pageUrl = "/home.html";
