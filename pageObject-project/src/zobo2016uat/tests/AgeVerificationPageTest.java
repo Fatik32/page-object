@@ -3,7 +3,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import miller2016uat.pageObject.AgeVerificationPage;
+import zobo2016uat.pageObject.AgeVerificationPage;
 /**
  * 
  * @Тест страницы верификации возраста
