@@ -4,8 +4,8 @@ import org.junit.*;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import miller2016uat.pageObject.AgeVerificationPage;
-import miller2016uat.pageObject.HomePage;
+import zobo2016uat.pageObject.AgeVerificationPage;
+import zobo2016uat.pageObject.HomePage;
 /**
  * 
  * @Тест главной (домашней) страницы

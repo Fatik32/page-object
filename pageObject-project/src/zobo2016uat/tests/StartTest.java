@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 //import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import essa2016uat.pageObject.AuthorizationPage;
+import zobo2016uat.pageObject.AuthorizationPage;
 //import tests.Driver;
 
 public class StartTest {

@@ -22,7 +22,7 @@ import org.openqa.selenium.WebDriver;
 public class AgeVerificationPage extends Page {	
 				//                   Переменные
 	public WebDriver driver;
-	public String pageUrl = "ru/overlays/age-verification.html";
+	public String pageUrl = "/ru/overlays/age-verification.html";
 	public By yesButtonLocator = By.id("agevalidation-confirm");
 	public By noButtonLocator = By.id("agevalidation-deny");	
 				//	                    Методы
