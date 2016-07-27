@@ -5,10 +5,10 @@ import static org.junit.Assert.*;
 /**
  * Страница авторизации Возможно не будет  использована
  * @author a.fatov
- * ����������:
+ * Переменные:
  * @public WebDriver driver
  * @public String pageUrl
- * ������:
+ * Методы:
  * @public HomePage(WebDriver driver) throws Exception
  * @public String getPage() throws Exception
  * @public void openPage() throws Exception
