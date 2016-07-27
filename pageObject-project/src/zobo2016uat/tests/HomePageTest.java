@@ -38,70 +38,101 @@ public class HomePageTest {
 	    driver.manage().window().maximize();
     	System.out.println("@Before succes!");
     }
+
+    
+    /**
+     * TestClickRegister() Тест перехода на страницу регистрации
+     * @throws Exception
+     */
+        @Test
+        //@Ignore
+        public void TestClickRegister() throws Exception{
+        	System.out.println("@Test ClickRegister start!");
+        	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver); // Создаем обьект страницы проверки возраста
+        	HomePage homePage = new HomePage(driver); // Создаем обьект домашней (главной) старницы
+        	System.out.println("Домашняя страница: " + homePage.getPage());
+        	
+        	ageVerificationPage.ageVerificationTrue(); // Пройти проверку возраста, оказываемся на главной странице
+        	homePage.clickRegister();                  // Нажать на кнопку "Регистрация"
+        	
+        	System.out.println("Title." + driver.getTitle());
+            Assert.assertTrue(driver.getTitle().contains("Регистрация")); // Проверка Title страницы на предмет включения заранее известного текста
+            System.out.println("@Test ClickRegister success!");
+    }
+        
+        
+        
+        /**
+         * TestClickAuth() Тест перехода на страницу регистрации
+         * @throws Exception
+         */
+            @Test
+            //@Ignore
+            public void TestClickAuth() throws Exception{
+            	System.out.println("@Test ClickAuth start!");
+            	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver); // Создаем обьект страницы проверки возраста
+            	HomePage homePage = new HomePage(driver); // Создаем обьект домашней (главной) старницы
+            	System.out.println("Домашняя страница: " + homePage.getPage());
+            	
+            	ageVerificationPage.ageVerificationTrue(); // Пройти проверку возраста, оказываемся на главной странице
+            	homePage.clickAuth();                      // Нажать на кнопку "ВХОД"
+            	
+            	System.out.println("Title." + driver.getTitle());
+            	//Title проверять нельзя, надо поставить что-нибудь другое
+                //Assert.assertTrue(driver.getTitle().contains("Регистрация")); // Проверка Title страницы на предмет включения заранее известного текста
+                System.out.println("@Test ClickAuth success!");
+        } 
 /**
- * TestClickHome() Тест перехода по ссылке на главную страницу
- * @throws Exception
+* TestClickHome() Тест перехода по ссылке на главную страницу
+* @throws Exception
 */
     @Test
     //@Ignore
     public void TestClickHome() throws Exception{
     	System.out.println("@Test ClickHome start!");
-    	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
-    	HomePage homePage = new HomePage(driver);
+    	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver); // Создаем обьект страницы проверки возраста
+    	HomePage homePage = new HomePage(driver); // Создаем обьект домашней (главной) старницы
     	System.out.println("Домашняя страница: " + homePage.getPage());
     	
-    	ageVerificationPage.ageVerificationTrue(); //����� ����� �������� �� ������� ��������
-    	homePage.clickHome();                      //�������� �� �������
+    	ageVerificationPage.ageVerificationTrue(); // Пройти проверку возраста, оказываемся на главной странице
+    	homePage.clickHome();                      // Нажать на текст "Главная"
     	
     	System.out.println("Title." + driver.getTitle());
-        Assert.assertTrue(driver.getTitle().contains("World music tour")); // �������� Title ������� ��������
+        Assert.assertTrue(driver.getTitle().contains("Деньги в банке")); // Проверка Title страницы на предмет включения заранее известного текста
         System.out.println("@Test ClickHome success!");
 }
 /**
- * TestClickPrize() Тест прохождения верификации возраста
+ * TestClickRules() Тест перехода по ссылке на страницу правил акции
  * @throws Exception
  */
     @Test
-    @Ignore
-    public void TestClickPrize() throws Exception{
-    	System.out.println("@Test ClickPrize start!");
-    	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
-    	HomePage homePage = new HomePage(driver);
-    	System.out.println("�������� ������������� ��������: " + homePage.getPage());
+    //@Ignore
+    public void TestClickRules() throws Exception{
+    	System.out.println("@Test ClickRules start!");
+    	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver); // Создаем обьект страницы проверки возраста
+    	HomePage homePage = new HomePage(driver); // Создаем обьект домашней (главной) старницы
+    	System.out.println("Домашняя страница: " + homePage.getPage());
     	
-    	ageVerificationPage.ageVerificationTrue(); //�������� �������� �������� � �������� �� ������� ��������
-    	homePage.clickPrize();                      //��������� �� �������� ������
+    	ageVerificationPage.ageVerificationTrue(); // Пройти проверку возраста, оказываемся на главной странице
+    	homePage.clickRules();                      // Нажать на текст "Правила акции"
     	
     	System.out.println("Title." + driver.getTitle());
-        Assert.assertTrue(driver.getTitle().contains("�����")); // �������� Title ������� ��������
-    	System.out.println("@Test ClickPrize success!");
+        Assert.assertTrue(driver.getTitle().contains("Правила акции")); // Проверка Title страницы на предмет включения заранее известного текста
+        System.out.println("@Test ClickRules success!");
 }
+
+    
+    
+    
+    
+ 
 /**
- * TestClickWinner() Тест прохождения верификации возраста
+ * TestClickAuth() Тест прохождения верификации возраста (неактивен)
  * @throws Exception
  */
     @Test
     @Ignore
-    public void TestClickWinner() throws Exception{
-        System.out.println("@Test ClickWinner start!");
-        AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
-        HomePage homePage = new HomePage(driver);
-        System.out.println("�������� ������������� ��������: " + homePage.getPage());
-        	
-        ageVerificationPage.ageVerificationTrue(); //�������� �������� �������� � �������� �� ������� ��������
-        homePage.clickWinner();                      //��������� �� �������� �����������
-        	
-        System.out.println("Title." + driver.getTitle());
-        Assert.assertTrue(driver.getTitle().contains("����������")); // �������� Title ������� ��������
-        System.out.println("@Test ClickWinner success!");
-}
-/**
- * TestClickAuth() Тест прохождения верификации возраста
- * @throws Exception
- */
-    @Test
-    @Ignore
-    public void TestClickAuth() throws Exception{
+    public void TestClickAuthOld() throws Exception{
     System.out.println("@Test ClickAuth start!");
     AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
     HomePage homePage = new HomePage(driver);
@@ -113,13 +144,13 @@ public class HomePageTest {
     System.out.println("Title." + driver.getTitle());
 }
 /**
- * TestClickRegister() Тест прохождения верификации возраста
+ * TestClickRegister() Тест прохождения верификации возраста (неактивен)
  * ������ ���������� ��-�� ������������ ������ ��� ������ ������������
  * @throws Exception
  */
     @Test
     @Ignore
-    public void TestClickRegister() throws Exception{
+    public void TestClickRegisterOld() throws Exception{
     System.out.println("@Test ClickRegister start!");
     AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
     HomePage homePage = new HomePage(driver);
@@ -135,12 +166,12 @@ public class HomePageTest {
     System.out.println("@Test ClickRegister success!");
     }
 /**
- * TestClickPopUpRegBtn() Тест прохождения верификации возраста
+ * TestClickPopUpRegBtn() Тест прохождения верификации возраста (неактивен)
  * @throws Exception
  */
     @Test
     @Ignore
-    public void TestClickPopUpRegBtn() throws Exception{
+    public void TestClickPopUpRegBtnOld() throws Exception{
     System.out.println("@Test ClickPopUpRegBtn start!");
     AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
     HomePage homePage = new HomePage(driver);
@@ -159,7 +190,7 @@ public class HomePageTest {
     System.out.println("@Test ClickPopUpRegBtn success!");
 }
 /**
- * tearDown() Тест прохождения верификации возраста
+ * tearDown() Метод вызываемый после окончания каждого теста
  * @throws Exception
  */
     @After

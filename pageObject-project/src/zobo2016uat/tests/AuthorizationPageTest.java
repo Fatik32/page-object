@@ -11,12 +11,17 @@ import zobo2016uat.pageObject.AgeVerificationPage;
 /**
  * 
  * @author a.fatov
- * @Тест страницы верификации возраста
+ * @Тест страницы авторизации (НЕ ИСПОЛЬЗУЕТСЯ)
  */
 
 public class AuthorizationPageTest {
 	public WebDriver driver;
-    @Before
+    
+	/**
+	 * setUp() Метод вызываемый перед началом каждого теста
+	 * @throws Exception
+	 */
+	@Before
     public void setUp() throws Exception {
     	driver = new FirefoxDriver();
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -25,6 +30,10 @@ public class AuthorizationPageTest {
     	System.out.println("@Before succes!");
     }
 
+	/**
+	 * TestAgeVerificationTrue() Тест прохождения верификации возраста
+	 * @throws Exception
+	 */
 	@Test
     public void TestAgeVerificationTrue() throws Exception{
     	System.out.println("@Test 1 start!");
@@ -38,6 +47,10 @@ public class AuthorizationPageTest {
         System.out.println("@Test 1 success!");
 }
 	
+	/**
+	 * TestAgeVerificationFalse() Тест неудачного прохождения верификации возраста	
+	 * @throws Exception
+	 */
 	@Test
     public void TestAgeVerificationFalse() throws Exception{
     	System.out.println("@Test 2 start!");
@@ -60,6 +73,10 @@ public class AuthorizationPageTest {
         System.out.println("@Test 2 success!");
 }*/
 
+	/**
+	 * tearDown() Метод вызываемый после окончания каждого теста
+	 * @throws Exception
+	 */
     @After
     public void tearDown() throws Exception {
     	Thread.sleep(1000);

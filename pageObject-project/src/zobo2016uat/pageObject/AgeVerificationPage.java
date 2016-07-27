@@ -77,11 +77,11 @@ public class AgeVerificationPage extends Page {
 	 * @throws Exception
 	 */
     public void ageVerificationTrue() throws Exception{
-    	System.out.println("@ageVerificationTrue start!");
+    	System.out.println("@ageVerificationTrue start");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
     	ageVerificationPage.openPage();
     	ageVerificationPage.clickYesButton();
     	
-        System.out.println("@ageVerificationTrue success!");
+        System.out.println("@ageVerificationTrue success");
 }	
 	}
