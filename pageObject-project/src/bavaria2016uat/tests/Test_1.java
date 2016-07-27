@@ -1,4 +1,4 @@
-package zobo2016uat.tests;
+package bavaria2016uat.tests;
 //import static org.junit.Assert.*;
 
 import java.util.concurrent.TimeUnit;
@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import zobo2016uat.pageObject.AuthorizationPage;
+import bavaria2016uat.pageObject.AuthorizationPage;
 public class Test_1 {
 	public WebDriver driver;
         @Before
