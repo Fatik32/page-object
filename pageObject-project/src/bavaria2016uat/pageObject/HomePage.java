@@ -35,20 +35,38 @@ import org.openqa.selenium.WebDriver;
 public class HomePage extends Page {
 	//                   				Переменные
 	public WebDriver driver;
-	public String pageUrl = "/home.html";
+	public String pageUrl = "/ru/home.html";
 	//	HEADER
-	public By user_profileLocator = By.cssSelector("a[href='/ru/user-profile.html']"); //Ссылка на страницу профиля пользователя
+	
+	            // <-- USER NOT LOGGED -->
 	public By registerLocator = By.cssSelector("a[title='РЕГИСТРАЦИЯ']"); //Ссылка на страницу регистрации
 	public By authLocator = By.cssSelector("span[title='ВХОД']"); //Ссылка на страницу авторизации
+	            // </-- USER NOT LOGGED -->
 	public By homeLocator = By.xpath("//div[@id='mainNav']//div[@role='navigation']//a[@href='/ru/home.html']"); //Ссылка на главную страницу 
+	public By contact_usLocator = By.cssSelector("a[href='/ru/contact-us.html']"); //Ссылка на страницу  "Обратная связь"
+	
+	
+	
+	
+	public By user_profileLocator = By.cssSelector("a[href='/ru/user-profile.html']"); //Ссылка на страницу профиля пользователя
 	public By rulesLocator = By.cssSelector("a[href='/ru/rules.html']"); //Ссылка на страницу с правилами акции
 	//	BODY
+	public By rulesMaltLocator = By.cssSelector("a[href='/ru/malt/rules-malt.html']"); //Ссылка на страницу с правилами акции
+	
+	
+	
+	
+	
 	public By orderPrizeLocator = By.cssSelector("button[class='[ main-button  main-button--prize ]']"); //Кнопка "Заказать приз"
 	public By activateCodeLocator = By.cssSelector("button[class='[ main-button  main-button--code ]']"); //Кнопка "Зарегистрировать код"
 	//	FOOTER
+	
+	
+	
 	public By faqLocator = By.cssSelector("a[href='/ru/faq.html']"); //Ссылка на страницу "FAQ"
-	public By contact_usLocator = By.cssSelector("a[href='/ru/contact-us.html']"); //Ссылка на страницу  "Обратная связь"
 	//  AUTHORIZATION
+	
+	
 	public By loginEmailLocator;
 	public By passwordLocator;
 	public By loginButtonLocator;
