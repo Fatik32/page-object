@@ -6,12 +6,12 @@ import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import zobo2016uat.pageObject.AgeVerificationPage;
+import zobo2016uat.pageObject.AuthorizationPage;
 
 /**
  * 
  * @author a.fatov
- * @Тест страницы авторизации (НЕ ИСПОЛЬЗУЕТСЯ)
+ * @Тест страницы авторизации
  */
 
 public class AuthorizationPageTest {
@@ -30,11 +30,40 @@ public class AuthorizationPageTest {
     	System.out.println("@Before succes!");
     }
 
+
+	/**
+	 * AuthorizationPageTrue() Тест прохождения авторизации
+	 * @throws Exception
+	 */
+	@Test
+    public void TestAuthorizationTrue() throws Exception{
+    	System.out.println("@Test 1 start!");
+		AuthorizationPage AuthorizationPage = new AuthorizationPage(driver);
+    	System.out.println("Страница павторизации: " + AuthorizationPage.getPage());
+
+		AuthorizationPage.getPage();
+		AuthorizationPage.openPage();
+		AuthorizationPage.loginAs();
+
+        System.out.println("@Test 1 success!");
+}
+
+
+
+
+
+
+
+
+
+
+
+
 	/**
 	 * TestAgeVerificationTrue() Тест прохождения верификации возраста
 	 * @throws Exception
 	 */
-	@Test
+	/*@Test
     public void TestAgeVerificationTrue() throws Exception{
     	System.out.println("@Test 1 start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
@@ -46,12 +75,13 @@ public class AuthorizationPageTest {
     	
         System.out.println("@Test 1 success!");
 }
+*/
 	
 	/**
 	 * TestAgeVerificationFalse() Тест неудачного прохождения верификации возраста	
 	 * @throws Exception
 	 */
-	@Test
+	/*@Test
     public void TestAgeVerificationFalse() throws Exception{
     	System.out.println("@Test 2 start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
@@ -63,6 +93,7 @@ public class AuthorizationPageTest {
     	
         System.out.println("@Test 2 success!");
 }
+*/
 	/*@Test
     public void TestInvalidLogin() throws Exception{
     	System.out.println("@Test 2 start!");

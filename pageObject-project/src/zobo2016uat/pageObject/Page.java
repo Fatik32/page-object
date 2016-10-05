@@ -6,7 +6,8 @@ package zobo2016uat.pageObject;
 public abstract class Page {
 	public Page() {
 	}
-	public String baseUrl = "http://bochka2016-uat.efessky.net";
+	public String baseUrl = "https://www.google.ru";
+	//public String baseUrl = "http://test-cl.checkout.ru";
 	public String pageUrl = "";
 	public abstract String getPage() throws Exception;
 	public abstract void openPage() throws Exception;
