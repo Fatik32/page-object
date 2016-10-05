@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import zobo2016uat.pageObject.AgeVerificationPage;
 /**
  * 
- * @Тест страницы верификации возраста
+ * @Тест страницы верификации возраста (test тест)
  * @author a.fatov
  * Переменные:
  * @public WebDriver driver
