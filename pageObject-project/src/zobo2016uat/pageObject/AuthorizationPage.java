@@ -23,7 +23,7 @@ public class AuthorizationPage extends Page {
 	public By passwordLocator = By.name("j_password");
     public By loginButtonLocator = By.className("z-button-os");
 	//public By errorsLocator = By.className("errors");
-	public String Login = "a.fatov";
+	public String Login = "a.fatov@inbox.ru";
 	public String Password = "Fatik32rus";
 	//    									Методы
 	public AuthorizationPage(WebDriver driver) throws Exception {
