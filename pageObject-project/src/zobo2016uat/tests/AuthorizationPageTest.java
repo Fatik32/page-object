@@ -39,7 +39,7 @@ public class AuthorizationPageTest {
     public void TestAuthorizationTrue() throws Exception{
     	System.out.println("@Test 1 start!");
 		AuthorizationPage AuthorizationPage = new AuthorizationPage(driver);
-    	System.out.println("Страница павторизации: " + AuthorizationPage.getPage());
+    	System.out.println("Страница авторизации: " + AuthorizationPage.getPage());
 
 		AuthorizationPage.getPage();
 		AuthorizationPage.openPage();

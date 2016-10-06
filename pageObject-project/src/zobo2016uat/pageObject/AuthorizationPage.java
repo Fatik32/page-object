@@ -20,8 +20,8 @@ public class AuthorizationPage extends Page {
 	//public String pageUrl = "/login";
 	public String pageUrl = "";
 	public By usernameLocator = By.name("j_username");
-	public By passwordLocator = By.name("j_password	");
-	public By loginButtonLocator = By.id("mHPVu");
+	public By passwordLocator = By.name("j_password");
+    public By loginButtonLocator = By.className("z-button-os");
 	//public By errorsLocator = By.className("errors");
 	public String Login = "a.fatov";
 	public String Password = "Fatik32rus";
