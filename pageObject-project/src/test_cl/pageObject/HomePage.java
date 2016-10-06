@@ -37,7 +37,23 @@ import static org.junit.Assert.assertTrue;
 public class HomePage extends Page {
 	//                   				Переменные
 	public WebDriver driver;
-	public String pageUrl = "/home.html";
+	public String pageUrl = "/#home";
+
+	// LEFT MENU
+	public By accountsMenuLocator = By.cssSelector("a[title='Аккаунты']"); //Ссылка на страницу профиля пользователя
+
+
+
+
+
+
+
+
+
+
+
+
+
 	//	HEADER
 	public By user_profileLocator = By.cssSelector("a[href='/ru/user-profile.html']"); //Ссылка на страницу профиля пользователя
 	public By registerLocator = By.cssSelector("a[title='РЕГИСТРАЦИЯ']"); //Ссылка на страницу регистрации
@@ -97,9 +113,28 @@ public class HomePage extends Page {
 	 * clickHome() Нажать на текст "Главная"
 	 * @throws Exception
 	 */
-	
-	
-	
+
+	/**
+	 * clickAccounts() Нажать на вкладку "Аккаунты"
+	 * @throws Exception
+	 */
+	public void clickAccounts() throws Exception {
+		System.out.println("@clickAccounts start");
+		driver.findElement(accountsMenuLocator).click();
+		Thread.sleep(1000);
+		System.out.println("@clickAccounts success");
+	}
+
+
+
+
+
+
+
+
+
+
+
 	/**
 	 * clickRegister() Нажать на кнопку "Регистрация"
 	 * @throws Exception

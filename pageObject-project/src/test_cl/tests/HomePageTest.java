@@ -4,7 +4,7 @@ import org.junit.*;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import test_cl.pageObject.AgeVerificationPage;
+import test_cl.pageObject.AuthorizationPage;
 import test_cl.pageObject.HomePage;
 
 import java.util.concurrent.TimeUnit;
@@ -42,13 +42,53 @@ public class HomePageTest {
     	System.out.println("@Before succes!");
     }
 
-    
+
+
+
     /**
      * TestClickRegister() Тест перехода на страницу регистрации
      * @throws Exception
      */
+    @Test
+    //@Ignore
+    public void TestClickAccounts() throws Exception{
+        System.out.println("@Test clickAccounts start!");
+        AuthorizationPage authorizationPage = new AuthorizationPage(driver); // Создаем обьект страницы проверки возраста
+        HomePage homePage = new HomePage(driver); // Создаем обьект домашней (главной) старницы
+        System.out.println("Домашняя страница: " + homePage.getPage());
+
+        authorizationPage.getPage();
+        authorizationPage.openPage();
+        authorizationPage.loginAs(); // Пройти проверку возраста, оказываемся на главной странице
+        homePage.getPage();
+        homePage.openPage();
+        homePage.clickAccounts();                  // Нажать на кнопку "Регистрация"
+
+        System.out.println("Title." + driver.getTitle());
+        //Assert.assertTrue(driver.getTitle().contains("Регистрация")); // Проверка Title страницы на предмет включения заранее известного текста
+        System.out.println("@Test clickAccounts success!");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * TestClickRegister() Тест перехода на страницу регистрации
+     * @throws Exception
+     */
+/*
         @Test
-        //@Ignore
+        @Ignore
         public void TestClickRegister() throws Exception{
         	System.out.println("@Test ClickRegister start!");
         	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver); // Создаем обьект страницы проверки возраста
@@ -69,8 +109,9 @@ public class HomePageTest {
          * TestClickAuth() Тест перехода на страницу регистрации
          * @throws Exception
          */
+/*
             @Test
-            //@Ignore
+            @Ignore
             public void TestClickAuth() throws Exception{
             	System.out.println("@Test ClickAuth start!");
             	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver); // Создаем обьект страницы проверки возраста
@@ -89,8 +130,9 @@ public class HomePageTest {
 * TestClickHome() Тест перехода по ссылке на главную страницу
 * @throws Exception
 */
+/*
     @Test
-    //@Ignore
+    @Ignore
     public void TestClickHome() throws Exception{
     	System.out.println("@Test ClickHome start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver); // Создаем обьект страницы проверки возраста
@@ -108,8 +150,9 @@ public class HomePageTest {
  * TestClickRules() Тест перехода по ссылке на страницу правил акции
  * @throws Exception
  */
+/*
     @Test
-    //@Ignore
+    @Ignore
     public void TestClickRules() throws Exception{
     	System.out.println("@Test ClickRules start!");
     	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver); // Создаем обьект страницы проверки возраста
@@ -133,6 +176,7 @@ public class HomePageTest {
  * TestClickAuth() Тест прохождения верификации возраста (неактивен)
  * @throws Exception
  */
+/*
     @Test
     @Ignore
     public void TestClickAuthOld() throws Exception{
@@ -151,6 +195,7 @@ public class HomePageTest {
  * ������ ���������� ��-�� ������������ ������ ��� ������ ������������
  * @throws Exception
  */
+/*
     @Test
     @Ignore
     public void TestClickRegisterOld() throws Exception{
@@ -172,6 +217,7 @@ public class HomePageTest {
  * TestClickPopUpRegBtn() Тест прохождения верификации возраста (неактивен)
  * @throws Exception
  */
+/*
     @Test
     @Ignore
     public void TestClickPopUpRegBtnOld() throws Exception{
