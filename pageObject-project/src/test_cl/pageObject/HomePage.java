@@ -40,7 +40,11 @@ public class HomePage extends Page {
 	public String pageUrl = "/#home";
 
 	// LEFT MENU
-	public By accountsMenuLocator = By.cssSelector("a[title='Аккаунты']"); //Ссылка на страницу профиля пользователя
+	public By accountsMenuLocator = By.cssSelector("a[title='Аккаунты']"); // Раздел со списком аккаунтов
+	public By deliveriesMenuLocator = By.cssSelector("a[title='Службы доставки']"); // Раздел со списком служб доставок
+	public By shopsMenuLocator = By.cssSelector("a[title='Интернет магазины']"); // Раздел со списком интернет магазинов
+	public By ordersMenuLocator = By.cssSelector("a[title='Заказы']"); // Раздел со списком заказов
+	public By shipmentsMenuLocator = By.cssSelector("a[title='Интернет магазины']"); // Раздел для реестров
 
 
 
