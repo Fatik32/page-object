@@ -44,7 +44,17 @@ public class HomePage extends Page {
 	public By deliveriesMenuLocator = By.cssSelector("a[title='Службы доставки']"); // Раздел со списком служб доставок
 	public By shopsMenuLocator = By.cssSelector("a[title='Интернет магазины']"); // Раздел со списком интернет магазинов
 	public By ordersMenuLocator = By.cssSelector("a[title='Заказы']"); // Раздел со списком заказов
-	public By shipmentsMenuLocator = By.cssSelector("a[title='Интернет магазины']"); // Раздел для реестров
+	public By shipmentsMenuLocator = By.cssSelector("a[title='Реестры']"); // Раздел для реестров
+	public By usersMenuLocator = By.cssSelector("a[title='Пользователи']"); // Раздел со списком пользователей
+	public By audit_eventsMenuLocator = By.cssSelector("a[title='Журнал действий']"); // Раздел со списком действий
+	public By user_profileMenuLocator = By.cssSelector("a[title='Настройки профиля']"); // Раздел настроек профиля
+	public By billsMenuLocator = By.cssSelector("a[title='Счета']"); // Раздел со списком счетов
+	public By mailingMenuLocator = By.cssSelector("a[title='Рассылка уведомлений']"); // Раздел для рассылки уведомлений
+	public By allwarehousesMenuLocator = By.cssSelector("a[title='Склады']"); // Раздел для рассылки уведомлений
+	public By data_problemsMenuLocator = By.cssSelector("a[title='Проблемные города']"); // Раздел со списком проблемных городов
+	public By reportsMenuLocator = By.cssSelector("a[title='Отчёты']"); // Раздел со списком отчетов
+
+
 
 
 
