@@ -51,8 +51,8 @@ public class HomePageTest {
      */
     @Test
     //@Ignore
-    public void TestClickAccounts() throws Exception{
-        System.out.println("@Test clickAccounts start!");
+    public void TestClickAll() throws Exception{
+        System.out.println("@Test clickAll start!");
         AuthorizationPage authorizationPage = new AuthorizationPage(driver); // Создаем обьект страницы проверки возраста
         HomePage homePage = new HomePage(driver); // Создаем обьект домашней (главной) старницы
         System.out.println("Домашняя страница: " + homePage.getPage());
@@ -62,11 +62,23 @@ public class HomePageTest {
         authorizationPage.loginAs(); // Пройти проверку возраста, оказываемся на главной странице
         homePage.getPage();
         homePage.openPage();
-        homePage.clickAccounts();                  // Нажать на кнопку "Регистрация"
+        homePage.clickAccounts();                  // Нажать на вкладку "Аккаунты"
+        homePage.clickDeliveries();                  // Нажать на вкладку "Службы доставки"
+        homePage.clickShops();                  // Нажать на вкладку "Интернет магазины"
+        homePage.clickOrders();                  // Нажать на вкладку "Заказы"
+        homePage.clickShipments();                  // Нажать на вкладку "Реестры"
+        homePage.clickUsers();                  // Нажать на вкладку "Пользователи"
+        homePage.clickAudit_events();                  // Нажать на вкладку "Журнал действий"
+        homePage.clickUser_profile();                  // Нажать на вкладку "Настройки профиля"
+        homePage.clickBills();                  // Нажать на вкладку "Счета"
+        homePage.clickMailing();                  // Нажать на вкладку "Рассылка уведомлений"
+        homePage.clickAllwarehouses();                  // Нажать на вкладку "Склады"
+        homePage.clickData_problems();                  // Нажать на вкладку "Проблемные города"
+        homePage.clickReports();                  // Нажать на вкладку "Отчёты"
 
         System.out.println("Title." + driver.getTitle());
         //Assert.assertTrue(driver.getTitle().contains("Регистрация")); // Проверка Title страницы на предмет включения заранее известного текста
-        System.out.println("@Test clickAccounts success!");
+        System.out.println("@Test clickAll success!");
     }
 
 

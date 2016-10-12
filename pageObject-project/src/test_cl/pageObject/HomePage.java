@@ -139,6 +139,162 @@ public class HomePage extends Page {
 		System.out.println("@clickAccounts success");
 	}
 
+	/**
+	 * clickDeliveries() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+    public void clickDeliveries() throws Exception {
+        System.out.println("@clickDeliveries start");
+        driver.findElement(deliveriesMenuLocator).click();
+        Thread.sleep(1000);
+        System.out.println("@clickDeliveries success");
+    }
+
+	/**
+	 * clickShops() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+	public void clickShops() throws Exception {
+		System.out.println("@clickShops start");
+		driver.findElement(shopsMenuLocator).click();
+		Thread.sleep(1000);
+		System.out.println("@clickShops success");
+	}
+
+	/**
+	 * clickOrders() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+	public void clickOrders() throws Exception {
+		System.out.println("@clickOrders start");
+		driver.findElement(ordersMenuLocator).click();
+		Thread.sleep(5000);
+		System.out.println("@clickOrders success");
+	}
+
+	/**
+	 * clickShipments() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+	public void clickShipments() throws Exception {
+		System.out.println("@clickShipments start");
+		driver.findElement(shipmentsMenuLocator).click();
+		Thread.sleep(1000);
+		System.out.println("@clickShipments success");
+	}
+
+	/**
+	 * clickUsers() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+	public void clickUsers() throws Exception {
+		System.out.println("@clickUsers start");
+		driver.findElement(usersMenuLocator).click();
+		Thread.sleep(1000);
+		System.out.println("@clickUsers success");
+	}
+
+	/**
+	 * clickAudit_events() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+	public void clickAudit_events() throws Exception {
+		System.out.println("@clickAudit_events start");
+		driver.findElement(audit_eventsMenuLocator).click();
+		Thread.sleep(1000);
+		System.out.println("@clickAudit_events success");
+	}
+
+	/**
+	 * clickUser_profile() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+	public void clickUser_profile() throws Exception {
+		System.out.println("@clickUser_profile start");
+		driver.findElement(user_profileMenuLocator).click();
+		Thread.sleep(1000);
+		System.out.println("@clickUser_profile success");
+	}
+
+	/**
+	 * clickBills() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+	public void clickBills() throws Exception {
+		System.out.println("@clickBills start");
+		driver.findElement(billsMenuLocator).click();
+		Thread.sleep(1000);
+		System.out.println("@clickBills success");
+	}
+
+	/**
+	 * clickMailing() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+	public void clickMailing() throws Exception {
+		System.out.println("@clickMailing start");
+		driver.findElement(mailingMenuLocator).click();
+		Thread.sleep(1000);
+		System.out.println("@clickMailing success");
+	}
+
+	/**
+	 * clickAllwarehouses() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+	public void clickAllwarehouses() throws Exception {
+		System.out.println("@clickAllwarehouses start");
+		driver.findElement(allwarehousesMenuLocator).click();
+		Thread.sleep(1000);
+		System.out.println("@clickAllwarehouses success");
+	}
+
+	/**
+	 * clickAccounts() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+	public void clickData_problems() throws Exception {
+		System.out.println("@clickData_problems start");
+		driver.findElement(data_problemsMenuLocator).click();
+		Thread.sleep(1000);
+		System.out.println("@clickData_problems success");
+	}
+
+	/**
+	 * clickReports() Нажать на вкладку "Службы доставки"
+	 * @throws Exception
+	 */
+	public void clickReports() throws Exception {
+		System.out.println("@clickReports start");
+		driver.findElement(reportsMenuLocator).click();
+		Thread.sleep(1000);
+		System.out.println("@clickReports success");
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
