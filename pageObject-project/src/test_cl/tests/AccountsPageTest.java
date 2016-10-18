@@ -50,7 +50,8 @@ public class AccountsPageTest {
         LoginPage.openPage();
         LoginPage.loginAs();
         HomePage.clickAccounts();
-        AccountsPage.clickCreate();
+        AccountsPage.findAccountsAndSignIt();
+        //AccountsPage.clickCreate();
 
         System.out.println("@Test 1 success!");
     }

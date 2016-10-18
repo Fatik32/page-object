@@ -23,7 +23,8 @@ public class AccountsPage extends HomePage {
     public String pageUrl = "/#accounts";
 
     public By createButtonLocator = By.xpath("//tr[@valign='top']//button[@class='important z-button-os']");
-    public By searchInputLocator = By.xpath("//td[@width='190px']//input[@class='z-textbox']");
+    public By searchInputLocator = By.xpath("//td[@width='190px']//div[@id='pYIWf1']//input[@class='z-textbox']");
+    public By accountsBeforeSearchLocator = By.xpath("//td[@title='Артеммм']//a[@class='z-a']");
 
     //    									Методы
     public AccountsPage(WebDriver driver) throws Exception {
@@ -43,13 +44,14 @@ public class AccountsPage extends HomePage {
         System.out.println("AccountsPage.clickSearch() success!");
     }
 
-    /*
+
     public void findAccountsAndSignIt() throws Exception {
         System.out.println("AccountsPage.findAccountsAndSignIt() start!");
         driver.findElement(searchInputLocator).click();
         driver.findElement(searchInputLocator).clear();
-        driver.findElement(searchInputLocator).
+        driver.findElement(searchInputLocator).sendKeys("Артеммм");
+        driver.findElement(accountsBeforeSearchLocator).click();
         System.out.println("AccountsPage.findAccountsAndSignIt() success!");
     }
-*/
+
 }
