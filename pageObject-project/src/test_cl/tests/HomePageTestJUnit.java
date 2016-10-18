@@ -1,9 +1,8 @@
 package test_cl.tests;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-import org.openqa.selenium.ElementNotVisibleException;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import test_cl.pageObject.AuthorizationPage;
@@ -27,7 +26,7 @@ import java.util.concurrent.TimeUnit;
  * @public void TestClickPopUpRegBtn() throws Exception
  * @public void tearDown() throws Exception
  */
-public class HomePageTest {
+public class HomePageTestJUnit {
 					//                    Переменные
 	public WebDriver driver;
 					//                      Методы
@@ -35,7 +34,7 @@ public class HomePageTest {
  * setUp() Метод вызываемый перед началом каждого теста
  * @throws Exception
 */
-    @BeforeMethod
+    @Before
     public void setUp() throws Exception {
     	driver = new FirefoxDriver();
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -256,7 +255,7 @@ public class HomePageTest {
  * tearDown() Метод вызываемый после окончания каждого теста
  * @throws Exception
  */
-    @AfterMethod
+    @After
     public void tearDown() throws Exception {
     	Thread.sleep(1000);
 	    driver.manage().deleteAllCookies();

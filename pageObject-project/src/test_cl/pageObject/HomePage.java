@@ -3,7 +3,7 @@ package test_cl.pageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static org.junit.Assert.assertTrue;
+//import static org.junit.Assert.assertTrue;
 
 /**
  * Домашняя (главная) Страница сайта:
@@ -35,12 +35,13 @@ import static org.junit.Assert.assertTrue;
  * @public void clickPopUpRegBtn() throws Exception Не используется
  */
 public class HomePage extends Page {
+	public HomePage (){}
 	//                   				Переменные
 	public WebDriver driver;
 	public String pageUrl = "/#home";
 
 	// LEFT MENU
-	public By accountsMenuLocator = By.cssSelector("a[title='Аккаунты']"); // Раздел со списком аккаунтов
+	private By accountsMenuLocator = By.cssSelector("a[title='Аккаунты']"); // Раздел со списком аккаунтов
 	public By deliveriesMenuLocator = By.cssSelector("a[title='Службы доставки']"); // Раздел со списком служб доставок
 	public By shopsMenuLocator = By.cssSelector("a[title='Интернет магазины']"); // Раздел со списком интернет магазинов
 	public By ordersMenuLocator = By.cssSelector("a[title='Заказы']"); // Раздел со списком заказов
@@ -123,10 +124,6 @@ public class HomePage extends Page {
 		//System.out.println("AgeVerificationPage.openPage() success!");
 		//System.out.println(baseUrl + pageUrl);
 	 }
-	/**
-	 * clickHome() Нажать на текст "Главная"
-	 * @throws Exception
-	 */
 
 	/**
 	 * clickAccounts() Нажать на вкладку "Аккаунты"
@@ -168,7 +165,7 @@ public class HomePage extends Page {
 	public void clickOrders() throws Exception {
 		System.out.println("@clickOrders start");
 		driver.findElement(ordersMenuLocator).click();
-		Thread.sleep(5000);
+		Thread.sleep(50000);
 		System.out.println("@clickOrders success");
 	}
 
@@ -179,7 +176,7 @@ public class HomePage extends Page {
 	public void clickShipments() throws Exception {
 		System.out.println("@clickShipments start");
 		driver.findElement(shipmentsMenuLocator).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		System.out.println("@clickShipments success");
 	}
 
@@ -190,7 +187,7 @@ public class HomePage extends Page {
 	public void clickUsers() throws Exception {
 		System.out.println("@clickUsers start");
 		driver.findElement(usersMenuLocator).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		System.out.println("@clickUsers success");
 	}
 
@@ -201,7 +198,7 @@ public class HomePage extends Page {
 	public void clickAudit_events() throws Exception {
 		System.out.println("@clickAudit_events start");
 		driver.findElement(audit_eventsMenuLocator).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		System.out.println("@clickAudit_events success");
 	}
 
@@ -212,7 +209,7 @@ public class HomePage extends Page {
 	public void clickUser_profile() throws Exception {
 		System.out.println("@clickUser_profile start");
 		driver.findElement(user_profileMenuLocator).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		System.out.println("@clickUser_profile success");
 	}
 
@@ -223,7 +220,7 @@ public class HomePage extends Page {
 	public void clickBills() throws Exception {
 		System.out.println("@clickBills start");
 		driver.findElement(billsMenuLocator).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		System.out.println("@clickBills success");
 	}
 
@@ -234,7 +231,7 @@ public class HomePage extends Page {
 	public void clickMailing() throws Exception {
 		System.out.println("@clickMailing start");
 		driver.findElement(mailingMenuLocator).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		System.out.println("@clickMailing success");
 	}
 
@@ -245,7 +242,7 @@ public class HomePage extends Page {
 	public void clickAllwarehouses() throws Exception {
 		System.out.println("@clickAllwarehouses start");
 		driver.findElement(allwarehousesMenuLocator).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		System.out.println("@clickAllwarehouses success");
 	}
 
@@ -256,7 +253,7 @@ public class HomePage extends Page {
 	public void clickData_problems() throws Exception {
 		System.out.println("@clickData_problems start");
 		driver.findElement(data_problemsMenuLocator).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		System.out.println("@clickData_problems success");
 	}
 
@@ -267,7 +264,7 @@ public class HomePage extends Page {
 	public void clickReports() throws Exception {
 		System.out.println("@clickReports start");
 		driver.findElement(reportsMenuLocator).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		System.out.println("@clickReports success");
 	}
 
@@ -327,31 +324,6 @@ public class HomePage extends Page {
 		System.out.println("@clickRegister success");
 	 }
 
-	//Авторизация с правильным логином
-		public void loginAs() throws Exception {
-			// Требуется предварительное  выполнение метода clickAuth()
-		    driver.findElement(loginEmailLocator).clear();
-		    driver.findElement(loginEmailLocator).sendKeys("a.fatov");
-		    driver.findElement(passwordLocator).clear();
-		    driver.findElement(passwordLocator).sendKeys("Fatik32rus");
-		    driver.findElement(loginButtonLocator).click();
-		    System.out.println("AuthorizationPage.loginAs() success!");
-		}
-		//Авторизация с неправильным логином
-		public void loginAsInvalidLogin() throws Exception {
-			// Требуется предварительное  выполнение метода clickAuth()
-		    driver.findElement(loginEmailLocator).clear();
-		    driver.findElement(loginEmailLocator).sendKeys("a.fatov123");
-		    driver.findElement(passwordLocator).clear();
-		    driver.findElement(passwordLocator).sendKeys("Fatik32rus");
-		    driver.findElement(loginButtonLocator).click();
-		    driver.findElement(errorsLocator);
-		    System.out.println(driver.findElement(errorsLocator).getText());
-		    assertTrue(driver.findElement(errorsLocator).getText().equals("Invalid user"));
-		    System.out.println("AuthorizationPage.loginAsInvalidLogin() success!");
-		}
-	
-	
 	public void clickHome() throws Exception {
 		System.out.println("@clickHome start");
 		driver.findElement(homeLocator).click();

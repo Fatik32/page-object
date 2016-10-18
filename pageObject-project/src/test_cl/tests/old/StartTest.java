@@ -1,4 +1,4 @@
-package test_cl.tests;
+package test_cl.tests.old;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import test_cl.pageObject.AuthorizationPage;

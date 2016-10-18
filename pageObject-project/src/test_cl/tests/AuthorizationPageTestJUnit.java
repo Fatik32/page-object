@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
  * @Тест страницы авторизации
  */
 
-public class AuthorizationPageTest {
+public class AuthorizationPageTestJUnit {
 	public WebDriver driver;
     
 	/**

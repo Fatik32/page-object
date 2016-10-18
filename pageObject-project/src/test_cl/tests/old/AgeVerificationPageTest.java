@@ -1,4 +1,4 @@
-package test_cl.tests;
+package test_cl.tests.old;
 
 import org.junit.After;
 import org.junit.Before;

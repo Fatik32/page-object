@@ -1,4 +1,4 @@
-package test_cl.tests;
+package test_cl.tests.old;
 //                                                      Неактивен (рыба)
 
 //import java.util.regex.Pattern;

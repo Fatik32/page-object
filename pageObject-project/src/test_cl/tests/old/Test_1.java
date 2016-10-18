@@ -1,4 +1,4 @@
-package test_cl.tests;
+package test_cl.tests.old;
 //import static org.junit.Assert.*;
 
 import org.junit.After;
