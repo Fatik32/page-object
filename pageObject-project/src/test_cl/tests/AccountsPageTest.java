@@ -51,6 +51,7 @@ public class AccountsPageTest {
         AccountsPage.findAccountsAndSignIt();
         //AccountsPage.clickCreate();
         //AccountsPage.clickSearch();
+        AccountsPage.tearDown();
 
         System.out.println("@Test 1 success!");
     }
@@ -59,13 +60,17 @@ public class AccountsPageTest {
      * tearDown() Метод вызываемый после окончания каждого теста
      * @throws Exception
      */
+
+
     @AfterMethod
     public void tearDown() throws Exception {
+            }
+    /*public void tearDown() throws Exception {
         Thread.sleep(1000);
         driver.manage().deleteAllCookies();
         driver.quit();
         System.out.println("@After success!");
         System.out.println("End!");
-    }
+    }*/
 
 }

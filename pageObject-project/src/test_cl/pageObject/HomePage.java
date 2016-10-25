@@ -125,6 +125,8 @@ public class HomePage extends Page {
 		//System.out.println(baseUrl + pageUrl);
 	 }
 
+
+
 	/**
 	 * clickAccounts() Нажать на вкладку "Аккаунты"
 	 * @throws Exception
@@ -266,6 +268,8 @@ public class HomePage extends Page {
 		driver.findElement(reportsMenuLocator).click();
 		Thread.sleep(5000);
 		System.out.println("@clickReports success");
+
+
 	}
 
 

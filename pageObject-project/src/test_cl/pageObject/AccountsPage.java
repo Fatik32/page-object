@@ -72,4 +72,12 @@ public class AccountsPage extends HomePage {
         //System.out.println("AccountsPage.openPage() success!");
     }
 
+    public void tearDown() throws Exception {
+        Thread.sleep(1000);
+        driver.manage().deleteAllCookies();
+        driver.quit();
+        System.out.println("@After success!");
+        System.out.println("End!");
+    }
+
 }
