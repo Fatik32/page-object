@@ -54,8 +54,8 @@ public class LoginPage extends Page {
 
 
     public String getPage() throws Exception {
-        //System.out.println("LoginPage.getPage() success!");
         //System.out.println(baseUrl + pageUrl);
+        //System.out.println("LoginPage.getPage() success!");
         return (baseUrl + pageUrl);
     }
     /**
@@ -64,7 +64,7 @@ public class LoginPage extends Page {
      */
     public void openPage() throws Exception {
         driver.get(baseUrl + pageUrl);
-        //System.out.println("LoginPage.openPage() success!");
         //System.out.println(baseUrl + pageUrl);
+        //System.out.println("LoginPage.openPage() success!");
     }
 }

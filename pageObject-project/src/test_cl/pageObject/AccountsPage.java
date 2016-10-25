@@ -17,14 +17,16 @@ import org.openqa.selenium.WebDriver;
  * @public void openPage() throws Exception
  */
 public class AccountsPage extends HomePage {
+    public AccountsPage(){}
 
     //										Переменные
     public WebDriver driver;
     public String pageUrl = "/#accounts";
 
-    public By createButtonLocator = By.xpath("//tr[@valign='top']//button[@class='important z-button-os']");
-    public By searchInputLocator = By.xpath("//td[@width='190px']//div[@id='pYIWf1']//input[@class='z-textbox']");
-    public By accountsBeforeSearchLocator = By.xpath("//td[@title='Артеммм']//a[@class='z-a']");
+    public By createButtonLocator           = By.xpath("//tr[@valign='top']//button[@class='important z-button-os']");
+    public By searchInputLocator            = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox']");
+    public By searchInputLocatorFocus       = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox z-textbox-focus']");
+    public By accountsBeforeSearchLocator   = By.xpath("//td[@title='Артеммм']//a[@class='z-a']");
 
     //    									Методы
     public AccountsPage(WebDriver driver) throws Exception {
@@ -48,10 +50,26 @@ public class AccountsPage extends HomePage {
     public void findAccountsAndSignIt() throws Exception {
         System.out.println("AccountsPage.findAccountsAndSignIt() start!");
         driver.findElement(searchInputLocator).click();
-        driver.findElement(searchInputLocator).clear();
-        driver.findElement(searchInputLocator).sendKeys("Артеммм");
+        System.out.println("(searchInputLocator).click() success!");
+        //driver.findElement(searchInputLocator).clear();
+        driver.findElement(searchInputLocatorFocus).sendKeys("Артеммм");
         driver.findElement(accountsBeforeSearchLocator).click();
         System.out.println("AccountsPage.findAccountsAndSignIt() success!");
+    }
+
+    public String getPage() throws Exception {
+        //System.out.println(baseUrl + pageUrl);
+        //System.out.println("AccountsPage.getPage() success!");
+        return (baseUrl + pageUrl);
+    }
+    /**
+     * openPage() Открыть страницу
+     * @throws Exception
+     */
+    public void openPage() throws Exception {
+        driver.get(baseUrl + pageUrl);
+        //System.out.println(baseUrl + pageUrl);
+        //System.out.println("AccountsPage.openPage() success!");
     }
 
 }

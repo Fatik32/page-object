@@ -5,18 +5,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import test_cl.pageObject.AccountsPage;
 import test_cl.pageObject.LoginPage;
 import test_cl.pageObject.HomePage;
+import test_cl.pageObject.AccountsPage;
+import test_cl.pageObject.AccountsIdPage;
 
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by ayufatov on 18.10.2016.
- * @author a.fatov
- * @Тест страницы авторизации
+ * Created by ayufatov on 25.10.2016.
  */
-public class AccountsPageTest {
+public class AccountsIdPageTest {
     public WebDriver driver;
 
     /**
@@ -43,12 +42,15 @@ public class AccountsPageTest {
         LoginPage LoginPage = new LoginPage(driver);
         HomePage HomePage = new HomePage(driver);
         AccountsPage AccountsPage = new AccountsPage(driver);
-        System.out.println("Страница аккаунтов не опеределена, родительская страница: " + AccountsPage.getPage());
+        AccountsIdPage AccountsIdPage = new AccountsIdPage(driver);
+        System.out.println("Страница аккаунтов не опеределена, родительская страница: " + AccountsIdPage.getPage());
         LoginPage.getPage();
         LoginPage.openPage();
         LoginPage.loginAs();
         HomePage.clickAccounts();
         AccountsPage.findAccountsAndSignIt();
+        AccountsIdPage.clickEnterInAccounts();
+
         //AccountsPage.clickCreate();
         //AccountsPage.clickSearch();
 
