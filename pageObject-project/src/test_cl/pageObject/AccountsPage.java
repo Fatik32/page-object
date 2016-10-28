@@ -27,7 +27,7 @@ public class AccountsPage extends HomePage {
     private By createButtonLocator           = By.xpath("//tr[@valign='top']//button[@class='important z-button-os']");
     private By searchInputLocator            = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox']");
     private By searchInputLocatorFocus       = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox z-textbox-focus']");
-    private By accountsBeforeSearchLocator   = By.xpath("//td[@title='Артеммм']//a[@class='z-a']");
+    private By accountsBeforeSearchLocator   = By.xpath("//td[@title='Тесты чекаут']//a[@class='z-a']");
 
     //    									Методы
     public AccountsPage(WebDriver driver) throws Exception {
@@ -53,7 +53,7 @@ public class AccountsPage extends HomePage {
         driver.findElement(searchInputLocator).click();
         System.out.println("(searchInputLocator).click() success!");
         //driver.findElement(searchInputLocator).clear();
-        driver.findElement(searchInputLocatorFocus).sendKeys("Артеммм");
+        driver.findElement(searchInputLocatorFocus).sendKeys("Тесты чекаут");
         driver.findElement(accountsBeforeSearchLocator).click();
         System.out.println("AccountsPage.findAccountsAndSignIt() success!");
         Thread.sleep(1000);
