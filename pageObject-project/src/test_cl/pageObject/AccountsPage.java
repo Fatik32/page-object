@@ -9,12 +9,12 @@ import org.openqa.selenium.WebDriver;
  * Страница со списком аккаунтов
  * @author a.fatov
  * Переменные:
- * @public WebDriver driver
- * @public String pageUrl
+ * public WebDriver driver
+ * public String pageUrl
  * Методы:
- * @public HomePage(WebDriver driver) throws Exception
- * @public String getPage() throws Exception
- * @public void openPage() throws Exception
+ * public HomePage(WebDriver driver) throws Exception
+ * public String getPage() throws Exception
+ * public void openPage() throws Exception
  */
 public class AccountsPage extends HomePage {
     public AccountsPage(){}
@@ -22,11 +22,12 @@ public class AccountsPage extends HomePage {
     //										Переменные
     public WebDriver driver;
     public String pageUrl = "/#accounts";
+    private String accountUrl;
 
-    public By createButtonLocator           = By.xpath("//tr[@valign='top']//button[@class='important z-button-os']");
-    public By searchInputLocator            = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox']");
-    public By searchInputLocatorFocus       = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox z-textbox-focus']");
-    public By accountsBeforeSearchLocator   = By.xpath("//td[@title='Артеммм']//a[@class='z-a']");
+    private By createButtonLocator           = By.xpath("//tr[@valign='top']//button[@class='important z-button-os']");
+    private By searchInputLocator            = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox']");
+    private By searchInputLocatorFocus       = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox z-textbox-focus']");
+    private By accountsBeforeSearchLocator   = By.xpath("//td[@title='Артеммм']//a[@class='z-a']");
 
     //    									Методы
     public AccountsPage(WebDriver driver) throws Exception {
@@ -55,6 +56,10 @@ public class AccountsPage extends HomePage {
         driver.findElement(searchInputLocatorFocus).sendKeys("Артеммм");
         driver.findElement(accountsBeforeSearchLocator).click();
         System.out.println("AccountsPage.findAccountsAndSignIt() success!");
+        Thread.sleep(1000);
+        System.out.println("AccountsPage.getCurrentUrl() = " + driver.getCurrentUrl());
+        accountUrl = driver.getCurrentUrl();
+        System.out.println("AccountsPage.getCurrentUrl() = " + accountUrl);
     }
 
     public String getPage() throws Exception {
@@ -64,7 +69,7 @@ public class AccountsPage extends HomePage {
     }
     /**
      * openPage() Открыть страницу
-     * @throws Exception
+     * throws Exception
      */
     public void openPage() throws Exception {
         driver.get(baseUrl + pageUrl);

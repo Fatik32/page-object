@@ -14,14 +14,14 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by ayufatov on 18.10.2016.
  * @author a.fatov
- * @Тест страницы авторизации
+ * Тест страницы авторизации
  */
 public class AccountsPageTest {
     public WebDriver driver;
 
     /**
      * setUp() Метод вызываемый перед началом каждого теста
-     * @throws Exception
+     * throws Exception
      */
     @BeforeMethod
     public void setUp() throws Exception {
@@ -35,7 +35,7 @@ public class AccountsPageTest {
 
     /**
      * AuthorizationPageTrue() Тест прохождения авторизации
-     * @throws Exception
+     * throws Exception
      */
     @Test
     public void TestClickAccountsCreate() throws Exception{
@@ -58,7 +58,7 @@ public class AccountsPageTest {
 
     /**
      * tearDown() Метод вызываемый после окончания каждого теста
-     * @throws Exception
+     * throws Exception
      */
 
 

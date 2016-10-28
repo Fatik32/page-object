@@ -8,23 +8,23 @@ import static org.junit.Assert.assertTrue;
  * Страница авторизации
  * @author a.fatov
  * Переменные:
- * @public WebDriver driver
- * @public String pageUrl
+ * public WebDriver driver
+ * public String pageUrl
  * Методы:
- * @public HomePage(WebDriver driver) throws Exception
+ * public HomePage(WebDriver driver) throws Exception
  * public void loginAs() throws Exception
  * public void loginAsInvalidLogin() throws
- * @public String getPage() throws Exception
- * @public void openPage() throws Exception
+ * public String getPage() throws Exception
+ * public void openPage() throws Exception
  */
 public class LoginPage extends Page {
     //										Переменные
     public WebDriver driver;
     public String pageUrl = "/login";
-    public By usernameLocator = By.name("j_username");
-    public By passwordLocator = By.name("j_password");
-    public By loginButtonLocator = By.className("z-button-os");
-    public By errorsLocator = By.xpath("//div[@class='login_body']//span[@style='color:red;']");
+    private By usernameLocator = By.name("j_username");
+    private By passwordLocator = By.name("j_password");
+    private By loginButtonLocator = By.className("z-button-os");
+    private By errorsLocator = By.xpath("//div[@class='login_body']//span[@style='color:red;']");
     public String Login = "a.fatov@inbox.ru";
     public String Password = "Fatik32rus";
     //    									Методы
@@ -60,7 +60,7 @@ public class LoginPage extends Page {
     }
     /**
      * openPage() Открыть страницу
-     * @throws Exception
+     * throws Exception
      */
     public void openPage() throws Exception {
         driver.get(baseUrl + pageUrl);

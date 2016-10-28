@@ -14,13 +14,14 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Created by ayufatov on 25.10.2016.
+ *
  */
 public class AccountsIdPageTest {
     public WebDriver driver;
 
     /**
      * setUp() Метод вызываемый перед началом каждого теста
-     * @throws Exception
+     * throws Exception
      */
     @BeforeMethod
     public void setUp() throws Exception {
@@ -34,7 +35,7 @@ public class AccountsIdPageTest {
 
     /**
      * AuthorizationPageTrue() Тест прохождения авторизации
-     * @throws Exception
+     * throws Exception
      */
     @Test
     public void TestClickAccountsCreate() throws Exception{
@@ -43,7 +44,7 @@ public class AccountsIdPageTest {
         HomePage HomePage = new HomePage(driver);
         AccountsPage AccountsPage = new AccountsPage(driver);
         AccountsIdPage AccountsIdPage = new AccountsIdPage(driver);
-        System.out.println("Страница аккаунтов не опеределена, родительская страница: " + AccountsIdPage.getPage());
+        System.out.println("Страница аккаунта: " + AccountsIdPage.getPage());
         LoginPage.getPage();
         LoginPage.openPage();
         LoginPage.loginAs();
@@ -59,7 +60,7 @@ public class AccountsIdPageTest {
 
     /**
      * tearDown() Метод вызываемый после окончания каждого теста
-     * @throws Exception
+     * throws Exception
      */
     @AfterMethod
     public void tearDown() throws Exception {

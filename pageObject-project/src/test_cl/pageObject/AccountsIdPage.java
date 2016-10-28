@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 /**
  * Created by ayufatov on 25.10.2016.
+ *
  */
 public class AccountsIdPage extends AccountsPage {
 
@@ -13,7 +14,7 @@ public class AccountsIdPage extends AccountsPage {
     public WebDriver driver;
     public String pageUrl = "/#accounts~2468";
 
-    public By createButtonLocator           = By.xpath("//div[@class='oper-toolbar oper-editor z-div']//button[text()='Войти в аккаунт']");
+    private By createButtonLocator           = By.xpath("//div[@class='oper-toolbar oper-editor z-div']//button[text()='Войти в аккаунт']");
     //public By createButtonLocator           = By.xpath("//tr[@valign='top']//button[@class='important z-button-os']");
     //public By searchInputLocator            = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox']");
     //public By searchInputLocatorFocus       = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox z-textbox-focus']");
@@ -38,7 +39,7 @@ public class AccountsIdPage extends AccountsPage {
     }
     /**
      * openPage() Открыть страницу
-     * @throws Exception
+     * throws Exception
      */
     public void openPage() throws Exception {
         driver.get(baseUrl + pageUrl);

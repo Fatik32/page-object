@@ -12,19 +12,19 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 
- * @Тест главной (домашней) страницы
+ * Тест главной (домашней) страницы
  * @author a.fatov
  * Переменные:
- * @public WebDriver driver
+ * public WebDriver driver
  * Методы:
- * @public void setUp() throws Exception
- * @public void TestClickHome() throws Exception
- * @public void TestClickPrize() throws Exception
- * @public void TestClickWinner() throws Exception
- * @public void TestClickAuth() throws Exception
- * @public void TestClickRegister() throws Exception
- * @public void TestClickPopUpRegBtn() throws Exception
- * @public void tearDown() throws Exception
+ * public void setUp() throws Exception
+ * public void TestClickHome() throws Exception
+ * public void TestClickPrize() throws Exception
+ * public void TestClickWinner() throws Exception
+ * public void TestClickAuth() throws Exception
+ * public void TestClickRegister() throws Exception
+ * public void TestClickPopUpRegBtn() throws Exception
+ * public void tearDown() throws Exception
  */
 public class HomePageTestJUnit {
 					//                    Переменные
@@ -32,7 +32,7 @@ public class HomePageTestJUnit {
 					//                      Методы
 /**
  * setUp() Метод вызываемый перед началом каждого теста
- * @throws Exception
+ * throws Exception
 */
     @Before
     public void setUp() throws Exception {
@@ -48,7 +48,7 @@ public class HomePageTestJUnit {
 
     /**
      * TestClickRegister() Тест перехода на страницу регистрации
-     * @throws Exception
+     * throws Exception
      */
     @Test
     //@Ignore
@@ -97,7 +97,7 @@ public class HomePageTestJUnit {
 
     /**
      * TestClickRegister() Тест перехода на страницу регистрации
-     * @throws Exception
+     * throws Exception
      */
 /*
         @Test
@@ -253,7 +253,7 @@ public class HomePageTestJUnit {
 }
 /**
  * tearDown() Метод вызываемый после окончания каждого теста
- * @throws Exception
+ * throws Exception
  */
     @After
     public void tearDown() throws Exception {

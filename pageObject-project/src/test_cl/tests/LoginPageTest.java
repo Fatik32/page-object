@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 /**
  *
  * @author a.fatov
- * @Тест страницы авторизации
+ * Тест страницы авторизации
  */
 
 public class LoginPageTest {
@@ -21,7 +21,7 @@ public class LoginPageTest {
 
     /**
      * setUp() Метод вызываемый перед началом каждого теста
-     * @throws Exception
+     * throws Exception
      */
     @BeforeMethod
     public void setUp() throws Exception {
@@ -35,7 +35,7 @@ public class LoginPageTest {
 
     /**
      * AuthorizationPageTrue() Тест прохождения авторизации
-     * @throws Exception
+     * throws Exception
      */
     @Test(enabled = false)
     public void TestAuthorizationTrue() throws Exception{
@@ -52,7 +52,7 @@ public class LoginPageTest {
 
     /**
      * AuthorizationPageFalse() Тест прохождения авторизации
-     * @throws Exception
+     * throws Exception
      */
     @Test
     public void TestAuthorizationFalse() throws Exception{
@@ -70,7 +70,7 @@ public class LoginPageTest {
 
     /**
      * tearDown() Метод вызываемый после окончания каждого теста
-     * @throws Exception
+     * throws Exception
      */
     @AfterMethod
     public void tearDown() throws Exception {

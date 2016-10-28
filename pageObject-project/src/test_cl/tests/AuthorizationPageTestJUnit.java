@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 
  * @author a.fatov
- * @Тест страницы авторизации
+ * Тест страницы авторизации
  */
 
 public class AuthorizationPageTestJUnit {
@@ -21,7 +21,7 @@ public class AuthorizationPageTestJUnit {
     
 	/**
 	 * setUp() Метод вызываемый перед началом каждого теста
-	 * @throws Exception
+	 * throws Exception
 	 */
 	@Before
     public void setUp() throws Exception {
@@ -35,7 +35,7 @@ public class AuthorizationPageTestJUnit {
 
 	/**
 	 * AuthorizationPageTrue() Тест прохождения авторизации
-	 * @throws Exception
+	 * throws Exception
 	 */
 	@Test
     public void TestAuthorizationTrue() throws Exception{
@@ -51,64 +51,9 @@ public class AuthorizationPageTestJUnit {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-	/**
-	 * TestAgeVerificationTrue() Тест прохождения верификации возраста
-	 * @throws Exception
-	 */
-	/*@Test
-    public void TestAgeVerificationTrue() throws Exception{
-    	System.out.println("@Test 1 start!");
-    	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
-    	System.out.println("Страница подтверждения возраста: " + ageVerificationPage.getPage());
-    	
-    	ageVerificationPage.getPage();
-    	ageVerificationPage.openPage();
-    	ageVerificationPage.clickYesButton();
-    	
-        System.out.println("@Test 1 success!");
-}
-*/
-	
-	/**
-	 * TestAgeVerificationFalse() Тест неудачного прохождения верификации возраста	
-	 * @throws Exception
-	 */
-	/*@Test
-    public void TestAgeVerificationFalse() throws Exception{
-    	System.out.println("@Test 2 start!");
-    	AgeVerificationPage ageVerificationPage = new AgeVerificationPage(driver);
-    	System.out.println("Страница подтверждения возраста: " + ageVerificationPage.getPage());
-    	
-    	ageVerificationPage.getPage();
-    	ageVerificationPage.openPage();
-    	ageVerificationPage.clickNoButton();
-    	
-        System.out.println("@Test 2 success!");
-}
-*/
-	/*@Test
-    public void TestInvalidLogin() throws Exception{
-    	System.out.println("@Test 2 start!");
-        AuthorizationPage authPage = new AuthorizationPage(driver);
-        authPage.openPage();
-        authPage.loginAsInvalidLogin();
-        //assertTrue(driver.getTitle().equals("Build my Car - Configuration"));
-        System.out.println("@Test 2 success!");
-}*/
-
 	/**
 	 * tearDown() Метод вызываемый после окончания каждого теста
-	 * @throws Exception
+	 * throws Exception
 	 */
     @After
     public void tearDown() throws Exception {

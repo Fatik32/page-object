@@ -6,39 +6,39 @@ import org.openqa.selenium.WebDriver;
  * Страница проверки возраста
  * @author a.fatov
  * Переменные:
- * @public WebDriver driver
- * @public String pageUrl
- * @public By yesButtonLocator
- * @public By noButtonLocator
+ * public WebDriver driver
+ * public String pageUrl
+ * public By yesButtonLocator
+ * public By noButtonLocator
  * Методы:
- * @public AgeVerificationPage(WebDriver driver) throws Exception
- * @public String getPage() throws Exception
- * @public void openPage() throws Exception
- * @public void selectDay() throws Exception
- * @public void selectMonth() throws Exception
- * @public void selectYear() throws Exception
- * @public void clickLoginButton() throws Exception
- * @public void clickYesButton() throws Exception
+ * public AgeVerificationPage(WebDriver driver) throws Exception
+ * public String getPage() throws Exception
+ * public void openPage() throws Exception
+ * public void selectDay() throws Exception
+ * public void selectMonth() throws Exception
+ * public void selectYear() throws Exception
+ * public void clickLoginButton() throws Exception
+ * public void clickYesButton() throws Exception
  */
 public class AgeVerificationPage extends Page {
 				//                   Переменные
 	public WebDriver driver;
 	public String pageUrl = "/ru/overlays/age-verification.html";
-	public By yesButtonLocator = By.id("agevalidation-confirm");
-	public By noButtonLocator = By.id("agevalidation-deny");	
+	private By yesButtonLocator = By.id("agevalidation-confirm");
+	private By noButtonLocator = By.id("agevalidation-deny");
 				//	                    Методы
 	/**
 	 * Конструктор!
 	 * Метод для передачи обьекта driver
-	 * @param driver
-	 * @throws Exception
+	 * param driver
+	 * throws Exception
 	 */
 	public AgeVerificationPage(WebDriver driver) throws Exception {
 		this.driver = driver;
 	}
 	/**
 	 * Выдает адресс страницы
-	 * @throws Exception
+	 * throws Exception
 	 * @return (baseUrl + pageUrl)
 	 */
 	public String getPage() throws Exception {
@@ -48,7 +48,7 @@ public class AgeVerificationPage extends Page {
 	 }
 	/**
 	 * Открыть страницу
-	 * @throws Exception
+	 * throws Exception
 	 */
 	public void openPage() throws Exception {
 		driver.get(baseUrl + pageUrl);
@@ -57,7 +57,7 @@ public class AgeVerificationPage extends Page {
 	 }
 	/**
 	 * Нажать на кнопку "ДА"
-	 * @throws Exception
+	 * throws Exception
 	 */
 	public void clickYesButton() throws Exception {
 		driver.findElement(yesButtonLocator).click();
@@ -66,7 +66,7 @@ public class AgeVerificationPage extends Page {
 	 }
 	/**
 	 * Нажать на кнопку "НЕТ"
-	 * @throws Exception
+	 * throws Exception
 	 */
 	public void clickNoButton() throws Exception {
 		driver.findElement(noButtonLocator).click();
@@ -75,7 +75,7 @@ public class AgeVerificationPage extends Page {
 	 }
 	/**
 	 * Пройти проверку возраста, оказываемся на главной странице
-	 * @throws Exception
+	 * throws Exception
 	 */
     public void ageVerificationTrue() throws Exception{
     	System.out.println("@ageVerificationTrue start");

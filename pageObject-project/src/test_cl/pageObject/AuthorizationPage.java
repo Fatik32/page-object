@@ -6,12 +6,12 @@ import org.openqa.selenium.WebDriver;
  * Страница авторизации Возможно не будет  использована
  * @author a.fatov
  * Переменные:
- * @public WebDriver driver
- * @public String pageUrl
+ * public WebDriver driver
+ * public String pageUrl
  * Методы:
- * @public HomePage(WebDriver driver) throws Exception
- * @public String getPage() throws Exception
- * @public void openPage() throws Exception
+ * public HomePage(WebDriver driver) throws Exception
+ * public String getPage() throws Exception
+ * public void openPage() throws Exception
  */
 public class AuthorizationPage extends Page {
 	//if(elem.Displayed) проверка есть элемент или нет
@@ -59,7 +59,7 @@ public class AuthorizationPage extends Page {
 	}
 	/**
 	 * openPage() Открыть страницу
-	 * @throws Exception
+	 * throws Exception
 	 */
 	public void openPage() throws Exception {
 		driver.get(baseUrl + pageUrl);
