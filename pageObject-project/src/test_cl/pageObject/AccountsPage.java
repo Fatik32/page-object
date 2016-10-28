@@ -22,7 +22,7 @@ public class AccountsPage extends HomePage {
     //										Переменные
     public WebDriver driver;
     public String pageUrl = "/#accounts";
-    private String accountUrl;
+    String accountId;
 
     private By createButtonLocator           = By.xpath("//tr[@valign='top']//button[@class='important z-button-os']");
     private By searchInputLocator            = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox']");
@@ -58,8 +58,8 @@ public class AccountsPage extends HomePage {
         System.out.println("AccountsPage.findAccountsAndSignIt() success!");
         Thread.sleep(1000);
         System.out.println("AccountsPage.getCurrentUrl() = " + driver.getCurrentUrl());
-        accountUrl = driver.getCurrentUrl();
-        System.out.println("AccountsPage.getCurrentUrl() = " + accountUrl);
+        accountId = driver.getCurrentUrl().substring(driver.getCurrentUrl().indexOf('~') + 1);
+        System.out.println("accountId = " + accountId);
     }
 
     public String getPage() throws Exception {

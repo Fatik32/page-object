@@ -12,7 +12,8 @@ public class AccountsIdPage extends AccountsPage {
 
     //										Переменные
     public WebDriver driver;
-    public String pageUrl = "/#accounts~134";
+    //public String pageUrl = "/#accounts~134";
+    public String pageUrl = "/#accounts~" + accountId;
 
     private By createButtonLocator           = By.xpath("//div[@class='oper-toolbar oper-editor z-div']//button[text()='Войти в аккаунт']");
     //public By createButtonLocator           = By.xpath("//tr[@valign='top']//button[@class='important z-button-os']");
