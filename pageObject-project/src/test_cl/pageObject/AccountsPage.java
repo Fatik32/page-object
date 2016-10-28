@@ -17,7 +17,7 @@ import org.openqa.selenium.WebDriver;
  * public void openPage() throws Exception
  */
 public class AccountsPage extends HomePage {
-    public AccountsPage(){}
+    AccountsPage(){}
 
     //										Переменные
     public WebDriver driver;
