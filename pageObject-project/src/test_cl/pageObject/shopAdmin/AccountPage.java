@@ -8,11 +8,13 @@ import test_cl.pageObject.Page;
  * Created by ayufatov on 31.10.2016.
  *
  */
-public class OrdersPage extends Page {
-    public OrdersPage (){}
+public class AccountPage extends Page {
+    public AccountPage (){}
     //                   				Переменные
     public WebDriver driver;
     public String pageUrl = "/#home";
+    private By ordersMenuLocator = By.cssSelector("a[title='Активные заказы']"); // Раздел со списком заказов
+    //private By createButtonLocator           = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//button[text()='Создать заказ']");
 
     //					                    Методы
     /**
@@ -21,9 +23,18 @@ public class OrdersPage extends Page {
      * param driver
      * throws Exception
      */
-    public OrdersPage(WebDriver driver) throws Exception {
+    public AccountPage (WebDriver driver) throws Exception {
         this.driver = driver;
     }
+
+
+    public void clickOrders() throws Exception {
+        System.out.println("AccountPage.clickOrders() start!");
+        System.out.println("Текст кнопки Активные заказы = " + driver.findElement(ordersMenuLocator).getText());
+        driver.findElement(ordersMenuLocator).click();
+        System.out.println("AccountPage.clickOrders() success!");
+    }
+
     /**
      * getPage() Выдает адресс страницы
      * throws Exception
