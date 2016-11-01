@@ -5,7 +5,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import test_cl.pageObject.AccountsIdPage;
+import test_cl.pageObject.AccountsPage;
+import test_cl.pageObject.HomePage;
 import test_cl.pageObject.LoginPage;
+import test_cl.pageObject.shopAdmin.AccountPage;
+import test_cl.pageObject.shopAdmin.OrdersPage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -29,41 +34,29 @@ public class OrdersPageTest {
         System.out.println("@Before succes!");
     }
 
-
-    /**
-     * AuthorizationPageTrue() Тест прохождения авторизации
-     * throws Exception
-     */
-    @Test(enabled = false)
-    public void TestAuthorizationTrue() throws Exception{
+    @Test
+    public void TestClickAccountsEnter() throws Exception{
         System.out.println("@Test 1 start!");
         LoginPage LoginPage = new LoginPage(driver);
-        System.out.println("Страница авторизации: " + LoginPage.getPage());
-
+        HomePage HomePage = new HomePage(driver);
+        AccountsPage AccountsPage = new AccountsPage(driver);
+        AccountsIdPage AccountsIdPage = new AccountsIdPage(driver);
+        AccountPage AccountPage = new AccountPage(driver);
+        OrdersPage OrdersPage = new OrdersPage(driver);
+        System.out.println("Страница аккаунта: " + AccountPage.getPage());
         LoginPage.getPage();
         LoginPage.openPage();
         LoginPage.loginAs();
+        HomePage.clickAccounts();
+        AccountsPage.findAccountsAndSignIt();
+        AccountsIdPage.clickEnterInAccounts();
+        AccountPage.clickOrders();
+        OrdersPage.clickCreateButton();
+        //AccountsPage.clickCreate();
+        //AccountsPage.clickSearch();
 
         System.out.println("@Test 1 success!");
     }
-
-    /**
-     * AuthorizationPageFalse() Тест прохождения авторизации
-     * throws Exception
-     */
-    @Test
-    public void TestAuthorizationFalse() throws Exception{
-        System.out.println("@Test 2 start!");
-        LoginPage LoginPage = new LoginPage(driver);
-        System.out.println("Страница авторизации: " + LoginPage.getPage());
-
-        LoginPage.getPage();
-        LoginPage.openPage();
-        LoginPage.loginAsInvalidLogin();
-
-        System.out.println("@Test 2 success!");
-    }
-
 
     /**
      * tearDown() Метод вызываемый после окончания каждого теста
