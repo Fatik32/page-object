@@ -18,6 +18,7 @@ public class OrdersPage extends Page {
     private By createButtonLocator = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//div[@class='view z-tabbox']//table[@class='oper-toolbar']//button");
     private By listMagazinLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']");
     private By listMagazinAdvLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']//option[contains(@value, 'Stas ALL')]");
+    private By createButtonTwoLocator = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//div[@class='view z-tabbox']//table[@class='oper-toolbar']//table[@class='z-toolbar-panel-cnt']//button");
     //option[contains(@value, '9')]
     //customDialog z-window-modal z-window-modal-shadow
     //div[@class='z-tabpanels']
@@ -50,6 +51,8 @@ public class OrdersPage extends Page {
         select.selectByVisibleText("Stas ALL");
         select.getFirstSelectedOption();
         a.click();
+        Thread.sleep(1000);
+        driver.findElement(createButtonTwoLocator).click();
         System.out.println("AccountPage.clickCreateButton() success!");
     }
 
