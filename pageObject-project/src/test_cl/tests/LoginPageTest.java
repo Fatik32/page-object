@@ -38,7 +38,7 @@ public class LoginPageTest {
      * throws Exception
      */
     @Test(enabled = false)
-    public void TestAuthorizationTrue() throws Exception{
+    public void testAuthorizationTrue() throws Exception{
         System.out.println("@Test 1 start!");
         LoginPage LoginPage = new LoginPage(driver);
         System.out.println("Страница авторизации: " + LoginPage.getPage());

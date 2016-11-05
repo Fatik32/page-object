@@ -14,21 +14,13 @@ public class OrdersPage extends Page {
     public OrdersPage (){}
     //                   				Переменные
     public WebDriver driver;
-    public String pageUrl = "/#home";
+    public String pageUrl = "/#orders";
     private By createButtonLocator = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//div[@class='view z-tabbox']//table[@class='oper-toolbar']//button");
-    private By listMagazinLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']");
-    private By listMagazinAdvLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']//option[contains(@value, 'Stas ALL')]");
-    private By createButtonTwoLocator = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//div[@class='view z-tabbox']//table[@class='oper-toolbar']//table[@class='z-toolbar-panel-cnt']//button");
-    //option[contains(@value, '9')]
-    //customDialog z-window-modal z-window-modal-shadow
-    //div[@class='z-tabpanels']
-    //table[@id='nJxPt4']
-    //z-tabpanels
-    //oper-toolbar
-    ////button[text()='Создать заказ']
-    //Создать заказ
-////table[@id='nJxPt4']//button[text()='Создать заказ']
-//div[@class='z-window-embedded-cnt-noborder']
+    private By selectMagazinLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']");
+    //private By listMagazinAdvLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']//option[contains(@value, 'Stas ALL')]");
+    private By listMagazinLocator = By.xpath(("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']"));
+    private By createButtonTwoLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//button[contains(text(),'Создать заказ')]");
+
     //					                    Методы
     /**
      * HomePage(WebDriver driver) Конструктор!
@@ -40,19 +32,22 @@ public class OrdersPage extends Page {
         this.driver = driver;
     }
 
-    public void clickCreateButton() throws Exception {
+    public void createOrder() throws Exception {
         System.out.println("AccountPage.clickCreateButton() start!");
-        System.out.println("Текст кнопки Создать заказ createButtonLocator = " + driver.findElement(createButtonLocator).getText());
+        System.out.println("Текст createButtonLocator = " + driver.findElement(createButtonLocator).getText());
         driver.findElement(createButtonLocator).click();
-        driver.findElement(listMagazinLocator).click();
-        System.out.println("Текст listMagazinLocator = " + driver.findElement(listMagazinLocator).getText());
-        WebElement a = driver.findElement(By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']"));
-        Select select = new Select (a);
+        driver.findElement(selectMagazinLocator).click();
+
+        // Выбор магазина из списка
+        Select select = new Select (driver.findElement(listMagazinLocator));
         select.selectByVisibleText("Stas ALL");
         select.getFirstSelectedOption();
-        a.click();
+        driver.findElement(listMagazinLocator).click();
         Thread.sleep(1000);
+
         driver.findElement(createButtonTwoLocator).click();
+        System.out.println("Текст createButtonTwoLocator = " + driver.findElement(createButtonTwoLocator).getText());
+        Thread.sleep(5000);
         System.out.println("AccountPage.clickCreateButton() success!");
     }
 

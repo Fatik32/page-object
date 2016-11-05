@@ -53,7 +53,7 @@ public class HomePageTest {
      */
     @Test
     //@Ignore
-    public void TestClickAll() throws Exception{
+    public void testClickAll() throws Exception{
         System.out.println("@Test clickAll start!");
         AuthorizationPage authorizationPage = new AuthorizationPage(driver); // Создаем обьект страницы проверки возраста
         HomePage homePage = new HomePage(driver); // Создаем обьект домашней (главной) старницы

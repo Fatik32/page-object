@@ -38,7 +38,7 @@ public class AccountsPageTest {
      * throws Exception
      */
     @Test
-    public void TestClickAccountsCreate() throws Exception{
+    public void testClickAccountsCreate() throws Exception{
         System.out.println("@Test 1 start!");
         LoginPage LoginPage = new LoginPage(driver);
         HomePage HomePage = new HomePage(driver);

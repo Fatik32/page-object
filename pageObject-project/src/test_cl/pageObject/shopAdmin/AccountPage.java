@@ -12,7 +12,7 @@ public class AccountPage extends Page {
     public AccountPage (){}
     //                   				Переменные
     public WebDriver driver;
-    public String pageUrl = "/#home";
+    public String pageUrl = "/#account";
     private By ordersMenuLocator = By.cssSelector("a[title='Активные заказы']"); // Раздел со списком заказов
     //private By createButtonLocator           = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//button[text()='Создать заказ']");
 

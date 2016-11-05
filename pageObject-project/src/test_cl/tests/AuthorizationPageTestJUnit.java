@@ -38,7 +38,7 @@ public class AuthorizationPageTestJUnit {
 	 * throws Exception
 	 */
 	@Test
-    public void TestAuthorizationTrue() throws Exception{
+    public void testAuthorizationTrue() throws Exception{
     	System.out.println("@Test 1 start!");
 		AuthorizationPage AuthorizationPage = new AuthorizationPage(driver);
     	System.out.println("Страница авторизации: " + AuthorizationPage.getPage());
