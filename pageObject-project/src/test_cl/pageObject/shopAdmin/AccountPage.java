@@ -14,7 +14,6 @@ public class AccountPage extends Page {
     public WebDriver driver;
     public String pageUrl = "/#account";
     private By ordersMenuLocator = By.cssSelector("a[title='Активные заказы']"); // Раздел со списком заказов
-    //private By createButtonLocator           = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//button[text()='Создать заказ']");
 
     //					                    Методы
     /**
@@ -41,8 +40,6 @@ public class AccountPage extends Page {
      * @return (baseUrl and pageUrl)
      */
     public String getPage() throws Exception {
-        //System.out.println(baseUrl + pageUrl);
-        //System.out.println("AgeVerificationPage.getPage() success!");
         return (baseUrl + pageUrl);
     }
     /**
@@ -51,7 +48,5 @@ public class AccountPage extends Page {
      */
     public void openPage() throws Exception {
         driver.get(baseUrl + pageUrl);
-        //System.out.println(baseUrl + pageUrl);
-        //System.out.println("AgeVerificationPage.openPage() success!");
     }
 }

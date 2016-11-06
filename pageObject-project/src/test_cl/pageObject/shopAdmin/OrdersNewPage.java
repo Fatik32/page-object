@@ -32,6 +32,7 @@ public class OrdersNewPage extends Page {
 
     // Локаторы для блока "Товары"
     private By goodsEditLocator =                   By.xpath("//span[text()='Товары']/../button");
+
     private By goodsAddLocator =                    By.xpath("//div[@class='z-window-modal z-window-modal-shadow']//button[text()=' Добавить товар']");
     private By goodsNameLocator =                   By.xpath("//div[@class='z-window-modal z-window-modal-shadow']//div[@class='z-listbox-body z-listbox-autopaging']//tr/td[1]//input");
     private By goodsVendorCodeLocator =             By.xpath("//div[@class='z-window-modal z-window-modal-shadow']//div[@class='z-listbox-body z-listbox-autopaging']//tr/td[2]//input");
@@ -40,6 +41,7 @@ public class OrdersNewPage extends Page {
     private By goodsUnitPriceLocator =              By.xpath("//div[@class='z-window-modal z-window-modal-shadow']//div[@class='z-listbox-body z-listbox-autopaging']//tr/td[5]//input");
     private By goodsDeclaredValueLocator =          By.xpath("//div[@class='z-window-modal z-window-modal-shadow']//div[@class='z-listbox-body z-listbox-autopaging']//tr/td[6]//input");
     private By goodsUnitWeightLocator =             By.xpath("//div[@class='z-window-modal z-window-modal-shadow']//div[@class='z-listbox-body z-listbox-autopaging']//tr/td[7]//input");
+
     private By goodsConfirmLocator =                By.xpath("//div[@class='z-window-modal z-window-modal-shadow']//button[text()='Подтвердить']");
 
     private By goodsStockEditLocator =              By.xpath("//span[text()='Склад отгрузки']/../..//button");
@@ -47,6 +49,7 @@ public class OrdersNewPage extends Page {
     private By goodsStockChangeLocator =            By.xpath("//div[@class='z-window-modal z-window-modal-shadow']//button[text()='Изменить']");
 
     // Локаторы для блока "Дополнительно"
+    private By additionallyLocator =                By.xpath("//span[text()='Внутренние примечания - не передаются в службу доставки']/..//textarea");
 
     // Локаторы для блока "Способы Доставки"
     private By deliveryMethodsExpressLocator =                   By.xpath("//input[@value='express']");
@@ -60,9 +63,13 @@ public class OrdersNewPage extends Page {
     private By clientEmailLocator =                 By.xpath("//span[text()='E-mail']/..//input");
     private By clientIndexLocator =                 By.xpath("//span[text()='Индекс']/..//input");
     private By clientCountryLocator =               By.xpath("//span[text()='Страна']/..//input");
+
     private By clientLocalityLocator =              By.xpath("//span[text()='Населённый пункт']/..//input");
     private By clientLocalityMoscowLocator =        By.xpath("//span[text()='г. Москва']/..");
+
     private By clientStreetLocator =                By.xpath("//span[text()='Улица']/..//input");
+    private By clientStreetNovogireevskayaLocator = By.xpath("//span[text()='ул. Новогиреевская']/..");
+
     private By clientHouseLocator =                 By.xpath("//span[text()='Дом']/..//input");
     private By clientHousingLocator =               By.xpath("//span[text()='Корпус']/..//input");
     private By clientStructureLocator =             By.xpath("//span[text()='Строение']/..//input");
@@ -70,7 +77,7 @@ public class OrdersNewPage extends Page {
     private By clientCommentsLocator =              By.xpath("//span[text()='Комментарии покупателя для службы доставки']/..//textarea");
 
     // Локаторы для блока "Информация"
-    private By informationPaymentMethodLocator =              By.xpath("//td[@width='33%']//select");
+    private By informationPaymentMethodLocator =    By.xpath("//td[@width='33%']//select");
 
     //					                    Методы
     /**
@@ -127,6 +134,9 @@ public class OrdersNewPage extends Page {
         driver.findElement(goodsStockChangeLocator).click();
         Thread.sleep(1000);
 
+        // Заполнение блока "Дополнительно"
+        driver.findElement(additionallyLocator).click();
+        driver.findElement(additionallyLocator).sendKeys("auto_test_additionally");
 
         // Заполнение блока "Клиент"
         driver.findElement(clientFIOLocator).click();
@@ -138,14 +148,19 @@ public class OrdersNewPage extends Page {
         driver.findElement(clientIndexLocator).click();
         driver.findElement(clientIndexLocator).sendKeys("");
         driver.findElement(clientCountryLocator).click();
+
         driver.findElement(clientLocalityLocator).click();
         driver.findElement(clientLocalityLocator).sendKeys("Москва");
         Thread.sleep(1000);
-        System.out.println("Текст clientLocalityMoscowLocator = " + driver.findElement(clientLocalityMoscowLocator).getText());
         driver.findElement(clientLocalityMoscowLocator).click();
         Thread.sleep(1000);
+
         driver.findElement(clientStreetLocator).click();
         driver.findElement(clientStreetLocator).sendKeys("Новогиреевская");
+        Thread.sleep(1000);
+        driver.findElement(clientStreetNovogireevskayaLocator).click();
+        Thread.sleep(1000);
+
         driver.findElement(clientHouseLocator).click();
         driver.findElement(clientHouseLocator).sendKeys("1");
         driver.findElement(clientHousingLocator).click();
@@ -185,8 +200,6 @@ public class OrdersNewPage extends Page {
      * @return (baseUrl and pageUrl)
      */
     public String getPage() throws Exception {
-        //System.out.println(baseUrl + pageUrl);
-        //System.out.println("AgeVerificationPage.getPage() success!");
         return (baseUrl + pageUrl);
     }
     /**
@@ -195,7 +208,5 @@ public class OrdersNewPage extends Page {
      */
     public void openPage() throws Exception {
         driver.get(baseUrl + pageUrl);
-        //System.out.println(baseUrl + pageUrl);
-        //System.out.println("AgeVerificationPage.openPage() success!");
     }
 }

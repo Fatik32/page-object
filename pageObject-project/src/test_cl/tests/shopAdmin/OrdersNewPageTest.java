@@ -42,6 +42,7 @@ public class OrdersNewPageTest {
     @Test
     public void testCreateOrder() throws Exception{
         System.out.println("@Test 1 start!");
+
         LoginPage LoginPage = new LoginPage(driver);
         HomePage HomePage = new HomePage(driver);
         AccountsPage AccountsPage = new AccountsPage(driver);
@@ -49,7 +50,7 @@ public class OrdersNewPageTest {
         AccountPage AccountPage = new AccountPage(driver);
         OrdersPage OrdersPage = new OrdersPage(driver);
         OrdersNewPage OrdersNewPage = new OrdersNewPage(driver);
-        System.out.println("Страница создания нового заказа: " + OrdersNewPage.getPage());
+
         LoginPage.getPage();
         LoginPage.openPage();
         LoginPage.loginAs();
@@ -59,8 +60,6 @@ public class OrdersNewPageTest {
         AccountPage.clickOrders();
         OrdersPage.createOrder();
         OrdersNewPage.newOrder();
-        //AccountsPage.clickCreate();
-        //AccountsPage.clickSearch();
 
         System.out.println("@Test 1 success!");
     }

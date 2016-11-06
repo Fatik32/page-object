@@ -41,13 +41,14 @@ public class OrdersPageTest {
     @Test
     public void testCreateOrder() throws Exception{
         System.out.println("@Test 1 start!");
+
         LoginPage LoginPage = new LoginPage(driver);
         HomePage HomePage = new HomePage(driver);
         AccountsPage AccountsPage = new AccountsPage(driver);
         AccountsIdPage AccountsIdPage = new AccountsIdPage(driver);
         AccountPage AccountPage = new AccountPage(driver);
         OrdersPage OrdersPage = new OrdersPage(driver);
-        System.out.println("Страница заказов: " + OrdersPage.getPage());
+
         LoginPage.getPage();
         LoginPage.openPage();
         LoginPage.loginAs();
@@ -56,8 +57,6 @@ public class OrdersPageTest {
         AccountsIdPage.clickEnterInAccounts();
         AccountPage.clickOrders();
         OrdersPage.createOrder();
-        //AccountsPage.clickCreate();
-        //AccountsPage.clickSearch();
 
         System.out.println("@Test 1 success!");
     }

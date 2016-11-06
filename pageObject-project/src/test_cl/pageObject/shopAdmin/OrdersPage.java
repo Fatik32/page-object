@@ -17,7 +17,6 @@ public class OrdersPage extends Page {
     public String pageUrl = "/#orders";
     private By createButtonLocator = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//div[@class='view z-tabbox']//table[@class='oper-toolbar']//button");
     private By selectMagazinLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']");
-    //private By listMagazinAdvLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']//option[contains(@value, 'Stas ALL')]");
     private By listMagazinLocator = By.xpath(("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']"));
     private By createButtonTwoLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//button[contains(text(),'Создать заказ')]");
 
@@ -44,10 +43,10 @@ public class OrdersPage extends Page {
         driver.findElement(selectMagazinLocator).click();
 
         // Выбор магазина из списка
-        Select select = new Select (driver.findElement(listMagazinLocator));
+        Select select = new Select (driver.findElement(selectMagazinLocator));
         select.selectByVisibleText("Stas ALL");
         select.getFirstSelectedOption();
-        driver.findElement(listMagazinLocator).click();
+        driver.findElement(selectMagazinLocator).click();
         Thread.sleep(1000);
 
         driver.findElement(createButtonTwoLocator).click();
@@ -62,8 +61,6 @@ public class OrdersPage extends Page {
      * @return (baseUrl and pageUrl)
      */
     public String getPage() throws Exception {
-        //System.out.println(baseUrl + pageUrl);
-        //System.out.println("AgeVerificationPage.getPage() success!");
         return (baseUrl + pageUrl);
     }
     /**
@@ -72,7 +69,5 @@ public class OrdersPage extends Page {
      */
     public void openPage() throws Exception {
         driver.get(baseUrl + pageUrl);
-        //System.out.println(baseUrl + pageUrl);
-        //System.out.println("AgeVerificationPage.openPage() success!");
     }
 }

@@ -37,19 +37,20 @@ public class AccountPageTest {
 
 
     /**
-     * AuthorizationPageTrue() Тест прохождения авторизации
+     * testClickAccountsEnter() Тест прохождения авторизации
      * throws Exception
      */
 
     @Test
     public void testClickAccountsEnter() throws Exception{
         System.out.println("@Test 1 start!");
+
         LoginPage LoginPage = new LoginPage(driver);
         HomePage HomePage = new HomePage(driver);
         AccountsPage AccountsPage = new AccountsPage(driver);
         AccountsIdPage AccountsIdPage = new AccountsIdPage(driver);
         AccountPage AccountPage = new AccountPage(driver);
-        System.out.println("Страница аккаунта: " + AccountPage.getPage());
+
         LoginPage.getPage();
         LoginPage.openPage();
         LoginPage.loginAs();
@@ -57,9 +58,6 @@ public class AccountPageTest {
         AccountsPage.findAccountsAndSignIt();
         AccountsIdPage.clickEnterInAccounts();
         AccountPage.clickOrders();
-
-        //AccountsPage.clickCreate();
-        //AccountsPage.clickSearch();
 
         System.out.println("@Test 1 success!");
     }
