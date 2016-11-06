@@ -11,14 +11,15 @@ import test_cl.pageObject.HomePage;
 import test_cl.pageObject.LoginPage;
 import test_cl.pageObject.shopAdmin.AccountPage;
 import test_cl.pageObject.shopAdmin.OrdersPage;
+import test_cl.pageObject.shopAdmin.OrdersNewPage;
 
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by ayufatov on 31.10.2016.
+ * Created by 123 on 06.11.2016.
  *
  */
-public class OrdersPageTest {
+public class OrdersNewPageTest {
     public WebDriver driver;
 
     /**
@@ -35,7 +36,7 @@ public class OrdersPageTest {
     }
 
     /**
-     * testCreateOrder() Тест страницы OrdersPage
+     * testCreateOrder() Тест страницы OrdersNewPage
      * throws Exception
      */
     @Test
@@ -47,7 +48,8 @@ public class OrdersPageTest {
         AccountsIdPage AccountsIdPage = new AccountsIdPage(driver);
         AccountPage AccountPage = new AccountPage(driver);
         OrdersPage OrdersPage = new OrdersPage(driver);
-        System.out.println("Страница заказов: " + OrdersPage.getPage());
+        OrdersNewPage OrdersNewPage = new OrdersNewPage(driver);
+        System.out.println("Страница создания нового заказа: " + OrdersNewPage.getPage());
         LoginPage.getPage();
         LoginPage.openPage();
         LoginPage.loginAs();
@@ -56,6 +58,7 @@ public class OrdersPageTest {
         AccountsIdPage.clickEnterInAccounts();
         AccountPage.clickOrders();
         OrdersPage.createOrder();
+        OrdersNewPage.newOrder();
         //AccountsPage.clickCreate();
         //AccountsPage.clickSearch();
 
@@ -74,5 +77,4 @@ public class OrdersPageTest {
         System.out.println("@After success!");
         System.out.println("End!");
     }
-
 }

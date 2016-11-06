@@ -23,7 +23,7 @@ public class OrdersPage extends Page {
 
     //					                    Методы
     /**
-     * HomePage(WebDriver driver) Конструктор!
+     * OrdersPage(WebDriver driver) Конструктор!
      * Метод для передачи обьекта driver
      * param driver
      * throws Exception
@@ -32,8 +32,13 @@ public class OrdersPage extends Page {
         this.driver = driver;
     }
 
+    /**
+     * createOrder() Метод для для перехода на страницу создания заказа
+     * param
+     * throws Exception
+     */
     public void createOrder() throws Exception {
-        System.out.println("AccountPage.clickCreateButton() start!");
+        System.out.println("OrdersPage.createOrder() start!");
         System.out.println("Текст createButtonLocator = " + driver.findElement(createButtonLocator).getText());
         driver.findElement(createButtonLocator).click();
         driver.findElement(selectMagazinLocator).click();
@@ -48,7 +53,7 @@ public class OrdersPage extends Page {
         driver.findElement(createButtonTwoLocator).click();
         System.out.println("Текст createButtonTwoLocator = " + driver.findElement(createButtonTwoLocator).getText());
         Thread.sleep(5000);
-        System.out.println("AccountPage.clickCreateButton() success!");
+        System.out.println("OrdersPage.createOrder() success!");
     }
 
     /**
