@@ -25,8 +25,8 @@ public class LoginPage extends Page {
     private By passwordLocator = By.name("j_password");
     private By loginButtonLocator = By.className("z-button-os");
     private By errorsLocator = By.xpath("//div[@class='login_body']//span[@style='color:red;']");
-    public String Login = "a.fatov@inbox.ru";
-    public String Password = "Fatik32rus";
+    public String Login = "a.fatov32@gmail.com";
+    public String Password = "Auto_test_1234";
     //    									Методы
     public LoginPage(WebDriver driver) throws Exception {
         this.driver = driver;
@@ -34,18 +34,18 @@ public class LoginPage extends Page {
     //Авторизация с правильным логином
     public void loginAs() throws Exception {
         driver.findElement(usernameLocator).clear();
-        driver.findElement(usernameLocator).sendKeys("a.fatov@inbox.ru");
+        driver.findElement(usernameLocator).sendKeys("a.fatov32@gmail.com");
         driver.findElement(passwordLocator).clear();
-        driver.findElement(passwordLocator).sendKeys("Fatik32rus");
+        driver.findElement(passwordLocator).sendKeys("Auto_test_1234");
         driver.findElement(loginButtonLocator).click();
         System.out.println("LoginPage.loginAs() success!");
     }
-    //Авторизация с неправильным логином
+    //Авторизация с неправильным логином неиспользуется
     public void loginAsInvalidLogin() throws Exception {
         driver.findElement(usernameLocator).clear();
         driver.findElement(usernameLocator).sendKeys("a.fatov123");
         driver.findElement(passwordLocator).clear();
-        driver.findElement(passwordLocator).sendKeys("Fatik32rus");
+        driver.findElement(passwordLocator).sendKeys("Auto_test_1234");
         driver.findElement(loginButtonLocator).click();
         driver.findElement(errorsLocator);
         System.out.println("errorsLocatorText = " + driver.findElement(errorsLocator).getText());
