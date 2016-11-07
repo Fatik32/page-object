@@ -2,15 +2,8 @@ package test_cl.pageObject.shopAdmin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import test_cl.pageObject.Page;
-
-import javax.imageio.metadata.IIOMetadataNode;
-import java.util.List;
 
 /**
  * Created by 123 on 06.11.2016.
@@ -20,7 +13,7 @@ public class OrdersNewPage extends Page {
     public OrdersNewPage (){}
     //                   				Переменные
     public WebDriver driver;
-    int i = (int)(Math.random()*10000);
+    private int i = (int)(Math.random()*10000);
     public String pageUrl = "/#orders~new";
 
     // Локаторы для кнопок выше блока заказа
