@@ -179,8 +179,6 @@ public class OrdersNewPage extends Page {
         select1.getFirstSelectedOption();
         driver.findElement(informationPaymentMethodLocator).click();
         Thread.sleep(1000);
-        driver.findElement(informationPaymentMethodLocator).click();
-        Thread.sleep(1000);
 
         // Выбор способа доставки
         driver.findElement(deliveryMethodsExpressLocator).click();
