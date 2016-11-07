@@ -5,7 +5,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import test_cl.pageObject.HomePage;
 import test_cl.pageObject.LoginPage;
 
 import java.util.concurrent.TimeUnit;

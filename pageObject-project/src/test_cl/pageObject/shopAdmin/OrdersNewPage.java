@@ -10,7 +10,7 @@ import test_cl.pageObject.Page;
  *
  */
 public class OrdersNewPage extends Page {
-    public OrdersNewPage (){}
+    //public OrdersNewPage (){}
     //                   				Переменные
     public WebDriver driver;
     private int i = (int)(Math.random()*10000);

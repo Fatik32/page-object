@@ -6,16 +6,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import zobo2016uat.pageObject.AgeVerificationPage;
 /**
  * 
- * @Тест страницы верификации возраста (test тест)
+ * Тест страницы верификации возраста (test тест)
  * @author a.fatov
  * Переменные:
- * @public WebDriver driver
+ * public WebDriver driver
  * Методы:
- * @public void setUp() throws Exception
- * @public void TestAgeVerificationTrue() throws Exception
- * @public void TestAgeVerificationTrueIsOneMetod() throws Exception
- * @public void TestAgeVerificationFalse() throws Exception
- * @public void tearDown() throws Exception
+ * public void setUp() throws Exception
+ * public void TestAgeVerificationTrue() throws Exception
+ * public void TestAgeVerificationTrueIsOneMetod() throws Exception
+ * public void TestAgeVerificationFalse() throws Exception
+ * public void tearDown() throws Exception
  */
 public class AgeVerificationPageTest {
 					//                    Переменные
@@ -23,7 +23,7 @@ public class AgeVerificationPageTest {
 					//                      Методы
 /**
  * setUp() Метод вызываемый перед началом каждого теста
- * @throws Exception
+ * throws Exception
  */
     @Before
     public void setUp() throws Exception {
@@ -35,7 +35,7 @@ public class AgeVerificationPageTest {
     }
 /**
  * TestAgeVerificationTrue() Тест прохождения верификации возраста
- * @throws Exception
+ * throws Exception
  */
 	@Test
     public void TestAgeVerificationTrue() throws Exception{
@@ -51,7 +51,7 @@ public class AgeVerificationPageTest {
 }
 /**
  * TestAgeVerificationTrueIsOneMetod() Тест прохождения верификации возраста одним методом
- * @throws Exception
+ * throws Exception
  */
 	@Test
     public void TestAgeVerificationTrueIsOneMetod() throws Exception{
@@ -65,7 +65,7 @@ public class AgeVerificationPageTest {
 }
 /**
  * TestAgeVerificationFalse() Тест неудачного прохождения верификации возраста	
- * @throws Exception
+ * throws Exception
  */
 	@Test
     public void TestAgeVerificationFalse() throws Exception{
@@ -81,7 +81,7 @@ public class AgeVerificationPageTest {
 }
 /**
  * tearDown() Метод вызываемый после окончания каждого теста
- * @throws Exception
+ * throws Exception
  */
     @After
     public void tearDown() throws Exception {
