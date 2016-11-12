@@ -10,14 +10,17 @@ import test_cl.pageObject.Page;
  *
  */
 public class OrdersNewPage extends Page {
-    public OrdersNewPage (){}
+    //public OrdersNewPage (){}
     //                   				Переменные
     public WebDriver driver;
     private int i = (int)(Math.random()*10000);
     public String pageUrl = "/#orders~new";
 
     // Локаторы для кнопок выше блока заказа
-    private By buttonsOrderSaveLocator =            By.xpath("//button[text()=' Сохранить']");
+    private By buttonsOrderSaveLocator =                By.xpath("//button[text()=' Сохранить']");
+    private By buttonsHistoryChangeLocator =            By.xpath("//button[text()='История изменений']");
+    private By buttonsHistoryChangeAttributesLocator =  By.xpath("//button[text()='История изменений атрибутов']");
+
 
     // Локаторы для блока "Номер"
     private By numberOrderInMagazinLocator =        By.xpath("//div[@class='number z-div']//input[@class='z-textbox']");
@@ -176,8 +179,8 @@ public class OrdersNewPage extends Page {
         // Выбор способа доставки
         driver.findElement(deliveryMethodsExpressLocator).click();
         Thread.sleep(1000);
-        driver.findElement(deliveryMethodsExpressFastestLocator).click();
-        Thread.sleep(1000);
+        //driver.findElement(deliveryMethodsExpressFastestLocator).click();
+        //Thread.sleep(1000);
         driver.findElement(deliveryMethodsExpressCheckingLocator).click();
 
         // Сохранение заказа

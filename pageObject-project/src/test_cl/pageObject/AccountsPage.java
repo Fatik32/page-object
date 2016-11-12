@@ -24,7 +24,7 @@ public class AccountsPage extends HomePage {
     public String pageUrl = "/#accounts";
     String accountId;
 
-    private By createButtonLocator           = By.xpath("//tr[@valign='top']//button[@class='important z-button-os']");
+    //private By createButtonLocator           = By.xpath("//tr[@valign='top']//button[@class='important z-button-os']");
     private By searchInputLocator            = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox']");
     private By searchInputLocatorFocus       = By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox z-textbox-focus']");
     private By accountsBeforeSearchLocator   = By.xpath("//td[@title='Тесты чекаут']//a[@class='z-a']");
@@ -33,19 +33,20 @@ public class AccountsPage extends HomePage {
     public AccountsPage(WebDriver driver) throws Exception {
         this.driver = driver;
     }
-
+    /*
     public void clickCreate() throws Exception {
         System.out.println("AccountsPage.clickCreate() start!");
         System.out.println("Текст кнопки создания аккаунта = " + driver.findElement(createButtonLocator).getText());
         driver.findElement(createButtonLocator).click();
         System.out.println("AccountsPage.clickCreate() success!");
-    }
+    }*/
 
+    /*
     public void clickSearch() throws Exception {
         System.out.println("AccountsPage.clickSearch() start!");
         driver.findElement(searchInputLocator).click();
         System.out.println("AccountsPage.clickSearch() success!");
-    }
+    }*/
 
 
     public void findAccountsAndSignIt() throws Exception {

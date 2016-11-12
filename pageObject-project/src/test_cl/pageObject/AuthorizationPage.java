@@ -23,8 +23,8 @@ public class AuthorizationPage extends Page {
 	public By passwordLocator = By.name("j_password");
     public By loginButtonLocator = By.className("z-button-os");
 	//public By errorsLocator = By.className("errors");
-	public String Login = "a.fatov@inbox.ru";
-	public String Password = "Fatik32rus";
+	//public String Login = "a.fatov@inbox.ru";
+	//public String Password = "Fatik32rus";
 	//    									Методы
 	public AuthorizationPage(WebDriver driver) throws Exception {
 		this.driver = driver;
@@ -39,6 +39,7 @@ public class AuthorizationPage extends Page {
 	    System.out.println("AuthorizationPage.loginAs() success!");
 	}
 	//Авторизация с неправильным логином
+	/*
 	public void loginAsInvalidLogin() throws Exception {
 	    driver.findElement(usernameLocator).clear();
 	    driver.findElement(usernameLocator).sendKeys("a.fatov123");
@@ -49,7 +50,7 @@ public class AuthorizationPage extends Page {
 	    //System.out.println(driver.findElement(errorsLocator).getText());
 	    //assertTrue(driver.findElement(errorsLocator).getText().equals("Invalid user"));
 	    System.out.println("AuthorizationPage.loginAsInvalidLogin() success!");
-	}
+	}*/
 
 
 	public String getPage() throws Exception {

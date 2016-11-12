@@ -25,8 +25,8 @@ public class LoginPage extends Page {
     private By passwordLocator = By.name("j_password");
     private By loginButtonLocator = By.className("z-button-os");
     private By errorsLocator = By.xpath("//div[@class='login_body']//span[@style='color:red;']");
-    public String Login = "a.fatov32@gmail.com";
-    public String Password = "Auto_test_1234";
+    //public String Login = "a.fatov32@gmail.com";
+    //public String Password = "Auto_test_1234";
     //    									Методы
     public LoginPage(WebDriver driver) throws Exception {
         this.driver = driver;

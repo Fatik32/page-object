@@ -2,7 +2,6 @@ package test_cl.pageObject.shopAdmin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import test_cl.pageObject.Page;
 
@@ -11,13 +10,12 @@ import test_cl.pageObject.Page;
  *
  */
 public class OrdersPage extends Page {
-    public OrdersPage (){}
+    //public OrdersPage (){}
     //                   				Переменные
     public WebDriver driver;
     public String pageUrl = "/#orders";
     private By createButtonLocator = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//div[@class='view z-tabbox']//table[@class='oper-toolbar']//button");
     private By selectMagazinLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']");
-    private By listMagazinLocator = By.xpath(("//div[@class='customDialog z-window-modal z-window-modal-shadow']//select[@class='z-select']"));
     private By createButtonTwoLocator = By.xpath("//div[@class='customDialog z-window-modal z-window-modal-shadow']//button[contains(text(),'Создать заказ')]");
 
     //					                    Методы

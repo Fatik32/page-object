@@ -9,7 +9,7 @@ import test_cl.pageObject.Page;
  *
  */
 public class AccountPage extends Page {
-    public AccountPage (){}
+    //public AccountPage (){}
     //                   				Переменные
     public WebDriver driver;
     public String pageUrl = "/#account";
