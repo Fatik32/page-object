@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 //import test_cl.pageObject.Page;
 
 /**
- * Created by 123 on 06.11.2016.
+ * Created by ayufatov on 06.11.2016.
  *
  */
 public class OrdersNewPage extends LayotAccountPage {
@@ -186,6 +186,11 @@ public class OrdersNewPage extends LayotAccountPage {
         // Сохранение заказа
         driver.findElement(buttonsOrderSaveLocator).click();
         System.out.println("OrdersNewPage.newOrder() success!");
+    }
+    public void clickPrintLabels() throws Exception {
+        System.out.println("OrdersNewPage.clickPrintLabels() start!");
+        driver.findElement(printLabelsMenuLocator).click();
+        System.out.println("OrdersNewPage.clickPrintLabels() success!");
     }
 
     /**

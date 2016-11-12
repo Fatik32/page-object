@@ -1,6 +1,6 @@
 package test_cl.pageObject;
 
-import org.openqa.selenium.By;
+//import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 //import static org.junit.Assert.assertTrue;
@@ -9,79 +9,29 @@ import org.openqa.selenium.WebDriver;
  * Домашняя (главная) Страница сайта:
  * @author a.fatov
  * Переменные:
- *	//	HEADER
- *	public By user_profileLocator
- *	public By registerLocator
- *	public By authLocator
- *	public By homeLocator
- *	public By rulesLocator
- *	//	BODY
- *	public By orderPrizeLocator
- *	public By activateCodeLocator
- *	//	FOOTER
- *	public By faqLocator
- *	public By contact_usLocator
- *	public By prizeLocator
- *	public By winnerLocator
  * Методы:
  * HomePage(WebDriver driver) throws Exception
  * String getPage() throws Exception
- * void openPage() throws Exception
- * void clickHome() throws Exception
- * void clickPrize() throws Exception Не используется
- * void clickWinner() throws Exception Не используется
- * void clickAuth() throws Exception
- * void clickRegister() throws Exception
- * void clickPopUpRegBtn() throws Exception Не используется
+ * String openPage() throws Exception
+ * String clickAccounts() throws Exception
+ * String clickDeliveries() throws Exception
+ * String clickShops() throws Exception
+ * String clickOrders() throws Exception
+ * String clickShipments() throws Exception
+ * String clickUsers() throws Exception
+ * String clickAudit_events() throws Exception
+ * String clickUser_profile() throws Exception
+ * String clickBills() throws Exception
+ * String clickMailing() throws Exception
+ * String clickAllwarehouses() throws Exception
+ * String clickData_problems() throws Exception
+ * String clickReports() throws Exception
  */
 public class HomePage extends LayotPage {
 	public HomePage (){}
 	//                   				Переменные
 	public WebDriver driver;
 	public String pageUrl = "/#home";
-
-	// LEFT MENU
-	private By accountsMenuLocator = By.cssSelector("a[title='Аккаунты']"); // Раздел со списком аккаунтов
-	private By deliveriesMenuLocator = By.cssSelector("a[title='Службы доставки']"); // Раздел со списком служб доставок
-	private By shopsMenuLocator = By.cssSelector("a[title='Интернет магазины']"); // Раздел со списком интернет магазинов
-	private By ordersMenuLocator = By.cssSelector("a[title='Заказы']"); // Раздел со списком заказов
-	private By shipmentsMenuLocator = By.cssSelector("a[title='Реестры']"); // Раздел для реестров
-	private By usersMenuLocator = By.cssSelector("a[title='Пользователи']"); // Раздел со списком пользователей
-	private By audit_eventsMenuLocator = By.cssSelector("a[title='Журнал действий']"); // Раздел со списком действий
-	private By user_profileMenuLocator = By.cssSelector("a[title='Настройки профиля']"); // Раздел настроек профиля
-	private By billsMenuLocator = By.cssSelector("a[title='Счета']"); // Раздел со списком счетов
-	private By mailingMenuLocator = By.cssSelector("a[title='Рассылка уведомлений']"); // Раздел для рассылки уведомлений
-	private By allwarehousesMenuLocator = By.cssSelector("a[title='Склады']"); // Раздел для рассылки уведомлений
-	private By data_problemsMenuLocator = By.cssSelector("a[title='Проблемные города']"); // Раздел со списком проблемных городов
-	private By reportsMenuLocator = By.cssSelector("a[title='Отчёты']"); // Раздел со списком отчетов
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//	HEADER
-	//public By user_profileLocator = By.cssSelector("a[href='/ru/user-profile.html']"); //Ссылка на страницу профиля пользователя
-	//public By registerLocator = By.cssSelector("a[title='РЕГИСТРАЦИЯ']"); //Ссылка на страницу регистрации
-	//public By authLocator = By.cssSelector("span[title='ВХОД']"); //Ссылка на страницу авторизации
-	//public By homeLocator = By.xpath("//div[@id='mainNav']//div[@role='navigation']//a[@href='/ru/home.html']"); //Ссылка на главную страницу
-	//public By rulesLocator = By.cssSelector("a[href='/ru/rules.html']"); //Ссылка на страницу с правилами акции
-	//	BODY
-	//public By orderPrizeLocator = By.cssSelector("button[class='[ main-button  main-button--prize ]']"); //Кнопка "Заказать приз"
-	//public By activateCodeLocator = By.cssSelector("button[class='[ main-button  main-button--code ]']"); //Кнопка "Зарегистрировать код"
-	//	FOOTER
-	//public By faqLocator = By.cssSelector("a[href='/ru/faq.html']"); //Ссылка на страницу "FAQ"
-	//public By contact_usLocator = By.cssSelector("a[href='/ru/contact-us.html']"); //Ссылка на страницу  "Обратная связь"
-	
 	
 	//					                    Методы
 	/**

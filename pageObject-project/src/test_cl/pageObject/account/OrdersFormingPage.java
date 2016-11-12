@@ -6,29 +6,23 @@ import org.openqa.selenium.WebDriver;
 //import test_cl.pageObject.Page;
 
 /**
- * Created by 123 on 10.11.2016.
+ * Created by ayufatov on 10.11.2016.
  *
  */
 public class OrdersFormingPage extends LayotAccountPage {
     public OrdersFormingPage (){}
     //                   				Переменные
     public WebDriver driver;
-    private int i = (int)(Math.random()*10000);
-    public String pageUrl = "/#orders~new";
+    public String pageUrl = "/#ordersForming";
 
     // Локаторы для кнопок выше списка заказов
-    private By buttonsOrderSaveLocator =            By.xpath("//button[text()=' Сохранить']");
+    private By printLabelsLocator =                 By.xpath("//button[text()='Напечатать этикетки']");
 
-    // Локаторы для блока "Номер"
-    private By numberOrderInMagazinLocator =        By.xpath("//div[@class='number z-div']//input[@class='z-textbox']");
-    private By numberOrderInMagazinFocusLocator =   By.xpath("//div[@class='number z-div']//input[@class='z-textbox z-textbox-focus']");
+    // Локаторы для блока со списком заказов
+    private By checkOrderLocator =                   By.xpath("//a[text()='AutoTestOrderTest_5242']");
+    //private By checkOrderLocator =                   By.xpath("//td[@title='AutoTestOrderTest_5242/../td/span//input']");
+           // "/../../td/span//input");
 
-    // Локаторы для блока "Товары"
-    private By goodsEditLocator =                   By.xpath("//span[text()='Товары']/../button");
-
-    private By goodsAddLocator =                    By.xpath("//div[@class='z-window-modal z-window-modal-shadow']//button[text()=' Добавить товар']");
-    private By goodsNameLocator =                   By.xpath("//div[@class='z-window-modal z-window-modal-shadow']//div[@class='z-listbox-body z-listbox-autopaging']//tr/td[1]//input");
-    private By goodsVendorCodeLocator =             By.xpath("//div[@class='z-window-modal z-window-modal-shadow']//div[@class='z-listbox-body z-listbox-autopaging']//tr/td[2]//input");
 
     //					                    Методы
     /**
@@ -42,21 +36,18 @@ public class OrdersFormingPage extends LayotAccountPage {
     }
 
     /**
-     * newOrder() Метод для сохранения нового заказа
+     * printLabels() Метод для печати этикетки заказа
      * param driver
      * throws Exception
      */
-    public void newOrder() throws Exception {
-        System.out.println("OrdersNewPage.newOrder() start!");
+    public void printLabels() throws Exception {
+        System.out.println("OrdersFormingPage.printLabels() start!");
 
-        // Заполнение номера заказа
-        driver.findElement(numberOrderInMagazinLocator).click();
-        driver.findElement(numberOrderInMagazinFocusLocator).sendKeys("AutoTestOrderTest_" + i);
-
-
-        // Сохранение заказа
-        driver.findElement(buttonsOrderSaveLocator).click();
-        System.out.println("OrdersNewPage.newOrder() success!");
+        // Выбор заказа
+        driver.findElement(checkOrderLocator).click();
+        // Печать этикетки
+        driver.findElement(printLabelsLocator).click();
+        System.out.println("OrdersFormingPage.printLabels() success!");
     }
 
     /**

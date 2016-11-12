@@ -10,16 +10,17 @@ import test_cl.pageObject.AccountsPage;
 import test_cl.pageObject.HomePage;
 import test_cl.pageObject.LoginPage;
 import test_cl.pageObject.account.AccountPage;
-import test_cl.pageObject.account.OrdersPage;
+import test_cl.pageObject.account.OrdersFormingPage;
 import test_cl.pageObject.account.OrdersNewPage;
+import test_cl.pageObject.account.OrdersPage;
 
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by ayufatov on 06.11.2016.
+ * Created by ayufatov on 12.11.2016.
  *
  */
-public class OrdersNewPageTest {
+public class OrdersFormingPageTest {
     public WebDriver driver;
 
     /**
@@ -50,6 +51,7 @@ public class OrdersNewPageTest {
         AccountPage AccountPage = new AccountPage(driver);
         OrdersPage OrdersPage = new OrdersPage(driver);
         OrdersNewPage OrdersNewPage = new OrdersNewPage(driver);
+        OrdersFormingPage OrdersFormingPage = new OrdersFormingPage(driver);
 
         LoginPage.getPage();
         LoginPage.openPage();
@@ -60,6 +62,8 @@ public class OrdersNewPageTest {
         AccountPage.clickOrders();
         OrdersPage.createOrder();
         OrdersNewPage.newOrder();
+        OrdersNewPage.clickPrintLabels();
+        OrdersFormingPage.printLabels();
 
         System.out.println("@Test 1 success!");
     }
