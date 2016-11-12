@@ -9,7 +9,7 @@ import test_cl.pageObject.AccountsIdPage;
 import test_cl.pageObject.AccountsPage;
 import test_cl.pageObject.HomePage;
 import test_cl.pageObject.LoginPage;
-import test_cl.pageObject.shopAdmin.AccountPage;
+import test_cl.pageObject.account.AccountPage;
 
 import java.util.concurrent.TimeUnit;
 

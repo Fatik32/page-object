@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
  * public String getPage() throws Exception
  * public void openPage() throws Exception
  */
-public class AuthorizationPage extends Page {
+public class AuthorizationPage extends LayotPage {
 	//if(elem.Displayed) проверка есть элемент или нет
 	//										Переменные
 	public WebDriver driver;

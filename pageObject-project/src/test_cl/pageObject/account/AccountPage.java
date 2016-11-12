@@ -1,14 +1,14 @@
-package test_cl.pageObject.shopAdmin;
+package test_cl.pageObject.account;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import test_cl.pageObject.Page;
+//import test_cl.pageObject.Page;
 
 /**
  * Created by ayufatov on 31.10.2016.
  *
  */
-public class AccountPage extends Page {
+public class AccountPage extends LayotAccountPage {
     //public AccountPage (){}
     //                   				Переменные
     public WebDriver driver;

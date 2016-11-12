@@ -1,15 +1,15 @@
-package test_cl.pageObject.shopAdmin;
+package test_cl.pageObject.account;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
-import test_cl.pageObject.Page;
+//import org.openqa.selenium.support.ui.Select;
+//import test_cl.pageObject.Page;
 
 /**
  * Created by 123 on 10.11.2016.
  *
  */
-public class OrdersFormingPage extends Page {
+public class OrdersFormingPage extends LayotAccountPage {
     public OrdersFormingPage (){}
     //                   				Переменные
     public WebDriver driver;

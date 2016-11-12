@@ -16,7 +16,7 @@ import org.openqa.selenium.WebDriver;
  * public String getPage() throws Exception
  * public void openPage() throws Exception
  */
-public class AccountsPage extends HomePage {
+public class AccountsPage extends LayotPage {
     AccountsPage(){}
 
     //										Переменные

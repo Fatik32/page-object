@@ -34,7 +34,7 @@ import org.openqa.selenium.WebDriver;
  * void clickRegister() throws Exception
  * void clickPopUpRegBtn() throws Exception Не используется
  */
-public class HomePage extends Page {
+public class HomePage extends LayotPage {
 	public HomePage (){}
 	//                   				Переменные
 	public WebDriver driver;

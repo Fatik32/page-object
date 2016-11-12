@@ -1,15 +1,15 @@
-package test_cl.pageObject.shopAdmin;
+package test_cl.pageObject.account;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-import test_cl.pageObject.Page;
+//import test_cl.pageObject.Page;
 
 /**
  * Created by 123 on 06.11.2016.
  *
  */
-public class OrdersNewPage extends Page {
+public class OrdersNewPage extends LayotAccountPage {
     //public OrdersNewPage (){}
     //                   				Переменные
     public WebDriver driver;
@@ -18,8 +18,8 @@ public class OrdersNewPage extends Page {
 
     // Локаторы для кнопок выше блока заказа
     private By buttonsOrderSaveLocator =                By.xpath("//button[text()=' Сохранить']");
-    private By buttonsHistoryChangeLocator =            By.xpath("//button[text()='История изменений']");
-    private By buttonsHistoryChangeAttributesLocator =  By.xpath("//button[text()='История изменений атрибутов']");
+    //private By buttonsHistoryChangeLocator =            By.xpath("//button[text()='История изменений']");
+    //private By buttonsHistoryChangeAttributesLocator =  By.xpath("//button[text()='История изменений атрибутов']");
 
 
     // Локаторы для блока "Номер"
@@ -49,7 +49,7 @@ public class OrdersNewPage extends Page {
 
     // Локаторы для блока "Способы Доставки"
     private By deliveryMethodsExpressLocator =                   By.xpath("//input[@value='express']");
-    private By deliveryMethodsExpressFastestLocator =            By.xpath("//label[text()='Быстрее']/../input");
+    //private By deliveryMethodsExpressFastestLocator =            By.xpath("//label[text()='Быстрее']/../input");
     private By deliveryMethodsExpressCheckingLocator =           By.xpath("//label[text()='Возможность проверки/примерки товара до оплаты']/../input");
 
 
