@@ -10,15 +10,16 @@ import test_cl.pageObject.AccountsPage;
 import test_cl.pageObject.HomePage;
 import test_cl.pageObject.LoginPage;
 import test_cl.pageObject.account.AccountPage;
+import test_cl.pageObject.account.OrdersNewPage;
 import test_cl.pageObject.account.OrdersPage;
 
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by ayufatov on 31.10.2016.
+ * Created by ayufatov on 13.11.2016.
  *
  */
-public class OrdersPageTest {
+public class CreateOrdersAllDeliveriesTest {
     public WebDriver driver;
 
     /**
@@ -35,11 +36,11 @@ public class OrdersPageTest {
     }
 
     /**
-     * testCreateOrder() Тест страницы OrdersPage
+     * testCreateOrder() Тест страницы OrdersNewPage
      * throws Exception
      */
     @Test
-    public void testCreateOrder() throws Exception{
+    public void CreateOrdersAllDeliveries() throws Exception{
         System.out.println("@Test 1 start!");
 
         LoginPage LoginPage = new LoginPage(driver);
@@ -48,6 +49,7 @@ public class OrdersPageTest {
         AccountsIdPage AccountsIdPage = new AccountsIdPage(driver);
         AccountPage AccountPage = new AccountPage(driver);
         OrdersPage OrdersPage = new OrdersPage(driver);
+        OrdersNewPage OrdersNewPage = new OrdersNewPage(driver);
 
         LoginPage.getPage();
         LoginPage.openPage();
@@ -56,8 +58,12 @@ public class OrdersPageTest {
         AccountsPage.findAccountsAndSignIt();
         AccountsIdPage.clickEnterInAccounts();
         AccountPage.clickOrders();
-        //OrdersPage.createOrder();
+        OrdersPage.createOrder();
+        OrdersNewPage.newOrder();
+        AccountPage.clickOrders();
         OrdersPage.copyOrder();
+        OrdersNewPage.saveOrder();
+        OrdersNewPage.printLabels();
 
         System.out.println("@Test 1 success!");
     }
@@ -74,5 +80,4 @@ public class OrdersPageTest {
         System.out.println("@After success!");
         System.out.println("End!");
     }
-
 }

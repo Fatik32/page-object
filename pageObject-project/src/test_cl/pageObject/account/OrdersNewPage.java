@@ -17,10 +17,12 @@ public class OrdersNewPage extends LayotAccountPage {
     public String pageUrl = "/#orders~new";
 
     // Локаторы для кнопок выше блока заказа
-    private By buttonsOrderSaveLocator =                By.xpath("//button[text()=' Сохранить']");
+    private By buttonsOrderSaveLocator =                  By.xpath("//button[text()=' Сохранить']");
     //private By buttonsHistoryChangeLocator =            By.xpath("//button[text()='История изменений']");
     //private By buttonsHistoryChangeAttributesLocator =  By.xpath("//button[text()='История изменений атрибутов']");
-
+    private By buttonsPrintLabelsLocator =                By.xpath("//button[text()=' Печать этикетки']");
+    private By buttonsPrintLabelsYesLocator =             By.xpath("//div[@class='z-messagebox-window z-window-highlighted z-window-highlighted-shadow']//button[text()='Да']");
+    //private By buttonsPrintLabelsNoLocator =        By.xpath("//div[@class='z-messagebox-window z-window-highlighted z-window-highlighted-shadow']//button[text()='Да']");
 
     // Локаторы для блока "Номер"
     private By numberOrderInMagazinLocator =        By.xpath("//div[@class='number z-div']//input[@class='z-textbox']");
@@ -171,26 +173,54 @@ public class OrdersNewPage extends LayotAccountPage {
         // Выбор способа оплаты
         driver.findElement(informationPaymentMethodLocator).click();
         Select select1 = new Select (driver.findElement(informationPaymentMethodLocator));
-        select1.selectByVisibleText("Безналичная оплата");
+        //select1.selectByVisibleText("Безналичная оплата");
+        select1.selectByVisibleText("Оплата наличными");
         select1.getFirstSelectedOption();
         driver.findElement(informationPaymentMethodLocator).click();
         Thread.sleep(1000);
 
         // Выбор способа доставки
         driver.findElement(deliveryMethodsExpressLocator).click();
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         //driver.findElement(deliveryMethodsExpressFastestLocator).click();
         //Thread.sleep(1000);
         driver.findElement(deliveryMethodsExpressCheckingLocator).click();
 
         // Сохранение заказа
         driver.findElement(buttonsOrderSaveLocator).click();
+        // Печать этикетки
+        Thread.sleep(5000);
+        driver.findElement(buttonsPrintLabelsLocator).click();
+        //Thread.sleep(5000);
+        driver.findElement(buttonsPrintLabelsYesLocator).click();
+        Thread.sleep(5000);
         System.out.println("OrdersNewPage.newOrder() success!");
     }
+
+
+    // Сохранение заказа
+    public void saveOrder() throws Exception {
+        System.out.println("OrdersNewPage.saveOrder() start!");
+        driver.findElement(buttonsOrderSaveLocator).click();
+        Thread.sleep(1000);
+        System.out.println("OrdersNewPage.saveOrder() success!");
+    }
+
+    // Печать этикетки
+    public void printLabels() throws Exception {
+        System.out.println("OrdersNewPage.PrintLabels() start!");
+        driver.findElement(buttonsPrintLabelsLocator).click();
+        //Thread.sleep(5000);
+        driver.findElement(buttonsPrintLabelsYesLocator).click();
+        Thread.sleep(5000);
+        System.out.println("OrdersNewPage.PrintLabels() success!");
+    }
+
+    // Перейти в раздел "Печать этикеток"
     public void clickPrintLabels() throws Exception {
-        System.out.println("OrdersNewPage.clickPrintLabels() start!");
+        System.out.println("LayotAccountPage.clickPrintLabels() start!");
         driver.findElement(printLabelsMenuLocator).click();
-        System.out.println("OrdersNewPage.clickPrintLabels() success!");
+        System.out.println("LayotAccountPage.clickPrintLabels() success!");
     }
 
     /**

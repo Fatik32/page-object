@@ -1,6 +1,9 @@
 package test_cl.tests.shopAdmin;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -14,6 +17,7 @@ import test_cl.pageObject.account.OrdersFormingPage;
 import test_cl.pageObject.account.OrdersNewPage;
 import test_cl.pageObject.account.OrdersPage;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -30,7 +34,7 @@ public class OrdersFormingPageTest {
     @BeforeMethod
     public void setUp() throws Exception {
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         System.out.println("@Before succes!");
@@ -60,10 +64,50 @@ public class OrdersFormingPageTest {
         AccountsPage.findAccountsAndSignIt();
         AccountsIdPage.clickEnterInAccounts();
         AccountPage.clickOrders();
-        OrdersPage.createOrder();
-        OrdersNewPage.newOrder();
+        //OrdersPage.createOrder();
+        //OrdersNewPage.newOrder();
         OrdersNewPage.clickPrintLabels();
         OrdersFormingPage.printLabels();
+
+
+
+        //JavascriptExecutor js = (JavascriptExecutor)driver;
+        //WebElement element = (WebElement) js.executeScript("return jQuery.find('#hplogo');");
+        /*private static void addJQuery (JavascriptExecutor js) {
+
+            String script = "";
+
+            boolean needInjection = (Boolean)(js.executeScript("return this.$ === undefined;"));
+            if(needInjection) {
+                URL u = Resources.getResource("jquery.js");
+                try {
+                    script = Resources.toString(u, Charsets.UTF_8);
+                } catch(IOException e) {
+                    e.printStackTrace();
+                }
+                js.executeScript(script);
+            }
+        }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Thread.sleep(5000);
+        //String elementId = driver.findElement(By.xpath("//td[@title='AutoTestOrderTest_5242']")).getAttribute("title");
+        //driver.findElement(By.xpath("//td[@title='"+elementId+"']")).click();
 
         System.out.println("@Test 1 success!");
     }

@@ -10,17 +10,19 @@ import org.openqa.selenium.WebDriver;
  *
  */
 public class OrdersFormingPage extends LayotAccountPage {
-    public OrdersFormingPage (){}
+    //public OrdersFormingPage (){}
     //                   				Переменные
     public WebDriver driver;
     public String pageUrl = "/#ordersForming";
 
     // Локаторы для кнопок выше списка заказов
     private By printLabelsLocator =                 By.xpath("//button[text()='Напечатать этикетки']");
+    private By searchOrderLocator =                 By.xpath("//input[@placeholder='Поиск по номеру заказа']");
 
     // Локаторы для блока со списком заказов
-    private By checkOrderLocator =                   By.xpath("//a[text()='AutoTestOrderTest_5242']");
-    //private By checkOrderLocator =                   By.xpath("//td[@title='AutoTestOrderTest_5242/../td/span//input']");
+    //private By checkOrderLocator =                   By.xpath("//a[text()='AutoTestOrderTest_5242']");
+    //private By checkOrderLocator =                   By.xpath("//td[@title='AutoTestOrderTest_5242']/a");
+    //private By checkOrderLocator =                   By.xpath("//th[@title='Номер заказа']/../th/div/span/input");
            // "/../../td/span//input");
 
 
@@ -43,8 +45,24 @@ public class OrdersFormingPage extends LayotAccountPage {
     public void printLabels() throws Exception {
         System.out.println("OrdersFormingPage.printLabels() start!");
 
+        driver.findElement(searchOrderLocator).click();
+        driver.findElement(searchOrderLocator).sendKeys("AutoTestOrderTest_5242");
+
+
+
+        //Thread.sleep(5000);
         // Выбор заказа
-        driver.findElement(checkOrderLocator).click();
+        //System.out.println("printLabels.checkOrderLocator() = " +  driver.findElement(checkOrderLocator).getText());
+        //driver.findElement(checkOrderLocator).click();
+        //String elementId = driver.findElement(By.xpath("//td[@title='AutoTestOrderTest_5242']")).getAttribute("title");
+        //driver.findElement(By.xpath("//td[@title='"+elementId+"']")).click();
+
+
+
+
+
+
+
         // Печать этикетки
         driver.findElement(printLabelsLocator).click();
         System.out.println("OrdersFormingPage.printLabels() success!");

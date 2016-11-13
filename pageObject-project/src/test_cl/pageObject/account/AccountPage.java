@@ -29,8 +29,7 @@ public class AccountPage extends LayotAccountPage {
 
     public void clickOrders() throws Exception {
         System.out.println("AccountPage.clickOrders() start!");
-        System.out.println("Текст кнопки Активные заказы = " + driver.findElement(ordersMenuLocator).getText());
-        driver.findElement(ordersMenuLocator).click();
+        driver.findElement(activeOrdersMenuLocator).click();
         System.out.println("AccountPage.clickOrders() success!");
     }
 
