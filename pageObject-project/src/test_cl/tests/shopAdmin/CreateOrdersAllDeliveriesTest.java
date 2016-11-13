@@ -60,10 +60,12 @@ public class CreateOrdersAllDeliveriesTest {
         AccountPage.clickOrders();
         OrdersPage.createOrder();
         OrdersNewPage.newOrder();
+        // Создал новый заказ
         AccountPage.clickOrders();
         OrdersPage.copyOrder();
         OrdersNewPage.saveOrder();
         OrdersNewPage.printLabels();
+        // Скопировал заказ
 
         System.out.println("@Test 1 success!");
     }
