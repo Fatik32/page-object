@@ -14,6 +14,7 @@ public class OrdersPage extends LayotAccountPage {
     //                   				Переменные
     public WebDriver driver;
     public String pageUrl = "/#orders";
+    private String orderName = "313213123312";
 
     // Локаторы для кнопкок выше списка заказов
     //private By createButtonLocator = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//div[@class='view z-tabbox']//table[@class='oper-toolbar']//button");
@@ -27,13 +28,13 @@ public class OrdersPage extends LayotAccountPage {
 
 
     //private By cancelButtonLocator =        By.xpath("//button[text()='Отменить заказ']");
-    private By searchByNumberLocator =        By.xpath("//input[@placeholder='Поиск по номеру заказа']");
+    //private By searchByNumberLocator =        By.xpath("//input[@placeholder='Поиск по номеру заказа']");
     private By searchLocator =                By.xpath("//input[@placeholder='Поиск по номеру заказа']/../..//div[@style='width: 220px;']/input");
     //private By searchInputLocator =           By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox']");
 
 
 
-    private By checkOrderLocator =        By.xpath("//td[@title='313213123312']/../td//input");
+    private By checkOrderLocator =        By.xpath("//td[@title=" + orderName + "]/../td//input");
 
     //					                    Методы
     /**
@@ -71,8 +72,8 @@ public class OrdersPage extends LayotAccountPage {
     // Копирование заказа
     public void copyOrder() throws Exception {
         System.out.println("OrdersPage.copyOrder() start!");
-        //driver.findElement(searchByNumberLocator).click();
-        driver.findElement(searchLocator).sendKeys("313213123312");
+        driver.findElement(searchLocator).click();
+        driver.findElement(searchLocator).sendKeys(orderName);
         Thread.sleep(5000);
         driver.findElement(checkOrderLocator).click();
 
@@ -95,7 +96,7 @@ public class OrdersPage extends LayotAccountPage {
     //  Копирование заказа String ordersName, String magazinName
     public void copyOrderString(String ordersName, String magazinName) throws Exception {
         System.out.println("OrdersPage.copyOrderString() start!");
-        driver.findElement(searchByNumberLocator).click();
+        driver.findElement(searchLocator).click();
         driver.findElement(searchLocator).sendKeys(ordersName);
         Thread.sleep(5000);
         driver.findElement(checkOrderLocator).click();
