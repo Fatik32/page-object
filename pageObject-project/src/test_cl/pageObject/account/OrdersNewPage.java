@@ -125,7 +125,7 @@ public class OrdersNewPage extends LayotAccountPage {
         driver.findElement(goodsStockEditLocator).click();
         driver.findElement(goodsStockSelectLocator).click();
         Select select = new Select (driver.findElement(goodsStockSelectLocator));
-        select.selectByVisibleText("Test Склад");
+        select.selectByVisibleText("Москва");
         select.getFirstSelectedOption();
         driver.findElement(goodsStockSelectLocator).click();
         Thread.sleep(1000);

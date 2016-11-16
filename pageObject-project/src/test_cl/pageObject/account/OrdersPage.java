@@ -28,12 +28,12 @@ public class OrdersPage extends LayotAccountPage {
 
     //private By cancelButtonLocator =        By.xpath("//button[text()='Отменить заказ']");
     private By searchByNumberLocator =        By.xpath("//input[@placeholder='Поиск по номеру заказа']");
-    private By searchLocator =                By.xpath("//img[@src='common/images/buttons/btn_search.png?00362.001']/../../input");
+    private By searchLocator =                By.xpath("//input[@placeholder='Поиск по номеру заказа']/../..//div[@style='width: 220px;']/input");
     //private By searchInputLocator =           By.xpath("//table[@class='oper-toolbar']//div[@class='oper-input z-div']//input[@class='z-textbox']");
 
 
 
-    private By checkOrderLocator =        By.xpath("//td[@title='AutoTestOrderTest_8173']/../td//input");
+    private By checkOrderLocator =        By.xpath("//td[@title='313213123312']/../td//input");
 
     //					                    Методы
     /**
@@ -58,7 +58,7 @@ public class OrdersPage extends LayotAccountPage {
 
         // Выбор магазина из списка
         Select select = new Select (driver.findElement(selectMagazinLocator));
-        select.selectByVisibleText("Stas ALL");
+        select.selectByVisibleText("Avto_All_курьер");
         select.getFirstSelectedOption();
         driver.findElement(selectMagazinLocator).click();
         Thread.sleep(1000);
@@ -72,7 +72,7 @@ public class OrdersPage extends LayotAccountPage {
     public void copyOrder() throws Exception {
         System.out.println("OrdersPage.copyOrder() start!");
         //driver.findElement(searchByNumberLocator).click();
-        driver.findElement(searchLocator).sendKeys("AutoTestOrderTest_8173");
+        driver.findElement(searchLocator).sendKeys("313213123312");
         Thread.sleep(5000);
         driver.findElement(checkOrderLocator).click();
 
@@ -81,7 +81,7 @@ public class OrdersPage extends LayotAccountPage {
 
         // Выбор магазина из списка
         Select select = new Select (driver.findElement(selectMagazinLocator));
-        select.selectByVisibleText("Stas ALL");
+        select.selectByVisibleText("Avto_All_курьер");
         select.getFirstSelectedOption();
         driver.findElement(selectMagazinLocator).click();
         Thread.sleep(1000);

@@ -63,7 +63,7 @@ public class CreateOrdersAllDeliveriesTest {
         // Создал новый заказ
         AccountPage.clickOrders();
         //OrdersPage.copyOrder();
-        OrdersPage.copyOrderString("AutoTestOrderTest_8173","Stas ALL");
+        OrdersPage.copyOrderString("313213123312","Avto_All_курьер");
         OrdersNewPage.saveOrder();
         OrdersNewPage.printLabels();
         // Скопировал заказ
