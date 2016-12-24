@@ -14,7 +14,7 @@ public class OrdersPage extends LayotAccountPage {
     //                   				Переменные
     public WebDriver driver;
     public String pageUrl = "/#orders";
-    private String orderName = "313213123312";
+    private String orderName = "111111111111";
 
     // Локаторы для кнопкок выше списка заказов
     //private By createButtonLocator = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//div[@class='view z-tabbox']//table[@class='oper-toolbar']//button");

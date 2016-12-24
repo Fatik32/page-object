@@ -189,10 +189,10 @@ public class OrdersNewPage extends LayotAccountPage {
         // Сохранение заказа
         driver.findElement(buttonsOrderSaveLocator).click();
         // Печать этикетки
-        Thread.sleep(5000);
-        driver.findElement(buttonsPrintLabelsLocator).click();
         //Thread.sleep(5000);
-        driver.findElement(buttonsPrintLabelsYesLocator).click();
+        //driver.findElement(buttonsPrintLabelsLocator).click();
+        //Thread.sleep(5000);
+        //driver.findElement(buttonsPrintLabelsYesLocator).click();
         Thread.sleep(5000);
         System.out.println("OrdersNewPage.newOrder() success!");
     }
@@ -209,6 +209,7 @@ public class OrdersNewPage extends LayotAccountPage {
     // Печать этикетки
     public void printLabels() throws Exception {
         System.out.println("OrdersNewPage.PrintLabels() start!");
+        Thread.sleep(5000);
         driver.findElement(buttonsPrintLabelsLocator).click();
         //Thread.sleep(5000);
         driver.findElement(buttonsPrintLabelsYesLocator).click();
