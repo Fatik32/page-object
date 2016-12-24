@@ -15,6 +15,7 @@ public class OrdersPage extends LayotAccountPage {
     public WebDriver driver;
     public String pageUrl = "/#orders";
     private String orderName = "111111111111";
+    private String magazinName = "Avto_All_курьер";
 
     // Локаторы для кнопкок выше списка заказов
     //private By createButtonLocator = By.xpath("//div[@class='z-window-embedded-cnt-noborder']//div[@class='view z-tabbox']//table[@class='oper-toolbar']//button");
@@ -59,7 +60,7 @@ public class OrdersPage extends LayotAccountPage {
 
         // Выбор магазина из списка
         Select select = new Select (driver.findElement(selectMagazinLocator));
-        select.selectByVisibleText("Avto_All_курьер");
+        select.selectByVisibleText(magazinName);
         select.getFirstSelectedOption();
         driver.findElement(selectMagazinLocator).click();
         Thread.sleep(1000);
@@ -69,10 +70,34 @@ public class OrdersPage extends LayotAccountPage {
         System.out.println("OrdersPage.createOrder() success!");
     }
 
+    /**
+     * createOrderString(String magazinsName) Метод для для перехода на страницу создания заказа
+     * param
+     * throws Exception
+     */
+    public void createOrderString(String magazinsName) throws Exception {
+        System.out.println("OrdersPage.createOrderString(String magazinsName) start!");
+        driver.findElement(createButtonLocator).click();
+        driver.findElement(selectMagazinLocator).click();
+
+        // Выбор магазина из списка
+        Select select = new Select (driver.findElement(selectMagazinLocator));
+        select.selectByVisibleText(magazinsName);
+        select.getFirstSelectedOption();
+        driver.findElement(selectMagazinLocator).click();
+        Thread.sleep(1000);
+
+        driver.findElement(createButtonTwoLocator).click();
+        Thread.sleep(5000);
+        System.out.println("OrdersPage.createOrderString(String magazinsName) success!");
+    }
+
+
     // Копирование заказа
     public void copyOrder() throws Exception {
         System.out.println("OrdersPage.copyOrder() start!");
         driver.findElement(searchLocator).click();
+        driver.findElement(searchLocator).clear();
         driver.findElement(searchLocator).sendKeys(orderName);
         Thread.sleep(5000);
         driver.findElement(checkOrderLocator).click();
@@ -82,7 +107,7 @@ public class OrdersPage extends LayotAccountPage {
 
         // Выбор магазина из списка
         Select select = new Select (driver.findElement(selectMagazinLocator));
-        select.selectByVisibleText("Avto_All_курьер");
+        select.selectByVisibleText(magazinName);
         select.getFirstSelectedOption();
         driver.findElement(selectMagazinLocator).click();
         Thread.sleep(1000);
@@ -97,6 +122,7 @@ public class OrdersPage extends LayotAccountPage {
     public void copyOrderString(String ordersName, String magazinName) throws Exception {
         System.out.println("OrdersPage.copyOrderString() start!");
         driver.findElement(searchLocator).click();
+        driver.findElement(searchLocator).clear();
         driver.findElement(searchLocator).sendKeys(ordersName);
         Thread.sleep(5000);
         driver.findElement(checkOrderLocator).click();

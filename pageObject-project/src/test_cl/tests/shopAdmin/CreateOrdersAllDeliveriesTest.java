@@ -43,6 +43,7 @@ public class CreateOrdersAllDeliveriesTest {
     public void CreateOrdersAllDeliveries() throws Exception{
         System.out.println("@Test 1 start!");
 
+        // Инициализация обьектов
         LoginPage LoginPage = new LoginPage(driver);
         HomePage HomePage = new HomePage(driver);
         AccountsPage AccountsPage = new AccountsPage(driver);
@@ -50,22 +51,90 @@ public class CreateOrdersAllDeliveriesTest {
         AccountPage AccountPage = new AccountPage(driver);
         OrdersPage OrdersPage = new OrdersPage(driver);
         OrdersNewPage OrdersNewPage = new OrdersNewPage(driver);
+        // Инициализировал обьекты
 
+        // Вход в платформу
         LoginPage.getPage();
         LoginPage.openPage();
         LoginPage.loginAs();
+        // Вошел в платформу
+
+        // Вход в аккаунт
         HomePage.clickAccounts();
         AccountsPage.findAccountsAndSignIt();
         AccountsIdPage.clickEnterInAccounts();
+        // Вошел в аккаунт
+
+        // Создание нового заказа в Avto_All_курьер
         AccountPage.clickOrders();
-        OrdersPage.createOrder();
+        //OrdersPage.createOrder();
+        OrdersPage.createOrderString("Avto_All_курьер");
         OrdersNewPage.newOrder();
         // Создал новый заказ
+
+        // Создание нового заказа в Avto_B2cpl
         AccountPage.clickOrders();
-        //OrdersPage.copyOrder();
-        OrdersPage.copyOrderString("111111111111","Avto_All_курьер");
-        OrdersNewPage.saveOrder();
-        OrdersNewPage.printLabels();
+            //OrdersPage.createOrder();
+        OrdersPage.createOrderString("Avto_B2cpl");
+            //OrdersNewPage.newOrder();
+        OrdersNewPage.newOrderString("Avto_B2cpl_");
+        // Создал новый заказ
+
+        // Создание нового заказа в Avto_DPD_Consumer
+        AccountPage.clickOrders();
+            //OrdersPage.createOrder();
+        OrdersPage.createOrderString("Avto_DPD_Consumer");
+            //OrdersNewPage.newOrder();
+        OrdersNewPage.newOrderString("Avto_DPD_Consumer_");
+        // Создал новый заказ
+
+        // Создание нового заказа в Avto_DPD_Consumer
+        AccountPage.clickOrders();
+            //OrdersPage.createOrder();
+        OrdersPage.createOrderString("Avto_DPD_Parcel");
+            //OrdersNewPage.newOrder();
+        OrdersNewPage.newOrderString("Avto_DPD_Parcel_");
+        // Создал новый заказ
+
+        // Создание нового заказа в Avto_ShopLogistics
+        AccountPage.clickOrders();
+        //OrdersPage.createOrder();
+        OrdersPage.createOrderString("Avto_ShopLogistics");
+        //OrdersNewPage.newOrder();
+        OrdersNewPage.newOrderString("Avto_ShopLogistics_");
+        // Создал новый заказ
+
+        // Создание нового заказа в Avto_SPSR
+        AccountPage.clickOrders();
+            //OrdersPage.createOrder();
+        OrdersPage.createOrderString("Avto_SPSR");
+            //OrdersNewPage.newOrder();
+        OrdersNewPage.newOrderString("Avto_SPSR_");
+        // Создал новый заказ
+
+        // Создание нового заказа в Avto_CDEK
+        AccountPage.clickOrders();
+            //OrdersPage.createOrder();
+        OrdersPage.createOrderString("Avto_CDEK");
+            //OrdersNewPage.newOrder();
+        OrdersNewPage.newOrderString("Avto_CDEK_");
+        // Создал новый заказ
+
+        // Создание нового заказа в Avto_Your
+        //AccountPage.clickOrders();
+            //OrdersPage.createOrder();
+        //OrdersPage.createOrderString("Avto_Your");
+            //OrdersNewPage.newOrder();
+        //OrdersNewPage.newOrderString("Avto_Your_");
+        // Создал новый заказ
+
+        // Копирование заказа
+        //System.out.println("Копирование заказа в Avto_All_курьер!");
+        //AccountPage.clickOrders();
+            //OrdersPage.copyOrder();
+        //OrdersPage.copyOrderString("111111111111","Avto_All_курьер");
+        //OrdersNewPage.saveOrder();
+            //OrdersNewPage.printLabels();
         // Скопировал заказ
 
         System.out.println("@Test 1 success!");

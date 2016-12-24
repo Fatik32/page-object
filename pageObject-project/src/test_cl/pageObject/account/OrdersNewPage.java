@@ -15,6 +15,7 @@ public class OrdersNewPage extends LayotAccountPage {
     public WebDriver driver;
     private int i = (int)(Math.random()*10000);
     public String pageUrl = "/#orders~new";
+    private String orderName = "AutoTestOrderTest_" + i;
 
     // Локаторы для кнопок выше блока заказа
     private By buttonsOrderSaveLocator =                  By.xpath("//button[text()=' Сохранить']");
@@ -98,7 +99,7 @@ public class OrdersNewPage extends LayotAccountPage {
 
         // Заполнение номера заказа
         driver.findElement(numberOrderInMagazinLocator).click();
-        driver.findElement(numberOrderInMagazinFocusLocator).sendKeys("AutoTestOrderTest_" + i);
+        driver.findElement(numberOrderInMagazinFocusLocator).sendKeys(orderName);
 
         // Заполнение формы товаров
         driver.findElement(goodsEditLocator).click();
@@ -193,10 +194,120 @@ public class OrdersNewPage extends LayotAccountPage {
         //driver.findElement(buttonsPrintLabelsLocator).click();
         //Thread.sleep(5000);
         //driver.findElement(buttonsPrintLabelsYesLocator).click();
+        // Закончил печать этикетки
         Thread.sleep(5000);
         System.out.println("OrdersNewPage.newOrder() success!");
     }
 
+    /**
+     * newOrderString() Метод для сохранения нового заказа
+     * param driver
+     * throws Exception
+     */
+    public void newOrderString(String ordersName) throws Exception {
+        System.out.println("OrdersNewPage.newOrderString() start!");
+
+        // Заполнение номера заказа
+        driver.findElement(numberOrderInMagazinLocator).click();
+        driver.findElement(numberOrderInMagazinFocusLocator).sendKeys(ordersName + i);
+
+        // Заполнение формы товаров
+        driver.findElement(goodsEditLocator).click();
+        driver.findElement(goodsAddLocator).click();
+        driver.findElement(goodsNameLocator).click();
+        driver.findElement(goodsNameLocator).sendKeys("" + i);
+        driver.findElement(goodsVendorCodeLocator).click();
+        driver.findElement(goodsVendorCodeLocator).sendKeys("" + 1);
+        driver.findElement(goodsOptionCodeLocator).click();
+        driver.findElement(goodsOptionCodeLocator).sendKeys("" + 1);
+        driver.findElement(goodsQuantityLocator).click();
+        driver.findElement(goodsQuantityLocator).clear();
+        driver.findElement(goodsQuantityLocator).sendKeys("" + 1);
+        driver.findElement(goodsUnitPriceLocator).click();
+        driver.findElement(goodsUnitPriceLocator).sendKeys("" + 1);
+        driver.findElement(goodsDeclaredValueLocator).click();
+        driver.findElement(goodsDeclaredValueLocator).sendKeys("" + 1);
+        driver.findElement(goodsUnitWeightLocator).click();
+        driver.findElement(goodsUnitWeightLocator).sendKeys("" + 1);
+        driver.findElement(goodsConfirmLocator).click();
+        Thread.sleep(1000);
+
+        // Выбор склада
+        driver.findElement(goodsStockEditLocator).click();
+        driver.findElement(goodsStockSelectLocator).click();
+        Select select = new Select (driver.findElement(goodsStockSelectLocator));
+        select.selectByVisibleText("Москва");
+        select.getFirstSelectedOption();
+        driver.findElement(goodsStockSelectLocator).click();
+        Thread.sleep(1000);
+        driver.findElement(goodsStockChangeLocator).click();
+        Thread.sleep(1000);
+
+        // Заполнение блока "Дополнительно"
+        driver.findElement(additionallyLocator).click();
+        driver.findElement(additionallyLocator).sendKeys("auto_test_additionally");
+
+        // Заполнение блока "Клиент"
+        driver.findElement(clientFIOLocator).click();
+        driver.findElement(clientFIOLocator).sendKeys("auto_test_FIO");
+        driver.findElement(clientPhoneLocator).click();
+        driver.findElement(clientPhoneLocator).sendKeys("9999999999");
+        driver.findElement(clientEmailLocator).click();
+        driver.findElement(clientEmailLocator).sendKeys("auto@test.email");
+        driver.findElement(clientIndexLocator).click();
+        driver.findElement(clientIndexLocator).sendKeys("");
+        driver.findElement(clientCountryLocator).click();
+
+        driver.findElement(clientLocalityLocator).click();
+        driver.findElement(clientLocalityLocator).sendKeys("Москва");
+        Thread.sleep(1000);
+        driver.findElement(clientLocalityMoscowLocator).click();
+        Thread.sleep(1000);
+
+        driver.findElement(clientStreetLocator).click();
+        driver.findElement(clientStreetLocator).sendKeys("Новогиреевская");
+        Thread.sleep(1000);
+        driver.findElement(clientStreetNovogireevskayaLocator).click();
+        Thread.sleep(1000);
+
+        driver.findElement(clientHouseLocator).click();
+        driver.findElement(clientHouseLocator).sendKeys("1");
+        driver.findElement(clientHousingLocator).click();
+        driver.findElement(clientHousingLocator).sendKeys("2");
+        driver.findElement(clientStructureLocator).click();
+        driver.findElement(clientStructureLocator).sendKeys("3");
+        driver.findElement(clientApartmentLocator).click();
+        driver.findElement(clientApartmentLocator).sendKeys("4");
+        driver.findElement(clientCommentsLocator).click();
+        driver.findElement(clientCommentsLocator).sendKeys("auto_test_comments");
+
+        // Выбор способа оплаты
+        driver.findElement(informationPaymentMethodLocator).click();
+        Select select1 = new Select (driver.findElement(informationPaymentMethodLocator));
+        //select1.selectByVisibleText("Безналичная оплата");
+        select1.selectByVisibleText("Оплата наличными");
+        select1.getFirstSelectedOption();
+        driver.findElement(informationPaymentMethodLocator).click();
+        Thread.sleep(1000);
+
+        // Выбор способа доставки
+        driver.findElement(deliveryMethodsExpressLocator).click();
+        Thread.sleep(5000);
+        //driver.findElement(deliveryMethodsExpressFastestLocator).click();
+        //Thread.sleep(1000);
+        driver.findElement(deliveryMethodsExpressCheckingLocator).click();
+
+        // Сохранение заказа
+        driver.findElement(buttonsOrderSaveLocator).click();
+        // Печать этикетки
+        //Thread.sleep(5000);
+        //driver.findElement(buttonsPrintLabelsLocator).click();
+        //Thread.sleep(5000);
+        //driver.findElement(buttonsPrintLabelsYesLocator).click();
+        // Закончил печать этикетки
+        Thread.sleep(5000);
+        System.out.println("OrdersNewPage.newOrderString() success!");
+    }
 
     // Сохранение заказа
     public void saveOrder() throws Exception {
