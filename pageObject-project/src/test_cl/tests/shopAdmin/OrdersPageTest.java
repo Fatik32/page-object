@@ -12,6 +12,7 @@ import test_cl.pageObject.LoginPage;
 import test_cl.pageObject.account.AccountPage;
 import test_cl.pageObject.account.OrdersPage;
 
+
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -27,6 +28,7 @@ public class OrdersPageTest {
      */
     @BeforeMethod
     public void setUp() throws Exception {
+        //System.setProperty("webdriver.gecko.driver","path of geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();

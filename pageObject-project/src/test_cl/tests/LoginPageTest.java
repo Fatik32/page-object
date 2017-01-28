@@ -33,11 +33,11 @@ public class LoginPageTest {
 
 
     /**
-     * AuthorizationPageTrue() Тест прохождения авторизации
+     * testLoginAs() Тест прохождения авторизации
      * throws Exception
      */
-    @Test(enabled = false)
-    public void testAuthorizationTrue() throws Exception{
+    @Test//(enabled = false)
+    public void testLoginAs() throws Exception{
         System.out.println("@Test 1 start!");
         LoginPage LoginPage = new LoginPage(driver);
         System.out.println("Страница авторизации: " + LoginPage.getPage());
@@ -50,11 +50,11 @@ public class LoginPageTest {
     }
 
     /**
-     * AuthorizationPageFalse() Тест прохождения авторизации
+     * testLoginAsInvalidLogin() Тест прохождения авторизации
      * throws Exception
      */
     @Test
-    public void TestAuthorizationFalse() throws Exception{
+    public void testLoginAsInvalidLogin() throws Exception{
         System.out.println("@Test 2 start!");
         LoginPage LoginPage = new LoginPage(driver);
         System.out.println("Страница авторизации: " + LoginPage.getPage());
@@ -66,6 +66,39 @@ public class LoginPageTest {
         System.out.println("@Test 2 success!");
     }
 
+    /**
+     * testLoginAsInvalidPassword() Тест прохождения авторизации
+     * throws Exception
+     */
+    @Test
+    public void testLoginAsInvalidPassword() throws Exception{
+        System.out.println("@Test 3 start!");
+        LoginPage LoginPage = new LoginPage(driver);
+        System.out.println("Страница авторизации: " + LoginPage.getPage());
+
+        LoginPage.getPage();
+        LoginPage.openPage();
+        LoginPage.loginAsInvalidPassword();
+
+        System.out.println("@Test 3 success!");
+    }
+
+    /**
+     * testLoginAsInvalidLoginAndPassword() Тест прохождения авторизации
+     * throws Exception
+     */
+    @Test
+    public void testLoginAsInvalidLoginAndPassword() throws Exception{
+        System.out.println("@Test 4 start!");
+        LoginPage LoginPage = new LoginPage(driver);
+        System.out.println("Страница авторизации: " + LoginPage.getPage());
+
+        LoginPage.getPage();
+        LoginPage.openPage();
+        LoginPage.loginAsInvalidLoginAndPassword();
+
+        System.out.println("@Test 4 success!");
+    }
 
     /**
      * tearDown() Метод вызываемый после окончания каждого теста
