@@ -2,6 +2,9 @@ package test_cl.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -24,6 +27,15 @@ public class LoginPageTest {
      */
     @BeforeMethod
     public void setUp() throws Exception {
+        //System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+        //driver = new ChromeDriver();
+
+        //System.setProperty("webdriver.edge.driver","C:\\MicrosoftWebDriver.exe");
+        //driver = new EdgeDriver();
+
+        //System.setProperty("phantomjs.binary.path","C:\\driver\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
+        //driver = new PhantomJSDriver();
+
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
@@ -53,7 +65,7 @@ public class LoginPageTest {
      * testLoginAsInvalidLogin() Тест прохождения авторизации
      * throws Exception
      */
-    @Test
+    @Test(enabled = false)
     public void testLoginAsInvalidLogin() throws Exception{
         System.out.println("@Test 2 start!");
         LoginPage LoginPage = new LoginPage(driver);
@@ -70,7 +82,7 @@ public class LoginPageTest {
      * testLoginAsInvalidPassword() Тест прохождения авторизации
      * throws Exception
      */
-    @Test
+    @Test(enabled = false)
     public void testLoginAsInvalidPassword() throws Exception{
         System.out.println("@Test 3 start!");
         LoginPage LoginPage = new LoginPage(driver);
@@ -87,7 +99,7 @@ public class LoginPageTest {
      * testLoginAsInvalidLoginAndPassword() Тест прохождения авторизации
      * throws Exception
      */
-    @Test
+    @Test(enabled = false)
     public void testLoginAsInvalidLoginAndPassword() throws Exception{
         System.out.println("@Test 4 start!");
         LoginPage LoginPage = new LoginPage(driver);
