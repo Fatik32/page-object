@@ -48,7 +48,7 @@ public class LoginPageTest {
      * testLoginAs() Тест прохождения авторизации
      * throws Exception
      */
-    @Test//(enabled = false)
+    @Test//(enabled = false, groups={"test"})
     public void testLoginAs() throws Exception{
         System.out.println("@Test 1 start!");
         LoginPage LoginPage = new LoginPage(driver);
@@ -65,7 +65,7 @@ public class LoginPageTest {
      * testLoginAsInvalidLogin() Тест прохождения авторизации
      * throws Exception
      */
-    @Test(enabled = false)
+    @Test//(enabled = false, groups={"test"})
     public void testLoginAsInvalidLogin() throws Exception{
         System.out.println("@Test 2 start!");
         LoginPage LoginPage = new LoginPage(driver);
@@ -82,7 +82,7 @@ public class LoginPageTest {
      * testLoginAsInvalidPassword() Тест прохождения авторизации
      * throws Exception
      */
-    @Test(enabled = false)
+    @Test//(enabled = false, groups={"test"})
     public void testLoginAsInvalidPassword() throws Exception{
         System.out.println("@Test 3 start!");
         LoginPage LoginPage = new LoginPage(driver);
@@ -99,7 +99,7 @@ public class LoginPageTest {
      * testLoginAsInvalidLoginAndPassword() Тест прохождения авторизации
      * throws Exception
      */
-    @Test(enabled = false)
+    @Test//(enabled = false, groups={"test"})
     public void testLoginAsInvalidLoginAndPassword() throws Exception{
         System.out.println("@Test 4 start!");
         LoginPage LoginPage = new LoginPage(driver);
