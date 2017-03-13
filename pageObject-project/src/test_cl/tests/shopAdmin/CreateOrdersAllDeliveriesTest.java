@@ -96,6 +96,7 @@ public class CreateOrdersAllDeliveriesTest {
         OrdersNewPage.newOrderString("Avto_DPD_Parcel_");
         // Создал новый заказ
 
+        /* ShopLogistics отключили
         // Создание нового заказа в Avto_ShopLogistics
         AccountPage.clickOrders();
         //OrdersPage.createOrder();
@@ -103,6 +104,7 @@ public class CreateOrdersAllDeliveriesTest {
         //OrdersNewPage.newOrder();
         OrdersNewPage.newOrderString("Avto_ShopLogistics_");
         // Создал новый заказ
+        */
 
         // Создание нового заказа в Avto_SPSR
         AccountPage.clickOrders();
