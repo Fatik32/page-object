@@ -19,7 +19,7 @@ class LayotAccountPage extends Page {
     //By shipmentMenuLocator =                  By.cssSelector("a[title='Отгрузки']");            // Раздел для создания реестров для отгрузки
     //By shippingMenuLocator =                  By.cssSelector("a[title='Доставка']");            // Раздел со списком заказов в доставке
     //By allOrdersMenuLocator =                 By.cssSelector("a[title='Все заказы']");          // Раздел со списком всех заказов
-    //By settingsMenuLocator =                  By.cssSelector("a[title='Настройки']");           // Раздел с настройками магазинов
+    By settingsMenuLocator =          By.cssSelector("a[title='Настройки']");           // Раздел с настройками магазинов
     //By profileSettingsMenuLocator =           By.cssSelector("a[title='Настройки профиля']");   // Раздел для настройки профиля аккаунта
     //By offerMenuLocator =                     By.cssSelector("a[title='Оферта']");              // Договор оффферты
     //By accountMenuLocator =                   By.cssSelector("a[title='Аккаунт']");             // Раздел с реквизитами аккаунта

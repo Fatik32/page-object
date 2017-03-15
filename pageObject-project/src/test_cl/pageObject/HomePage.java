@@ -7,8 +7,11 @@ import org.openqa.selenium.WebDriver;
 
 /**
  * Домашняя (главная) Страница сайта:
+ * На нее происходит переход после авторизации.
  * @author a.fatov
  * Переменные:
+ * public WebDriver driver
+ * public String pageUrl
  * Методы:
  * HomePage(WebDriver driver) throws Exception
  * String getPage() throws Exception

@@ -26,7 +26,10 @@ public class AccountPage extends LayotAccountPage {
         this.driver = driver;
     }
 
-
+    /**
+     * clickOrders() Нажать на вкладку "Активные заказы"
+     * throws Exception
+     */
     public void clickOrders() throws Exception {
         System.out.println("AccountPage.clickOrders() start!");
         driver.findElement(activeOrdersMenuLocator).click();

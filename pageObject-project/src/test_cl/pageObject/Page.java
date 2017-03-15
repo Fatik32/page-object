@@ -1,6 +1,7 @@
 package test_cl.pageObject;
 /** 
  * Абстрактный класс Page
+ * Родительский класс для остальных страниц
  * @author a.fatov
  */
 public abstract class Page {

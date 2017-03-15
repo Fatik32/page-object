@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 /**
  * Абстрактный класс LayotPage
+ * Содержит общие элементы для страницы администратора платформы
  * Created by a.fatov on 12.11.2016.
  */
 abstract class LayotPage extends Page {
